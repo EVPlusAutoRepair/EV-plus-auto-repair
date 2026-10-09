@@ -117,7 +117,7 @@ export default function Home() {
           <div style={{ marginTop: 44 }}>
             <div className="kicker">Tow truck services</div>
             <h3 style={{ fontSize: 26, margin: "10px 0 6px" }}>Stuck somewhere? We&rsquo;ll come get you.</h3>
-            <p className="lede" style={{ maxWidth: 640 }}>Our tow truck picks up Teslas (and collision jobs of any make) across Southern California. Call or text <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a> and we&rsquo;ll roll.</p>
+            <p className="lede" style={{ maxWidth: 640, margin: "0 auto" }}>Our tow truck picks up Teslas (and collision jobs of any make) across Southern California. Call or text <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a> and we&rsquo;ll roll.</p>
             <div className="pills" style={{ marginTop: 18 }}>
               {["West LA", "East LA", "Santa Monica", "Palmdale", "Santa Barbara", "Irvine", "San Diego", "Orange County", "Ventura County", "Kern County", "LA County"].map((c) => (
                 <span className="pill" key={c}>{c}</span>
