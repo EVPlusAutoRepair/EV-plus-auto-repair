@@ -22,6 +22,8 @@ const SERVICE_LABELS: Record<string, string> = {
   maintenance: "Maintenance / scheduled service",
   "drive-unit-oil": "Drive-unit oil service",
   suspension: "Suspension / steering noise or vibration",
+  alignment: "Wheel alignment",
+  brakes: "Brake service",
   "12v": "12V battery",
   "16v": "16V lithium battery",
   "tire-rotation": "Tire rotation",
