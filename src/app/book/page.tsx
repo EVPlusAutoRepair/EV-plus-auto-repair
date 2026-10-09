@@ -14,19 +14,19 @@ export default function Book() {
   return (
     <>
       <SiteNav />
-      <div className="page-hero">
+      <div className="page-hero compact">
         <div className="wrap">
           <div className="kicker">Book</div>
           <h1>Two lanes. Pick yours.</h1>
           <p className="lede">Service requests get confirmed fast. Accident intakes go straight to Tracey—no self-booking for collision, because every accident deserves a human look first.</p>
         </div>
       </div>
-      <section style={{ paddingTop: 64 }}>
+      <section style={{ paddingTop: 32 }}>
         <div className="wrap">
           <Suspense>
             <BookFlow />
           </Suspense>
-          <div className="cta-band">
+          <div className="cta-band" style={{ marginTop: 48 }}>
             <h2>Rather just talk to a human?</h2>
             <p className="lede" style={{ margin: "0 auto" }}>Call or text—Mon–Fri 9–5, Sat 10–3.</p>
             <div className="hero-ctas">
