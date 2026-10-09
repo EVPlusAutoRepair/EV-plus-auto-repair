@@ -43,7 +43,7 @@ export default function RootLayout({
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "17:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "15:00" },
     ],
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "28" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "29" },
     sameAs: ["https://www.instagram.com/evplusautorepair/"],
   };
   return (
