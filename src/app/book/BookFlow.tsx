@@ -2,6 +2,7 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import DatePicker from "@/components/DatePicker";
 
 type Lane = "service" | "accident" | null;
 type Status = "idle" | "sending" | "sent" | "error";
@@ -152,7 +153,7 @@ function ServiceForm({ defaultService }: { defaultService?: string | null }) {
         {SERVICE_OPTIONS.map(([v, label]) => (<option key={v} value={v}>{label}</option>))}
       </select>
       <div className="form-row">
-        <div><label>Preferred date</label><input name="date" type="date" /></div>
+        <div><label>Preferred date</label><DatePicker name="date" /></div>
         <div><label>Need a Tesla rental?</label>
           <select name="rental"><option>Not sure yet</option><option>Yes</option><option>No</option></select>
         </div>
