@@ -25,7 +25,7 @@ export const POSTS: Post[] = [
     description:
       "See a Tesla Model Y with its high-voltage battery removed—and what a replacement actually involves at EV+ Auto Repair in Sun Valley, Los Angeles.",
     tag: "Battery",
-    date: "October 6, 2026",
+    date: "April 2, 2026",
     excerpt:
       "Most Tesla owners never see their high-voltage battery—it spans nearly the entire floor of the car. We pulled one from a Model Y, and here's what a replacement actually involves.",
     videoUrl: "https://www.instagram.com/reel/DWqJHtADUF_/",
@@ -71,7 +71,7 @@ export const POSTS: Post[] = [
     description:
       "Teslas don't need engine oil—but the drive unit gearbox fluid is a real service. Here's what Tesla won't tell you. EV+ Auto Repair, Sun Valley.",
     tag: "Maintenance",
-    date: "October 5, 2026",
+    date: "June 11, 2026",
     excerpt:
       "No engine means no engine oil—but your Tesla's drive unit runs in oil just like a transmission does. Here's the fluid service Tesla doesn't put on a schedule.",
     videoUrl: "https://www.instagram.com/reel/DZcBMaKtCmn/",
@@ -117,7 +117,7 @@ export const POSTS: Post[] = [
     description:
       'Tesla calls drive unit gearbox fluid a "lifetime fluid." We show you what it actually looks like at high mileage—you decide. Sun Valley, Los Angeles.',
     tag: "Maintenance",
-    date: "October 3, 2026",
+    date: "June 11, 2026",
     excerpt:
       "Tesla's official line: the drive unit fluid never needs changing. Our experience in the shop tells a different story—here's the honest nuance.",
     videoUrl: "https://www.instagram.com/reel/DZdboHvyaxH/",
@@ -167,7 +167,7 @@ export const POSTS: Post[] = [
     description:
       "We drained Tesla drive unit oil at 100,000 miles and sent it to a lab. Here's what was actually in it—and what it means for your Tesla.",
     tag: "Maintenance",
-    date: "October 1, 2026",
+    date: "August 25, 2026",
     excerpt:
       "Instead of arguing about \"lifetime fluid\" in theory, we got evidence: we drained the drive-unit oil at 100,000 miles and sent it to a lab.",
     videoUrl: "https://www.instagram.com/reel/DcfY3G-Nf7N/",
@@ -217,7 +217,7 @@ export const POSTS: Post[] = [
     description:
       "Feeling a kick or vibration in your Tesla Model 3? It's not normal—here's what causes it and how we diagnose it in Sun Valley, Los Angeles.",
     tag: "Suspension",
-    date: "September 29, 2026",
+    date: "April 21, 2026",
     excerpt:
       "A lot of Model 3 owners feel a \"kick\" or shudder and assume it's just how the car drives. It isn't—a healthy Model 3 drives smooth, and vibration is information.",
     videoUrl: "https://www.instagram.com/reel/DXYnU2EDWLh/",
@@ -263,7 +263,7 @@ export const POSTS: Post[] = [
     description:
       "Tesla battery replacement cost depends on year, model, and pack—plus new vs. used options. Honest breakdown from EV+ Auto Repair, Sun Valley.",
     tag: "Battery",
-    date: "September 26, 2026",
+    date: "April 8, 2026",
     excerpt:
       "\"What does a Tesla battery replacement cost?\" is the question every EV owner dreads—and the honest answer is: it depends. Here's what actually moves the number.",
     videoUrl: "https://www.instagram.com/reel/DW5PNHaDTP1/",
@@ -310,7 +310,7 @@ export const POSTS: Post[] = [
     description:
       "Teslas skip oil changes but still need maintenance: radiator cleaning, cabin filters, 12V battery, suspension, drive unit service. Full list here.",
     tag: "Maintenance",
-    date: "September 23, 2026",
+    date: "October 2, 2026",
     excerpt:
       "\"No maintenance\" is Tesla's most successful marketing line—and its most misunderstood. Here's the real maintenance list your Tesla actually needs.",
     videoUrl: "https://www.instagram.com/reel/DeBDJDJtFmV/",
@@ -357,7 +357,7 @@ export const POSTS: Post[] = [
     description:
       "Creaking from the front suspension of your Tesla? Usually control arms or bushings. Here's how we diagnose it—free inspection, Sun Valley.",
     tag: "Suspension",
-    date: "September 20, 2026",
+    date: "May 29, 2026",
     excerpt:
       "That creak from the front end when you turn or hit a bump is one of the most common Tesla complaints we see. It's usually wear talking—here's how we diagnose it.",
     videoUrl: "https://www.instagram.com/reel/DY81pygtUH8/",
@@ -403,7 +403,7 @@ export const POSTS: Post[] = [
     description:
       "Extend your Tesla battery's life: minimize supercharging, don't charge past 80% daily. Simple habits from EV+ Auto Repair, Sun Valley.",
     tag: "Battery",
-    date: "September 16, 2026",
+    date: "April 14, 2026",
     excerpt:
       "Your Tesla's battery is its most expensive component, and two daily habits matter more than everything else for keeping it healthy. Here's what battery engineers point to first.",
     videoUrl: "https://www.instagram.com/reel/DXIFdwZEts0/",
@@ -459,7 +459,7 @@ export const POSTS: Post[] = [
     description:
       "Tesla Model Y battery warranty: 8 years or 120,000 miles. What's covered, what's not, and when you're on your own—Sun Valley, Los Angeles.",
     tag: "Battery",
-    date: "September 12, 2026",
+    date: "April 6, 2026",
     excerpt:
       "The Model Y's battery warranty is one of the strongest in the industry—and a lot of owners don't know exactly what it covers, or when the clock runs out.",
     videoUrl: "https://www.instagram.com/reel/DW0fDtKDYe4/",
