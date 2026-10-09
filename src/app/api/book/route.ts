@@ -29,7 +29,8 @@ const SERVICE_LABELS: Record<string, string> = {
   "tire-rotation": "Tire rotation",
   "hv-battery": "HV battery concern",
   diagnostics: "Diagnostics / warning light",
-  "cabin-filter": "Cabin filter / radiator cleaning",
+  "cabin-filter": "Cabin filter replacement",
+  "radiator-cleaning": "Radiator cleaning",
   other: "Something else",
 };
 const serviceLabel = (v: string) => SERVICE_LABELS[v] ?? v;
