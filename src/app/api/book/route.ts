@@ -23,6 +23,8 @@ const SERVICE_LABELS: Record<string, string> = {
   "drive-unit-oil": "Drive-unit oil service",
   suspension: "Suspension / steering noise or vibration",
   "12v": "12V battery",
+  "16v": "16V lithium battery",
+  "tire-rotation": "Tire rotation",
   "hv-battery": "HV battery concern",
   diagnostics: "Diagnostics / warning light",
   "cabin-filter": "Cabin filter / radiator cleaning",

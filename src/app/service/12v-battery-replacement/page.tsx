@@ -5,9 +5,9 @@ import FaqSchema from "@/components/FaqSchema";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Tesla 12V Battery in Los Angeles | EV+ Auto Repair",
+  title: "Tesla 12V Battery Service in Los Angeles | EV+ Auto Repair",
   description:
-    "Tesla 12V battery replacement in Sun Valley, LA. Dead Tesla? The little battery causes big problems. Fast replacement. Free estimates: (818) 281-7757.",
+    "Tesla 12V battery testing & replacement in Sun Valley, LA. Dead Tesla? The little battery causes big problems. Fast testing, same-day replacement. Free estimates: (818) 281-7757.",
 };
 
 const faqs = [
@@ -38,7 +38,7 @@ export default function TwelveVBattery() {
         <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Tesla 12V Battery" }]} /></div>
         <div className="wrap">
           <div className="kicker">Tesla Service Center</div>
-          <h1>Tesla 12V Battery Replacement</h1>
+          <h1>Tesla 12V Battery Service</h1>
           <p className="lede">Your Tesla is completely dead—and the big battery was fine yesterday. Nine times out of ten, the culprit is the little 12V battery. Quick to test, quick to replace, cheap compared to what it mimics.</p>
         </div>
       </div>
@@ -56,9 +56,21 @@ export default function TwelveVBattery() {
           </div>
 
           <div style={{ marginTop: 56 }}>
+            <div className="kicker">Full 12V service</div>
+            <h2>Test, replace, and verify—not just a swap.</h2>
+            <p className="lede">A proper 12V service starts with testing: load-test the battery, check the charging circuit, and rule out parasitic drains before spending a dollar on parts. If the battery&rsquo;s done, we replace it with the correct unit for your model and year, then verify the car wakes, charges, and clears errors before it leaves. Usually same-day.</p>
+          </div>
+
+          <div style={{ marginTop: 56 }}>
+            <div className="kicker">Which battery do you have?</div>
+            <h2>12V or 16V? We&rsquo;ll check by VIN.</h2>
+            <p className="lede">Newer Teslas (Model S/X from late 2021, Model 3/Y from 2022) use a <a href="/service/16v-battery-service" style={{ color: "var(--acc)" }}>16V lithium low-voltage battery</a> instead of 12V lead-acid. They fail differently and need a different replacement. If your car is from the switchover years, don&rsquo;t guess—send us your VIN and we&rsquo;ll confirm in seconds.</p>
+          </div>
+
+          <div style={{ marginTop: 56 }}>
             <div className="kicker">The Tesla-specific part</div>
             <h2>The symptoms mimic serious problems.</h2>
-            <p className="lede">The symptoms of a dying 12V mimic serious problems: HV battery errors, charging faults, computers that won&rsquo;t boot. A general shop can chase those ghosts for hours. We check the 12V first because we&rsquo;ve seen this movie hundreds of times. Newer Teslas use a lithium 16V battery instead of lead-acid 12V—we stock and service the right one for your car, and we know which models made the switch.</p>
+            <p className="lede">The symptoms of a dying 12V mimic serious problems: HV battery errors, charging faults, computers that won&rsquo;t boot. A general shop can chase those ghosts for hours. We check the 12V first because we&rsquo;ve seen this movie hundreds of times.</p>
             <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
           </div>
 

@@ -14,7 +14,9 @@ const services = [
   { t: "Drive-unit / gearbox oil service", d: "Yes, your Tesla has oil. We service it.", href: "/service/drive-unit-oil-service" },
   { t: "Suspension & steering", d: "Creaks, clunks, vibrations, control arms, bushings.", href: "/service/suspension-steering" },
   { t: "HV battery service & replacement", d: "Diagnostics, module work, full replacement.", href: "/service/hv-battery-service" },
-  { t: "12V battery replacement", d: "The little battery that causes big problems.", href: "/service/12v-battery-replacement" },
+  { t: "12V battery service", d: "Testing & replacement—the little battery that causes big problems.", href: "/service/12v-battery-replacement" },
+  { t: "16V lithium battery service", d: "For newer Teslas with the 16V low-voltage battery.", href: "/service/16v-battery-service" },
+  { t: "Tire rotation", d: "Every 6,250 miles—EVs eat tires unevenly.", href: "/service/tire-rotation" },
   { t: "Cabin filters & radiator cleaning", d: "Airflow, cooling efficiency, the dirty jobs.", href: "/service/cabin-filters-radiator-cleaning" },
   { t: "Diagnostics", d: 'Warning lights, error messages, "something feels off."', href: "/service/diagnostics" },
 ];

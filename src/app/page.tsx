@@ -26,7 +26,7 @@ export default function Home() {
           <div className="cards">
             <a className="card" id="service" href="/service">
               <h3>Tesla Service Center</h3>
-              <p>Everything your Tesla needs to stay on the road: maintenance, inspections, drive-unit oil service, suspension, 12V batteries, HV battery service and replacement, diagnostics.</p>
+              <p>Everything your Tesla needs to stay on the road: maintenance, inspections, drive-unit oil service, suspension, 12V & 16V batteries, HV battery service and replacement, tire rotation, diagnostics.</p>
               <span className="more">Explore service →</span>
             </a>
             <a className="card" id="collision" href="/collision">
