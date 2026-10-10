@@ -13,7 +13,7 @@ export default function Home() {
           <p className="sub">EV+ Auto Repair is a family-owned Tesla service center and collision center in Los Angeles—maintenance, repairs, and accident recovery, all under one roof.</p>
           <div className="hero-ctas">
             <a className="btn" href="/service">I need service</a>
-            <a className="btn btn-ghost" href="/collision">I had an accident</a>
+            <a className="btn btn-light" href="/collision">I had an accident</a>
           </div>
           <div className="trust"><b>★ 5.0</b> on Google &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 12-month labor warranty</div>
         </div>
