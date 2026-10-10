@@ -15,7 +15,7 @@ export default function Home() {
             <a className="btn" href="/service">I need service</a>
             <a className="btn btn-light" href="/collision">I had an accident</a>
           </div>
-          <div className="trust"><b>★ 5.0</b> on Google &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 12-month labor warranty</div>
+          <div className="trust"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><b>★ 5.0</b> on Google</a> &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 12-month labor warranty</div>
         </div>
       </header>
 
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="kicker">Reviews</div>
           <div className="rev-head">
             <h2 style={{ margin: 0 }}>What Tesla owners say.</h2>
-            <div className="stars"><span>★★★★★</span> 5.0 on Google · 29 reviews</div>
+            <div className="stars"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Google · 29 reviews</a></div>
           </div>
           <div className="quotes">
             <div className="q">&ldquo;Great service. They resolved my suspension issue within a few minutes. I&rsquo;ve used them before and have always been satisfied with their service and work. I highly recommend them.&rdquo;<div className="who">— Gabriel Paz · Google review</div></div>
