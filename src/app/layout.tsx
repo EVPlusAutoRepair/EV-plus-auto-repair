@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MobileCallBar from "@/components/MobileCallBar";
+import ChatWidget from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://evplusautorepair.com"),
@@ -51,7 +52,7 @@ export default function RootLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </head>
-      <body>{children}<MobileCallBar /></body>
+      <body>{children}<MobileCallBar /><ChatWidget /></body>
     </html>
   );
 }
