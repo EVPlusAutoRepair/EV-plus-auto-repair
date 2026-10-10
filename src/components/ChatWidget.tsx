@@ -6,6 +6,7 @@ type Msg = { role: "user" | "assistant"; content: string };
 const FALLBACK =
   "Our chat is being set up right now—please call or text us at (818) 281-7757 and we'll take care of you.";
 
+// Chat backend: /api/chat (ANTHROPIC_API_KEY ready)
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [msgs, setMsgs] = useState<Msg[]>([
