@@ -16,8 +16,8 @@ const faqs = [
     a: "Almost always worn control arm bushings or end links. It's one of the most common Tesla complaints we see, and it's very fixable.",
   },
   {
-    q: "Can you replace just the bushing instead of the whole control arm?",
-    a: "Often, yes—and it costs less. We'll show you the worn part and give you both options honestly.",
+    q: "Do you replace the whole control arm or just the bushing?",
+    a: "We replace the full control arm—that's the proper repair. We'll show you the worn part on the lift so you can see exactly what failed.",
   },
   {
     q: "Will I need an alignment after suspension work?",
@@ -52,7 +52,7 @@ export default function SuspensionSteering() {
           <div style={{ marginTop: 56 }}>
             <div className="kicker">How we fix it</div>
             <h2>Diagnose the part, not the guess.</h2>
-            <p className="lede">We diagnose the actual worn component instead of throwing parts at it. Control arms, bushings, end links, ball joints—we replace what&rsquo;s worn with quality parts, and where it makes sense we can replace <b style={{ color: "var(--txt)" }}>just the bushing</b> instead of the whole arm (we&rsquo;ve shown this on video—it saves real money). Every suspension job gets a proper alignment check afterward, because new parts with bad alignment just wear out again.</p>
+            <p className="lede">We diagnose the actual worn component instead of throwing parts at it. Control arms, bushings, end links, ball joints—we replace what&rsquo;s worn with quality parts. When a control arm&rsquo;s bushings are shot, we replace the full arm—the right repair, done once. Every suspension job gets a proper alignment check afterward, because new parts with bad alignment just wear out again.</p>
           </div>
 
           <div style={{ marginTop: 56 }}>

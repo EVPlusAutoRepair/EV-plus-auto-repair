@@ -372,7 +372,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Diagnosis is straightforward on a lift: we check the control arms, bushings, ball joints, and related components, and show you exactly what's worn. In many cases the fix is replacing the arms or just the bushings—a routine job at a Tesla shop, and far cheaper than the tires you'll burn through ignoring it.",
+        text: "Diagnosis is straightforward on a lift: we check the control arms, bushings, ball joints, and related components, and show you exactly what's worn. In many cases the fix is replacing the worn arms—a routine job at a Tesla shop, and far cheaper than the tires you'll burn through ignoring it.",
       },
       {
         type: "myth",
@@ -382,8 +382,8 @@ export const POSTS: Post[] = [
     ],
     faqs: [
       {
-        q: "Can you replace just the bushing on a Tesla control arm?",
-        a: "Sometimes—it depends on the arm design and wear. We'll show you both options with honest pricing.",
+        q: "Do you replace the whole control arm or just the bushing?",
+        a: "The whole arm—that's the proper repair, and we'll show you the worn part so you can see why.",
       },
       {
         q: "How urgent is a creaking suspension?",
