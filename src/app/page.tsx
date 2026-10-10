@@ -101,6 +101,7 @@ export default function Home() {
           </div>
           <div className="hero-ctas" style={{ marginTop: 30, justifyContent: "flex-start" }}>
             <a className="btn btn-ghost" href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer">Read all our Google reviews</a>
+            <a className="btn btn-ghost" href="https://yelp.to/AXXN-njRiU" target="_blank" rel="noopener noreferrer">Find us on Yelp</a>
           </div>
         </div>
       </section>
