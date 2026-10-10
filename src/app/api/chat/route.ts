@@ -83,7 +83,10 @@ export async function POST(req: Request) {
         messages,
       }),
     });
-    if (!res.ok) throw new Error(`anthropic ${res.status}`);
+    if (!res.ok) {
+      const errBody = await res.text().catch(() => "");
+      return NextResponse.json({ ok: false, error: `anthropic_${res.status}`, detail: errBody.slice(0, 300) }, { status: 502 });
+    }
     const data = await res.json();
     const reply = data.content?.map((b: { text?: string }) => b.text || "").join("").trim();
     if (!reply) throw new Error("empty");
