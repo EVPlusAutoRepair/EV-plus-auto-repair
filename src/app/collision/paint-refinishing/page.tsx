@@ -59,7 +59,7 @@ export default function PaintRefinishing() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>Multi-coat colors shift with the light.</h2>
             <p className="lede">Tesla&rsquo;s multi-coat colors (especially red and pearl white) are notoriously hard to match—they shift with light angle, so blending technique matters as much as the paint code. We&rsquo;ve matched them across hundreds of repairs. Our before-and-after gallery shows the standard we hold.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

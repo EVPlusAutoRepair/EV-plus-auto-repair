@@ -59,7 +59,7 @@ export default function CabinFiltersRadiator() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>It&rsquo;s tied to battery thermal management.</h2>
             <p className="lede">Tesla&rsquo;s front intake design collects debris aggressively—we&rsquo;ve pulled shocking amounts of material out of radiators on video. And the cooling system doesn&rsquo;t just cool the cabin; it&rsquo;s tied to battery thermal management. A choked radiator makes everything work harder. This is a maintenance item most owners (and most general shops) never think about, which is exactly why we check it.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

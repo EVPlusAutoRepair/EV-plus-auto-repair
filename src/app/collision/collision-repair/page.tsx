@@ -64,7 +64,7 @@ export default function CollisionRepair() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>Tesla collision repair demands Tesla knowledge.</h2>
             <p className="lede">How the structures are built, which panels are aluminum, how the high-voltage system stays safe during repair, and which calibrations the car needs afterward. We repair Teslas every week—Model 3, Y, S, and X—and our before-and-after work is public.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Every repair is backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Every repair is backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

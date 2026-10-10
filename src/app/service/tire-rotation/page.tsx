@@ -59,7 +59,7 @@ export default function TireRotation() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>Torque matters more than you think.</h2>
             <p className="lede">Tesla wheels need proper torque sequence and spec—over-torqued lugs warp rotors and make the next removal miserable. We do it by the book, every time.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

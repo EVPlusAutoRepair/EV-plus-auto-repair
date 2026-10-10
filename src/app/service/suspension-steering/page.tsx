@@ -59,7 +59,7 @@ export default function SuspensionSteering() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>We know the failure points by model.</h2>
             <p className="lede">Tesla suspension isn&rsquo;t complicated, but it is specific: torque specs, ride-height calibration, and the fact that EVs wear components differently than gas cars. We know the common failure points by model—Model 3/Y front upper control arms, for example, are a known wear item—so diagnosis is fast and accurate. If your job takes more than a day, you&rsquo;ll be in an <b style={{ color: "var(--txt)" }}>on-site Tesla rental</b>, not a shuttle queue.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

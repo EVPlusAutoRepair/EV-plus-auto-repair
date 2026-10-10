@@ -63,7 +63,7 @@ export default function DriveUnitOil() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>This is where Tesla knowledge is everything.</h2>
             <p className="lede">The fluid spec varies by drive unit and model year. The filter exists on some units and not others. The procedure has to be done right or you get leaks and shifting complaints. We&rsquo;ve done this service across Model 3, Y, S, and X—and we documented the whole thing, including lab-testing used fluid, so you can see exactly why it matters.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">
