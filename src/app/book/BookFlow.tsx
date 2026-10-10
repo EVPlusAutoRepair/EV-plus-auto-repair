@@ -8,11 +8,11 @@ type Lane = "service" | "accident" | null;
 type Status = "idle" | "sending" | "sent" | "error";
 
 const SERVICE_OPTIONS: [string, string][] = [
+  ["inspection", "Free inspection — not sure what's wrong"],
   ["suspension", "Suspension / steering noise or vibration"],
   ["radiator-cleaning", "Radiator cleaning"],
   ["cabin-filter", "Cabin filter replacement"],
   ["maintenance", "Maintenance / scheduled service"],
-  ["inspection", "Free inspection — not sure what's wrong"],
   ["12v", "12V battery"],
   ["diagnostics", "Diagnostics / warning light"],
   ["tire-rotation", "Tire rotation"],
