@@ -27,7 +27,7 @@ a{color:inherit;text-decoration:none}
   .nav-links{display:none}
   .menu-btn{display:block}
   .nav-in{padding:10px 16px}
-  .logo img{height:64px}
+  .logo img{height:80px}
   .mobile-menu{display:flex;flex-direction:column;padding:4px 24px 22px;background:rgba(11,11,12,.98);border-top:1px solid var(--line)}
   .mobile-menu a{padding:13px 0;border-bottom:1px solid var(--line);font-size:17px;color:var(--txt);text-decoration:none}
   .mobile-menu a.btn{border-bottom:none}
