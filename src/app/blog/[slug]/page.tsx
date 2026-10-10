@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import InstagramEmbed from "@/components/InstagramEmbed";
 import { POSTS, getPost, getRelated, type Block } from "../posts";
 
 export async function generateStaticParams() {
@@ -71,15 +72,7 @@ export default async function BlogPost({
             {post.body.map(renderBlock)}
 
             {post.videoUrl && (
-              <a
-                className="video-link"
-                href={post.videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="play">▶</span>
-                <span>Watch the original shop video for this article on Instagram</span>
-              </a>
+              <InstagramEmbed key={post.videoUrl} url={post.videoUrl} />
             )}
 
             <a className="svc-link" href={post.serviceLink.href}>
