@@ -93,6 +93,7 @@ export default function Home() {
           <div className="rev-head">
             <h2 style={{ margin: 0 }}>What Tesla owners say.</h2>
             <div className="stars"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Google · 29 reviews</a></div>
+            <div className="stars" style={{ marginTop: 12 }}><a href="https://yelp.to/AXXN-njRiU" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★</span> Find us on Yelp</a></div>
           </div>
           <div className="quotes">
             <div className="q">&ldquo;Great service. They resolved my suspension issue within a few minutes. I&rsquo;ve used them before and have always been satisfied with their service and work. I highly recommend them.&rdquo;<div className="who">— Gabriel Paz · Google review</div></div>
@@ -101,7 +102,6 @@ export default function Home() {
           </div>
           <div className="hero-ctas" style={{ marginTop: 30, justifyContent: "flex-start" }}>
             <a className="btn btn-ghost" href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer">Read all our Google reviews</a>
-            <a className="btn btn-ghost" href="https://yelp.to/AXXN-njRiU" target="_blank" rel="noopener noreferrer">Find us on Yelp</a>
           </div>
         </div>
       </section>
