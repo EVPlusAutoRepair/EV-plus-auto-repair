@@ -116,6 +116,7 @@ export async function POST(req: NextRequest) {
   }
 
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, BOOKING_TO } = process.env;
+  // All five vars must be present in the deployment's environment.
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
     // Email delivery isn't wired up yet — surface this so the client can
     // show the call/text fallback instead of pretending it worked.
