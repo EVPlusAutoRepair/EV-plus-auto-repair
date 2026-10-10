@@ -15,7 +15,7 @@ export default function Home() {
             <a className="btn" href="/service">I need service</a>
             <a className="btn btn-light" href="/collision">I had an accident</a>
           </div>
-          <div className="trust"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><b>★ 5.0</b> on Google</a> &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 12-month labor warranty</div>
+          <div className="trust"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><b>★ 5.0</b> on Google</a> &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 6-12 months labor warranty</div>
         </div>
       </header>
 
@@ -26,7 +26,7 @@ export default function Home() {
           <div className="cards">
             <a className="card" id="service" href="/service">
               <h3>Tesla Service Center</h3>
-              <p>Everything your Tesla needs to stay on the road: maintenance, inspections, drive-unit oil service, suspension, 12V & 16V batteries, HV battery service and replacement, tire rotation, diagnostics.</p>
+              <p>Everything your Tesla needs to stay on the road: maintenance, inspections, drive-unit oil service, suspension, 12V & 16V batteries, HV battery replacement, tire rotation, diagnostics.</p>
               <span className="more">Explore service →</span>
             </a>
             <a className="card" id="collision" href="/collision">
@@ -58,10 +58,10 @@ export default function Home() {
           <h2>Back on the road in 5 steps.</h2>
           <div className="steps">
             <div className="step"><div className="n">01</div><h4>Call us</h4><p><a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>. Tell us about the issue or the damage; we schedule your free estimate.</p></div>
-            <div className="step"><div className="n">02</div><h4>Drop off</h4><p>Bring your Tesla to 9755 Glenoaks Blvd, Sun Valley.</p></div>
+            <div className="step"><div className="n">02</div><h4>Drop off</h4><p>Bring your Tesla to <a href="https://maps.google.com/?q=9755+Glenoaks+Blvd,+Sun+Valley,+CA+91352" target="_blank" rel="noopener noreferrer" style={{ color: "var(--acc)" }}>9755 Glenoaks Blvd, Sun Valley, CA 91352</a>.</p></div>
             <div className="step"><div className="n">03</div><h4>Rental car</h4><p>Ask about an on-site Tesla rental from our sister company—subject to availability.</p></div>
             <div className="step"><div className="n">04</div><h4>Repairs &amp; updates</h4><p>We fix it and keep you updated with photos along the way.</p></div>
-            <div className="step"><div className="n">05</div><h4>Pickup</h4><p>Back on the road, backed by our 12-month labor warranty.</p></div>
+            <div className="step"><div className="n">05</div><h4>Pickup</h4><p>Back on the road, backed by our 6-12 months labor warranty.</p></div>
           </div>
         </div>
       </section>
@@ -73,12 +73,12 @@ export default function Home() {
             <div>
               <div className="kicker">Why EV+</div>
               <h2>Tesla is our specialty.</h2>
-              <p className="lede">Family-owned and operated in Sun Valley since 2017. Tesla service, maintenance, batteries, and collision are what we do best—honest pricing, original equipment parts, photo updates during every repair, and we work directly with your insurance company.</p>
+              <p className="lede">Family-owned and operated in Sun Valley since 2016. Tesla service, maintenance, batteries, and collision are what we do best—honest pricing, photo updates during every repair, and we work directly with your insurance company.</p>
               <p className="lede" style={{ marginTop: 14 }}>Our collision center also performs body repair on other EVs and gas vehicles—so don&rsquo;t be surprised to see a few non-Teslas around the shop. Service and maintenance stays Tesla-only.</p>
               <ul className="ticks">
                 <li><b>Tesla specialists</b>—not a general shop</li>
                 <li><b>Free estimates</b> &amp; inspections</li>
-                <li><b>12-month labor warranty</b></li>
+                <li><b>6-12 months labor warranty</b></li>
                 <li><b>On-site Tesla rentals</b> via EV+ Auto Rentals LLC (subject to availability)</li>
                 <li><b>We handle insurance claims</b> start to finish</li>
               </ul>
@@ -92,9 +92,8 @@ export default function Home() {
           <div className="kicker">Reviews</div>
           <div className="rev-head">
             <h2 style={{ margin: 0 }}>What Tesla owners say.</h2>
-            <div className="stars"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Google · 29 reviews</a></div>
-            <div className="stars" style={{ marginTop: 12 }}><a href="https://yelp.to/AXXN-njRiU" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Yelp · 10 reviews</a></div>
           </div>
+          <div className="stars" style={{ marginBottom: 28 }}><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Google · 29 reviews</a></div>
           <div className="quotes">
             <div className="q">&ldquo;Great service. They resolved my suspension issue within a few minutes. I&rsquo;ve used them before and have always been satisfied with their service and work. I highly recommend them.&rdquo;<div className="who">— Gabriel Paz · Google review</div></div>
             <div className="q">&ldquo;I recently brought my car in for accident damage, and they did an incredible job—my Tesla looks brand new again! They also handled everything related to the insurance claim. Professional, precise, timely, and very communicative.&rdquo;<div className="who">— Preni Amijanian · Google review</div></div>

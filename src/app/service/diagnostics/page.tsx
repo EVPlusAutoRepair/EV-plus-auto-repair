@@ -59,7 +59,7 @@ export default function Diagnostics() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>Not generic OBD-II guesswork.</h2>
             <p className="lede">Tesla diagnostics aren&rsquo;t generic OBD-II guesswork. The car&rsquo;s systems—battery management, drive units, thermal, autopilot—speak Tesla&rsquo;s language, and interpreting them correctly takes Tesla experience. We&rsquo;ve diagnosed everything from phantom 12V failures masquerading as HV battery errors to suspension noises owners were told were &ldquo;normal.&rdquo; The diagnostic is free because we&rsquo;d rather earn your trust than charge you to look.</p>
-            <p className="lede" style={{ marginTop: 16 }}>If the repair takes more than a day, you&rsquo;ll be in an <b style={{ color: "var(--txt)" }}>on-site Tesla rental</b>—and every repair is backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>If the repair takes more than a day, you&rsquo;ll be in an <b style={{ color: "var(--txt)" }}>on-site Tesla rental</b>—and every repair is backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">
@@ -78,7 +78,7 @@ export default function Diagnostics() {
               {" · "}
               <a href="/service/maintenance-inspections" style={{ color: "var(--acc)" }}>Maintenance &amp; Inspections</a>
               {" · "}
-              <a href="/service/hv-battery-service" style={{ color: "var(--acc)" }}>HV Battery Service</a>
+              <a href="/service/hv-battery-service" style={{ color: "var(--acc)" }}>HV Battery Replacement</a>
             </p>
           </div>
 

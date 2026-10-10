@@ -6,19 +6,19 @@ import FaqSchema from "@/components/FaqSchema";
 export const metadata: Metadata = {
   title: "Tesla Service Center in Los Angeles | EV+ Auto Repair",
   description:
-    "Tesla maintenance & repair in Los Angeles: inspections, drive-unit oil, suspension, 12V & HV battery service, diagnostics. Free estimates—(818) 281-7757.",
+    "Tesla maintenance & repair in Los Angeles: inspections, drive-unit oil, suspension, 12V & HV battery replacement, diagnostics. Free estimates—(818) 281-7757.",
 };
 
 const services = [
   { t: "Maintenance & inspections", d: "Free inspections, scheduled maintenance, the stuff Tesla doesn't tell you about.", href: "/service/maintenance-inspections" },
-  { t: "Drive-unit / gearbox oil service", d: "Yes, your Tesla has oil. We service it.", href: "/service/drive-unit-oil-service" },
   { t: "Suspension & steering", d: "Creaks, clunks, vibrations, control arms, bushings.", href: "/service/suspension-steering" },
-  { t: "HV battery service & replacement", d: "Diagnostics, module work, full replacement.", href: "/service/hv-battery-service" },
+  { t: "Cabin filters & radiator cleaning", d: "Airflow, cooling efficiency, the dirty jobs.", href: "/service/cabin-filters-radiator-cleaning" },
+  { t: "Drive-unit / gearbox oil service", d: "Yes, your Tesla has oil. We service it.", href: "/service/drive-unit-oil-service" },
+  { t: "Tire rotation", d: "Every 6,250 miles—EVs eat tires unevenly.", href: "/service/tire-rotation" },
   { t: "12V battery service", d: "Testing & replacement—the little battery that causes big problems.", href: "/service/12v-battery-replacement" },
   { t: "16V lithium battery service", d: "For newer Teslas with the 16V low-voltage battery.", href: "/service/16v-battery-service" },
-  { t: "Tire rotation", d: "Every 6,250 miles—EVs eat tires unevenly.", href: "/service/tire-rotation" },
-  { t: "Cabin filters & radiator cleaning", d: "Airflow, cooling efficiency, the dirty jobs.", href: "/service/cabin-filters-radiator-cleaning" },
   { t: "Diagnostics", d: 'Warning lights, error messages, "something feels off."', href: "/service/diagnostics" },
+  { t: "HV battery replacement", d: "Failed pack? We replace it with a low-mileage used battery.", href: "/service/hv-battery-service" },
 ];
 
 const faqs = [
@@ -36,7 +36,7 @@ export default function ServiceCenter() {
         <div className="wrap">
           <div className="kicker">Tesla Service Center</div>
           <h1>Tesla Service Center—Los Angeles</h1>
-          <p className="lede">Your Tesla doesn&rsquo;t need a general mechanic—it needs people who work on Teslas all day, every day. Our service center handles everything your Tesla needs outside of collisions: maintenance, repairs, batteries, and diagnostics. Tesla vehicles only.</p>
+          <p className="lede">Your Tesla doesn&rsquo;t need a general mechanic&mdash;it needs people who work on Teslas all day, every day. Our service center handles everything your Tesla needs: maintenance, repairs, batteries, and diagnostics. Tesla vehicles only. If you need help with body work or collision, <a href="/collision" style={{ color: "var(--acc)" }}>click here</a>!</p>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ export default function ServiceCenter() {
             <ul className="ticks" style={{ maxWidth: 560 }}>
               <li><b>Tesla specialists</b>—not a general shop</li>
               <li><b>Free inspections</b> &amp; estimates</li>
-              <li><b>12-month labor warranty</b></li>
+              <li><b>6-12 months labor warranty</b></li>
               <li><b>Photo updates</b> during every repair</li>
               <li><b>On-site Tesla rentals</b> if the job takes days</li>
             </ul>

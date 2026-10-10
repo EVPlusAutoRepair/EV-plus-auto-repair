@@ -71,7 +71,7 @@ export default function TwelveVBattery() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>The symptoms mimic serious problems.</h2>
             <p className="lede">The symptoms of a dying 12V mimic serious problems: HV battery errors, charging faults, computers that won&rsquo;t boot. A general shop can chase those ghosts for hours. We check the 12V first because we&rsquo;ve seen this movie hundreds of times.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

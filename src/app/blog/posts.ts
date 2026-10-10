@@ -62,7 +62,7 @@ export const POSTS: Post[] = [
         a: "It depends on the model and parts availability, but a specialized shop works far faster than a general repair shop figuring it out for the first time.",
       },
     ],
-    serviceLink: { href: "/service/hv-battery-service", label: "HV battery service & replacement" },
+    serviceLink: { href: "/service/hv-battery-service", label: "HV battery replacement" },
   },
   {
     slug: "does-your-tesla-need-an-oil-change",
@@ -301,7 +301,7 @@ export const POSTS: Post[] = [
         a: "A healthy pack—new or quality used—delivers years of service. Battery health, not just age, is what matters, and we verify it.",
       },
     ],
-    serviceLink: { href: "/service/hv-battery-service", label: "HV battery service & replacement" },
+    serviceLink: { href: "/service/hv-battery-service", label: "HV battery replacement" },
   },
   {
     slug: "do-teslas-need-maintenance",
@@ -450,7 +450,7 @@ export const POSTS: Post[] = [
         a: "LFP (lithium iron phosphate) packs have different guidance—Tesla recommends charging those to 100% periodically. Know your pack type.",
       },
     ],
-    serviceLink: { href: "/service/hv-battery-service", label: "HV battery service & replacement" },
+    serviceLink: { href: "/service/hv-battery-service", label: "HV battery replacement" },
   },
   {
     slug: "tesla-model-y-battery-warranty",
@@ -507,7 +507,7 @@ export const POSTS: Post[] = [
         a: "Get a battery health diagnostic. If there's a covered issue, you want it found while Tesla is still paying. Our inspections are free.",
       },
     ],
-    serviceLink: { href: "/service/hv-battery-service", label: "HV battery service & replacement" },
+    serviceLink: { href: "/service/hv-battery-service", label: "HV battery replacement" },
   },
 ];
 

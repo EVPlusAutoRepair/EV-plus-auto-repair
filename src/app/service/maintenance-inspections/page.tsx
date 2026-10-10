@@ -60,7 +60,7 @@ export default function MaintenanceInspections() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>Pattern recognition is the whole job.</h2>
             <p className="lede">A general shop sees a car. We see a Model 3 with 80,000 miles and know exactly what&rsquo;s likely worn—because we&rsquo;ve seen hundreds of them. We know which model years eat 12V batteries, which ones creak from control arm bushings, and what &ldquo;normal&rdquo; looks like for every Tesla system.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Every maintenance visit includes photo updates if we find anything, and our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b> backs the work.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Every maintenance visit includes photo updates if we find anything, and our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b> backs the work.</p>
           </div>
 
           <div className="faq">
