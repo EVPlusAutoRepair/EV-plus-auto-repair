@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EV+ Auto Repair—Tesla Service & Collision Center, Los Angeles",
     description:
-      "Your Tesla, serviced and repaired by people who specialize in Teslas. Free estimates, 12-month labor warranty, on-site Tesla rentals.",
+      "Your Tesla, serviced and repaired by people who specialize in Teslas. Free estimates, 6-12 months labor warranty, on-site Tesla rentals.",
     type: "website",
     images: [{ url: "https://evplusautorepair.com/og.jpg", width: 1200, height: 630 }],
   },

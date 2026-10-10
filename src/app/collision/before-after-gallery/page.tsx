@@ -63,7 +63,7 @@ export default function BeforeAfterGallery() {
             <div className="kicker">Why we show our work</div>
             <h2>A body shop&rsquo;s gallery is its resume.</h2>
             <p className="lede">Ours shows what Tesla collision repair looks like when it&rsquo;s done by people who specialize in Teslas: factory panel gaps, invisible paint blends, calibrated systems. If your car looks like one of the &ldquo;before&rdquo; photos, we already know exactly how to fix it.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Every repair shown here is backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>—and every customer got photo updates throughout, just like you will.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Every repair shown here is backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>—and every customer got photo updates throughout, just like you will.</p>
           </div>
 
           <div className="faq">

@@ -59,7 +59,7 @@ export default function ADASCalibration() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>On a Tesla, calibration is core to how the car drives.</h2>
             <p className="lede">Camera aiming and system verification all have to be right, or the car tells you about it every drive. We calibrate cameras in-house after bodywork, so nothing falls between two shops—ask us about radar and sensor calibration for your specific repair.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

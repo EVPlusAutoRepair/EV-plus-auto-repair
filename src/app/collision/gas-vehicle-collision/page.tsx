@@ -48,7 +48,7 @@ export default function GasVehicleCollision() {
           <div style={{ marginTop: 56 }}>
             <div className="kicker">What we do</div>
             <h2>Same craftsmen. Same paint booth. Same warranty.</h2>
-            <p className="lede">Bumper repair and replacement, fender and panel repair, paint matching and refinishing, dent repair, and full collision repair after an accident—including insurance-claim handling, just like our Tesla work. The same craftsmen, the same paint booth, the same <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>.</p>
+            <p className="lede">Bumper repair and replacement, fender and panel repair, paint matching and refinishing, dent repair, and full collision repair after an accident—including insurance-claim handling, just like our Tesla work. The same craftsmen, the same paint booth, the same <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>.</p>
           </div>
 
           <div className="faq">

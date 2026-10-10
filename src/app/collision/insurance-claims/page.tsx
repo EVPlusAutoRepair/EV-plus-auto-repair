@@ -63,7 +63,7 @@ export default function InsuranceClaims() {
             <div className="kicker">The Tesla-specific part</div>
             <h2>Tesla claims go wrong when adjusters write for generic cars.</h2>
             <p className="lede">Missing Tesla-specific procedures, underestimating calibration, or spec&rsquo;ing aftermarket parts. We know what a proper Tesla repair requires and we document it, so supplements get approved instead of argued. We&rsquo;ve worked with all the major carriers and we speak their language.</p>
-            <p className="lede" style={{ marginTop: 16 }}>Every insurance repair is backed by our <b style={{ color: "var(--txt)" }}>12-month labor warranty</b>, and you get photo updates throughout.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Every insurance repair is backed by our <b style={{ color: "var(--txt)" }}>6-12 months labor warranty</b>, and you get photo updates throughout.</p>
           </div>
 
           <div className="faq">

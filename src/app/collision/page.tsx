@@ -23,7 +23,7 @@ const steps = [
   { n: "02", t: "Free estimate", d: "Free estimate at the shop." },
   { n: "03", t: "We handle insurance", d: "We handle the insurance claim and approvals." },
   { n: "04", t: "Drive a Tesla rental", d: "Ask about an on-site Tesla rental while we repair (subject to availability)." },
-  { n: "05", t: "Pickup", d: "Photo updates throughout; pickup backed by our 12-month labor warranty." },
+  { n: "05", t: "Pickup", d: "Photo updates throughout; pickup backed by our 6-12 months labor warranty." },
 ];
 
 const faqs = [

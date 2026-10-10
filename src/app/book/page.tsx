@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Book Tesla Service or Start an Accident Claim | EV+ Auto Repair",
   description:
-    "Book Tesla service in Los Angeles or start an accident intake with photo estimate. Free inspections, on-site Tesla rentals, 12-month labor warranty. Call/text (818) 281-7757.",
+    "Book Tesla service in Los Angeles or start an accident intake with photo estimate. Free inspections, on-site Tesla rentals, 6-12 months labor warranty. Call/text (818) 281-7757.",
 };
 
 export default function Book() {
