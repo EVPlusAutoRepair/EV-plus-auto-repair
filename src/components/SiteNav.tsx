@@ -6,6 +6,7 @@ const links = [
   { href: "/collision", label: "Collision Center" },
   { href: "/rentals", label: "Rentals" },
   { href: "/blog", label: "Blog" },
+  { href: "/about", label: "About" },
   { href: "/#reviews", label: "Reviews" },
   { href: "/#areas", label: "Areas" },
 ];

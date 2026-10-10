@@ -45,7 +45,7 @@ export default function Rentals() {
           <div className="faq">
             <div className="faq-item">
               <h4>Is the rental company part of EV+ Auto Repair?</h4>
-              <p>EV+ Auto Rentals LLC is our sister company and operates on-site at the same address—9755 Glenoaks Blvd, Sun Valley. One location, one visit.</p>
+              <p>EV+ Auto Rentals LLC is our sister company and operates on-site at the same address—9755 Glenoaks Blvd, Sun Valley, CA 91352. One location, one visit.</p>
             </div>
             <div className="faq-item">
               <h4>Can I get a rental if my repair isn&rsquo;t accident-related?</h4>

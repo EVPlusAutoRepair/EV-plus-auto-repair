@@ -14,6 +14,7 @@ const services = [
   { t: "Suspension & steering", d: "Creaks, clunks, vibrations, control arms, bushings.", href: "/service/suspension-steering" },
   { t: "Cabin filters & radiator cleaning", d: "Airflow, cooling efficiency, the dirty jobs.", href: "/service/cabin-filters-radiator-cleaning" },
   { t: "Drive-unit / gearbox oil service", d: "Yes, your Tesla has oil. We service it.", href: "/service/drive-unit-oil-service" },
+  { t: "Drive unit bushing replacement", d: "Kick or vibration under acceleration? Torn bushing—we replace it.", href: "/service/drive-unit-bushing-replacement" },
   { t: "Tire rotation", d: "Every 6,250 miles—EVs eat tires unevenly.", href: "/service/tire-rotation" },
   { t: "12V battery service", d: "Testing & replacement—the little battery that causes big problems.", href: "/service/12v-battery-replacement" },
   { t: "16V lithium battery service", d: "For newer Teslas with the 16V low-voltage battery.", href: "/service/16v-battery-service" },
@@ -36,7 +37,7 @@ export default function ServiceCenter() {
         <div className="wrap">
           <div className="kicker">Tesla Service Center</div>
           <h1>Tesla Service Center—Los Angeles</h1>
-          <p className="lede">Your Tesla doesn&rsquo;t need a general mechanic&mdash;it needs people who work on Teslas all day, every day. Our service center handles everything your Tesla needs: maintenance, repairs, batteries, and diagnostics. Tesla vehicles only. If you need help with body work or collision, <a href="/collision" style={{ color: "var(--acc)" }}>click here</a>!</p>
+          <p className="lede">Your Tesla doesn&rsquo;t need a general mechanic&mdash;it needs people who work on Teslas all day, every day. Our service center handles everything your Tesla needs: maintenance, repairs, batteries, and diagnostics. Tesla vehicles only.</p>
         </div>
       </div>
 

@@ -4,12 +4,15 @@ const URL = "https://evplusautorepair.com";
 
 const serviceSlugs = [
   "12v-battery-replacement",
+  "16v-battery-service",
   "maintenance-inspections",
   "drive-unit-oil-service",
+  "drive-unit-bushing-replacement",
   "suspension-steering",
   "hv-battery-service",
   "cabin-filters-radiator-cleaning",
   "diagnostics",
+  "tire-rotation",
 ];
 const collisionSlugs = [
   "collision-repair",
@@ -41,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${URL}/rentals`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${URL}/book`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
   ];
   for (const s of serviceSlugs)
     pages.push({ url: `${URL}/service/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
