@@ -7,6 +7,7 @@ const FALLBACK =
   "Our chat is being set up right now—please call or text us at (818) 281-7757 and we'll take care of you.";
 
 const STORE_KEY = "evplus-chat-v1";
+const BOOK_KEY = "evplus-booking-sent";
 
 const GREETING: Msg = {
   role: "assistant",
@@ -44,12 +45,16 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [dead, setDead] = useState(false);
+  const [bookingSent, setBookingSent] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
 
   // Restore previous conversation if the visitor comes back
   useEffect(() => {
     const saved = loadSaved();
     if (saved) setMsgs(saved);
+    try {
+      if (localStorage.getItem(BOOK_KEY) === "1") setBookingSent(true);
+    } catch {}
   }, []);
 
   // Persist conversation on every change
@@ -76,10 +81,16 @@ export default function ChatWidget() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: next.slice(-12) }),
+        body: JSON.stringify({ messages: next.slice(-12), bookingSent }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.reply) throw new Error("bad");
+      if (data.bookingSent && !bookingSent) {
+        setBookingSent(true);
+        try {
+          localStorage.setItem(BOOK_KEY, "1");
+        } catch {}
+      }
       setMsgs([...next, { role: "assistant", content: data.reply }]);
     } catch {
       setDead(true);
@@ -87,6 +98,17 @@ export default function ChatWidget() {
     } finally {
       setBusy(false);
     }
+  }
+
+  function newChat() {
+    try {
+      localStorage.removeItem(STORE_KEY);
+      localStorage.removeItem(BOOK_KEY);
+    } catch {}
+    setMsgs([GREETING]);
+    setBookingSent(false);
+    setDead(false);
+    setInput("");
   }
 
   return (
@@ -116,11 +138,23 @@ export default function ChatWidget() {
           }}
           className="chat-panel"
         >
-          <div style={{ padding: "14px 18px", borderBottom: "1px solid var(--line)", fontWeight: 800 }}>
-            Chat with EV+
-            <div style={{ fontWeight: 400, fontSize: 13, color: "var(--mut)", marginTop: 2 }}>
-              Tesla service &amp; repair · Sun Valley, LA
+          <div style={{ padding: "14px 18px", borderBottom: "1px solid var(--line)", fontWeight: 800, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 8 }}>
+            <div>
+              Chat with EV+
+              <div style={{ fontWeight: 400, fontSize: 13, color: "var(--mut)", marginTop: 2 }}>
+                Tesla service &amp; repair · Sun Valley, LA
+              </div>
             </div>
+            <button
+              onClick={newChat}
+              aria-label="Start a new chat"
+              style={{
+                background: "none", border: "1px solid var(--line)", color: "var(--mut)",
+                borderRadius: 8, padding: "4px 10px", fontSize: 12, cursor: "pointer", flexShrink: 0,
+              }}
+            >
+              New chat
+            </button>
           </div>
           <div ref={boxRef} style={{ flex: 1, overflowY: "auto", padding: 16, display: "flex", flexDirection: "column", gap: 10 }}>
             {msgs.map((m, i) => (

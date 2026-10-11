@@ -41,6 +41,12 @@ HOW TO TALK (this is how the shop actually talks to customers):
 - Be reassuring about safety: if something sounds urgent (steering, suspension noise, brakes), tell them to avoid high speeds until it's inspected.
 - If they share their name, phone, or email, thank them and say someone from the shop will follow up.
 
+BOOKING IN CHAT:
+- When the visitor wants to book, schedule, or get their car seen (service, free inspection, estimate), collect what you need conversationally, ONE question at a time: their name, then their phone number, then year and model, then what's needed, then their preferred day/time.
+- As soon as you have their name, phone number, and what's needed, tell them you're sending the request to the shop right now and someone will text or call to confirm the time. Keep it short and warm.
+- Never invent availability or promise a specific slot — the shop confirms the actual time.
+- /book on the site and (818) 281-7757 remain options, but try to complete the booking right here in chat first.
+
 RULES:
 - If someone describes car trouble, acknowledge it briefly, name the likely service from the list, and offer the free inspection + booking link (/book).
 - If they ask the price of a listed service, quote it with "around". If the service isn't listed, offer the free inspection for an exact quote. Never invent a price.
@@ -74,17 +80,95 @@ async function sendLeadEmail(transcript: string) {
   }
 }
 
+async function sendBookingEmail(
+  b: { name: string; phone: string; year: string; model: string; service: string; preferred_time: string },
+  transcript: string
+): Promise<boolean> {
+  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, BOOKING_TO } = process.env;
+  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) return false;
+  try {
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: Number(SMTP_PORT || 587),
+      secure: Number(SMTP_PORT) === 465,
+      auth: { user: SMTP_USER, pass: SMTP_PASS },
+    });
+    const tesla = `${b.year || ""} ${b.model || ""}`.trim() || "—";
+    await transporter.sendMail({
+      from: `"EV+ Website" <${SMTP_USER}>`,
+      to: BOOKING_TO || "info@evplusautorepair.com",
+      subject: `Chat booking request — ${b.name}`,
+      text: [
+        "NEW CHAT BOOKING REQUEST (website chat)",
+        "",
+        `Name: ${b.name}`,
+        `Phone: ${b.phone}`,
+        `Tesla: ${tesla}`,
+        `Service needed: ${b.service}`,
+        `Preferred time: ${b.preferred_time || "—"}`,
+        "",
+        "Transcript:",
+        transcript,
+      ].join("\n"),
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Lightweight second pass: pull structured booking fields out of the chat.
+async function extractBooking(
+  key: string,
+  messages: { role: string; content: string }[]
+): Promise<{
+  wants_to_book: boolean;
+  name: string;
+  phone: string;
+  year: string;
+  model: string;
+  service: string;
+  preferred_time: string;
+} | null> {
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "x-api-key": key,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 200,
+        system:
+          'Extract booking details from this website chat. Reply with JSON only, no other text: {"wants_to_book": boolean, "name": string, "phone": string, "year": string, "model": string, "service": string, "preferred_time": string}. wants_to_book is true only if the visitor asked to book, schedule, or get their car seen. Use "" for anything not stated.',
+        messages: messages.map((m) => ({ role: m.role, content: m.content.slice(0, 1000) })),
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const text: string =
+      data.content?.map((b: { text?: string }) => b.text || "").join("").trim() || "";
+    const json = text.match(/\{[\s\S]*\}/)?.[0];
+    return json ? JSON.parse(json) : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function POST(req: Request) {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) {
     return NextResponse.json({ ok: false, error: "not_configured" }, { status: 503 });
   }
-  let body: { messages?: { role: string; content: string }[] };
+  let body: { messages?: { role: string; content: string }[]; bookingSent?: boolean };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ ok: false, error: "bad_request" }, { status: 400 });
   }
+  const alreadyBooked = body.bookingSent === true;
   const messages = (body.messages || [])
     .filter((m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
     .slice(-12)
@@ -118,10 +202,20 @@ export async function POST(req: Request) {
 
     // Fire-and-forget lead capture when contact info appears
     const transcript = messages.map((m) => `${m.role}: ${m.content}`).join("\n");
-    if (hasContact(transcript)) {
+
+    // In-chat booking: if the visitor asked to book and gave name + phone + service,
+    // email the shop a booking request (once per conversation).
+    let bookingSent = alreadyBooked;
+    if (!alreadyBooked) {
+      const bk = await extractBooking(key, [...messages, { role: "assistant", content: reply }]);
+      if (bk && bk.wants_to_book && bk.name && bk.phone && bk.service) {
+        bookingSent = await sendBookingEmail(bk, `${transcript}\nassistant: ${reply}`);
+      }
+    }
+    if (!bookingSent && hasContact(transcript)) {
       sendLeadEmail(transcript).catch(() => {});
     }
-    return NextResponse.json({ ok: true, reply });
+    return NextResponse.json({ ok: true, reply, bookingSent });
   } catch {
     return NextResponse.json({ ok: false, error: "chat_failed" }, { status: 502 });
   }
