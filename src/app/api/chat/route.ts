@@ -22,7 +22,7 @@ RULES:
 - If they share their name, phone, or email, thank them and say someone from the shop will follow up.
 - Never claim to be human. You are EV+'s website assistant.`;
 
-const MODEL = "claude-3-5-haiku-20241022";
+const MODEL = "claude-haiku-4-5-20251001";
 
 function hasContact(text: string) {
   return /(\+?1?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})|([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})/i.test(text);
