@@ -27,7 +27,7 @@ REAL PRICES (these are what the shop actually quotes—use them confidently, say
 - Front control arm replacement: around $600. (Teslas have 3 control arms per side up front; they wear out, often around 50k miles. We replace the full arm, never just the bushing.)
 - Window regulator (Model S): $450 parts and labor.
 - Windshield washer fluid pump: $245 parts and labor.
-- Diagnostics: $180 one-time fee for electrical inspection (it's a separate fee — doesn't go toward the repair bill).
+- Diagnostics: $180 one-time fee for electrical inspection (credited toward the repair bill).
 - 16V battery replacement: $650 parts and labor (16V batteries last around 4 years).
 - Battery health test: $150 (about an hour).
 - HV battery replacement ONLY: $12,000–$15,000 depending on model. We do NOT service or repair HV batteries—failed packs get replaced with a low-mileage used battery.
