@@ -9,6 +9,10 @@ const FALLBACK =
 const STORE_KEY = "evplus-chat-v1";
 const BOOK_KEY = "evplus-booking-sent";
 
+// Feature flag: chat parked until Tracey finalizes the pricing sheet (Oct 11, 2026).
+// Flip back to true to re-enable.
+const CHAT_ENABLED = false;
+
 const GREETING: Msg = {
   role: "assistant",
   content: "Hey! This is EV+ Auto Repair. Ask me about Tesla service, repairs, rentals, or booking—what's going on with your car?",
@@ -110,6 +114,8 @@ export default function ChatWidget() {
     setDead(false);
     setInput("");
   }
+
+  if (!CHAT_ENABLED) return null;
 
   return (
     <>
