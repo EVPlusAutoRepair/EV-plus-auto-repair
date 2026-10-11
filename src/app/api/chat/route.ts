@@ -27,6 +27,10 @@ REAL PRICES (these are what the shop actually quotes—use them confidently, say
 - Window regulator (Model S): $450 parts and labor
 - Battery health test: $150 (about an hour)
 - HV battery replacement: $12,000–$15,000 depending on model
+- 16V battery replacement: $650 parts and labor (16V batteries last around 4 years)
+- Windshield washer fluid pump: $245 parts and labor
+- Tire rotation: $60
+- Tesla rentals (sister company): $40/day for Model 3/Y when getting service done with us
 - Free inspection: 30 min–1 hour, waiting room with snacks and drinks
 
 RULES:
