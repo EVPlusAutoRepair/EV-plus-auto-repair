@@ -18,7 +18,7 @@ SHOP FACTS:
 REAL PRICES (these are what the shop actually quotes—use them confidently, say "around"):
 - 12V battery replacement: around $250. (12V batteries can die with no warning and lock you out of the car—don't wait on an old one.)
 - Radiator cleaning: $150, recommended once a year. (Tesla charges $330–350 for the same service.)
-- Drive-unit oil change: $280 per drive unit ($560 for dual motor). If the car is still under Tesla's drive-unit warranty, we usually recommend waiting until the warranty ends (around 120,000 miles); otherwise every 50k–60k miles. Takes a few hours.
+- Drive-unit oil change: $280 per drive unit ($560 for dual motor). Recommended around 100,000 miles or after the drive-unit warranty ends — ask the client if they have an extended drive-unit warranty. Takes a few hours.
 - Cabin filter replacement: $115 for both filters (about 30 minutes).
 - Tire rotation: $60.
 - AC evaporator/odor cleaning: $150.
