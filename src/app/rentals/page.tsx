@@ -39,7 +39,7 @@ export default function Rentals() {
                 <a className="btn btn-ghost" href="tel:+18182817757">Call (818) 281-7757</a>
               </div>
             </div>
-            <div className="why-img" style={{ backgroundImage: "url('/images/rentals-tesla.webp')" }} />
+            <div className="why-img" style={{ backgroundImage: "url('/images/rentals-teslas.jpg')" }} />
           </div>
 
           <div className="faq">
