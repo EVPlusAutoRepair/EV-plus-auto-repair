@@ -13,6 +13,7 @@ export default function SiteFooter() {
             <a href="/service">Tesla Service Center</a>
             <a href="/collision">Tesla Collision Center</a>
             <a href="/rentals">On-site Rentals</a>
+            <a href="/shop">Shop accessories</a>
             <a href="/blog">Blog</a>
             <a href="/about">About Us</a>
             <a href="/book">Book Now</a>
