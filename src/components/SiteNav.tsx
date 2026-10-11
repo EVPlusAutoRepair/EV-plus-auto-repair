@@ -5,6 +5,7 @@ const links = [
   { href: "/service", label: "Service Center" },
   { href: "/collision", label: "Collision Center" },
   { href: "/rentals", label: "Rentals" },
+  { href: "/shop", label: "Shop" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/#reviews", label: "Reviews" },

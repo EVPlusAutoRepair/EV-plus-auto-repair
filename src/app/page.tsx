@@ -69,7 +69,7 @@ export default function Home() {
       <section style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="why-grid">
-            <div className="why-img" style={{ backgroundImage: "url('/images/why-shop.webp')" }} />
+            <div className="why-img" style={{ backgroundImage: "url('/images/shop-sign.jpg')" }} />
             <div>
               <div className="kicker">Why EV+</div>
               <h2>Tesla is our specialty.</h2>
