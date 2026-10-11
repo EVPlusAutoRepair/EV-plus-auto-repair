@@ -6,15 +6,60 @@ type Msg = { role: "user" | "assistant"; content: string };
 const FALLBACK =
   "Our chat is being set up right now—please call or text us at (818) 281-7757 and we'll take care of you.";
 
+const STORE_KEY = "evplus-chat-v1";
+
+const GREETING: Msg = {
+  role: "assistant",
+  content: "Hey! This is EV+ Auto Repair. Ask me about Tesla service, repairs, rentals, or booking—what's going on with your car?",
+};
+
+function loadSaved(): Msg[] | null {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (!raw) return null;
+    const arr = JSON.parse(raw);
+    if (!Array.isArray(arr) || arr.length === 0) return null;
+    return arr
+      .filter(
+        (m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string"
+      )
+      .slice(-40);
+  } catch {
+    return null;
+  }
+}
+
+// Minimal safe inline formatting: **bold** only. Escapes HTML first.
+function renderInline(s: string): string {
+  const esc = s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  return esc.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+}
+
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
-  const [msgs, setMsgs] = useState<Msg[]>([
-    { role: "assistant", content: "Hey! This is EV+ Auto Repair. Ask me about Tesla service, repairs, rentals, or booking—what's going on with your car?" },
-  ]);
+  const [msgs, setMsgs] = useState<Msg[]>([GREETING]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [dead, setDead] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
+
+  // Restore previous conversation if the visitor comes back
+  useEffect(() => {
+    const saved = loadSaved();
+    if (saved) setMsgs(saved);
+  }, []);
+
+  // Persist conversation on every change
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(msgs.slice(-40)));
+    } catch {
+      /* storage full or unavailable — chat still works */
+    }
+  }, [msgs]);
 
   useEffect(() => {
     boxRef.current?.scrollTo({ top: boxRef.current.scrollHeight, behavior: "smooth" });
@@ -89,7 +134,11 @@ export default function ChatWidget() {
                   fontSize: 14, lineHeight: 1.45, whiteSpace: "pre-wrap",
                 }}
               >
-                {m.content}
+                {m.role === "assistant" ? (
+                  <span dangerouslySetInnerHTML={{ __html: renderInline(m.content) }} />
+                ) : (
+                  m.content
+                )}
               </div>
             ))}
             {busy && <div style={{ fontSize: 13, color: "var(--mut)" }}>Typing…</div>}
