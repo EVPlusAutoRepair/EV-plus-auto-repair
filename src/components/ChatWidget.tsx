@@ -6,7 +6,6 @@ type Msg = { role: "user" | "assistant"; content: string };
 const FALLBACK =
   "Our chat is being set up right now—please call or text us at (818) 281-7757 and we'll take care of you.";
 
-// Chat backend: /api/chat (ANTHROPIC_API_KEY ready)
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [msgs, setMsgs] = useState<Msg[]>([
@@ -64,12 +63,13 @@ export default function ChatWidget() {
       {open && (
         <div
           style={{
-            position: "fixed", right: 18, bottom: 88, zIndex: 70,
-            width: "min(380px, calc(100vw - 36px))", height: "min(540px, calc(100dvh - 180px))",
+            position: "fixed", left: 16, right: 16, bottom: 88, zIndex: 70,
+            height: "min(540px, calc(100dvh - 180px))",
             background: "var(--card)", border: "1px solid var(--line)", borderRadius: 18,
             display: "flex", flexDirection: "column", overflow: "hidden",
             boxShadow: "0 24px 70px rgba(0,0,0,.6)",
           }}
+          className="chat-panel"
         >
           <div style={{ padding: "14px 18px", borderBottom: "1px solid var(--line)", fontWeight: 800 }}>
             Chat with EV+
@@ -102,7 +102,7 @@ export default function ChatWidget() {
               placeholder="Type your question…"
               disabled={dead}
               style={{
-                flex: 1, background: "rgba(255,255,255,.06)", border: "1px solid var(--line)",
+                flex: 1, minWidth: 0, background: "rgba(255,255,255,.06)", border: "1px solid var(--line)",
                 borderRadius: 12, padding: "10px 14px", color: "var(--txt)", fontSize: 14, outline: "none",
               }}
             />
@@ -110,7 +110,7 @@ export default function ChatWidget() {
               onClick={send}
               disabled={busy || dead}
               style={{
-                background: "var(--acc)", color: "#0b0b0c", border: "none",
+                background: "var(--acc)", color: "#0b0b0c", border: "none", flexShrink: 0,
                 borderRadius: 12, padding: "10px 18px", fontWeight: 800, cursor: "pointer",
               }}
             >
@@ -119,7 +119,7 @@ export default function ChatWidget() {
           </div>
         </div>
       )}
-      <style>{`@media (max-width: 900px){ .chat-fab{ bottom: 84px !important; } }`}</style>
+      <style>{`@media (max-width: 900px){ .chat-fab{ bottom: 84px !important; } } @media (min-width: 901px){ .chat-panel{ left: auto !important; width: 380px; } }`}</style>
     </>
   );
 }
