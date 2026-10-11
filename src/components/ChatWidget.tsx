@@ -103,7 +103,7 @@ export default function ChatWidget() {
               disabled={dead}
               style={{
                 flex: 1, minWidth: 0, background: "rgba(255,255,255,.06)", border: "1px solid var(--line)",
-                borderRadius: 12, padding: "10px 14px", color: "var(--txt)", fontSize: 14, outline: "none",
+                borderRadius: 12, padding: "10px 14px", color: "var(--txt)", fontSize: 16, outline: "none",
               }}
             />
             <button

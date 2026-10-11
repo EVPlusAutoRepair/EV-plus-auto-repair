@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Why does my Tesla's radiator get so dirty?",
-    a: "The front intake sits low and collects leaves, dirt, and road debris—especially with street parking. It packs in over time and restricts airflow to the radiator and condenser.",
+    a: "The front intake sits low and collects leaves, dirt, and road debris—especially with street parking. It packs in over time and restricts airflow to the radiator and condenser. That's why we recommend a radiator cleaning once a year.",
   },
   {
     q: "Does a dirty radiator actually matter?",
