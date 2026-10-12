@@ -2,14 +2,11 @@ import type { Metadata } from "next";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { shop2 } from "../img/shop-2";
-import { shop3 } from "../img/shop-3";
-import { shop4 } from "../img/shop-4";
 
 export const metadata: Metadata = {
   title: "About EV+ Auto Repair | Sun Valley, Los Angeles",
   description:
-    "Meet Tracey Aivaz — the voice behind EV+ Auto Repair's educational Tesla content on TikTok, Instagram, and Facebook. Family-operated in Sun Valley since 2016.",
+    "Meet Tracey — the voice behind EV+ Auto Repair's educational Tesla content on TikTok, Instagram, and Facebook. Family-operated in Sun Valley since 2016.",
 };
 
 const socials = [
@@ -43,25 +40,8 @@ export default function About() {
       <section>
         <div className="wrap">
           <div className="kicker">Who you're talking to</div>
-          <h2>Tracey Aivaz</h2>
-          <p className="lede">Tracey runs everything digital at EV+—the website, the booking flow, and the educational content across our social channels. If you've learned something about your Tesla from one of our videos, that was him. He&rsquo;s the reason you can watch a repair happen on your phone and then book the same job online.</p>
-
-          <div style={{ marginTop: 56 }}>
-            <div className="kicker">The shop</div>
-            <h2>9755 Glenoaks Blvd, Sun Valley.</h2>
-            <p className="lede">This is where the work happens — drop by and say hi.</p>
-            <div className="svc-grid" style={{ marginTop: 24 }}>
-              {[
-                { src: shop2, alt: "EV+ Auto Repair shop signage" },
-                { src: shop3, alt: "EV+ Auto Repair building in Sun Valley" },
-                { src: shop4, alt: "EV+ Auto Repair and EV+ Auto Rentals signage" },
-              ].map((p) => (
-                <div key={p.src} style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "3/4" }}>
-                  <img src={p.src} alt={p.alt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                </div>
-              ))}
-            </div>
-          </div>
+          <h2>Tracey</h2>
+          <p className="lede">Tracey runs everything digital at EV+—the website, the booking flow, and the educational content across our social channels. If you've learned something about your Tesla from one of our videos, that was her. She&rsquo;s the reason you can watch a repair happen on your phone and then book the same job online.</p>
 
           <div style={{ marginTop: 56 }}>
             <div className="kicker">Learn with us</div>
