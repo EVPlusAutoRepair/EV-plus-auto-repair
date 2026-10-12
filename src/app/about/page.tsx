@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { shop2 } from "./img/shop-2";
-import { shop3 } from "./img/shop-3";
-import { shop4 } from "./img/shop-4";
+import { shop2 } from "../img/shop-2";
+import { shop3 } from "../img/shop-3";
+import { shop4 } from "../img/shop-4";
 
 export const metadata: Metadata = {
   title: "About EV+ Auto Repair | Sun Valley, Los Angeles",
