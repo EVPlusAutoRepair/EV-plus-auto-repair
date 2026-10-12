@@ -1,5 +1,7 @@
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import { shopSign } from "./img/shop-sign";
+import { rentalsTeslas } from "./img/rentals";
 
 export default function Home() {
   return (
@@ -47,7 +49,7 @@ export default function Home() {
               <p className="lede" style={{ marginTop: 16 }}>Our sister company <b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> operates right here in the shop. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
               <div className="hero-ctas" style={{ marginTop: 30 }}><a className="btn" href="/rentals">How rentals work</a></div>
             </div>
-            <div className="rentals-img" style={{ backgroundImage: "url('/images/rentals-teslas.jpg')" }} />
+            <div className="rentals-img" style={{ backgroundImage: `url('${rentalsTeslas}')` }} />
           </div>
         </div>
       </section>
@@ -69,7 +71,7 @@ export default function Home() {
       <section style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="why-grid">
-            <div className="why-img" style={{ backgroundImage: "url('/images/shop-sign.jpg')" }} />
+            <div className="why-img" style={{ backgroundImage: `url('${shopSign}')` }} />
             <div>
               <div className="kicker">Why EV+</div>
               <h2>Tesla is our specialty.</h2>

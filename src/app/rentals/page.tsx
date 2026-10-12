@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import { rentalsTeslas } from "../img/rentals";
 
 export const metadata: Metadata = {
   title: "On-Site Tesla Rentals | EV+ Auto Repair",
@@ -39,7 +40,7 @@ export default function Rentals() {
                 <a className="btn btn-ghost" href="tel:+18182817757">Call (818) 281-7757</a>
               </div>
             </div>
-            <div className="why-img" style={{ backgroundImage: "url('/images/rentals-teslas.jpg')" }} />
+            <div className="why-img" style={{ backgroundImage: `url('${rentalsTeslas}')` }} />
           </div>
 
           <div className="faq">

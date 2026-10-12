@@ -1,3 +1,5 @@
+import { usbDrive } from "../img/shop-sign";
+
 export type Product = {
   slug: string;
   name: string;
@@ -18,7 +20,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Dashcam & Sentry Mode — your Tesla is always watching. Make sure it's actually recording.",
     price: 29.99,
     priceLabel: "$29.99",
-    image: "/images/usb-drive-128gb.jpg",
+    image: usbDrive,
     imageAlt: "Tesla 128GB USB flash drive for Dashcam and Sentry Mode",
     description: [
       "Dashcam and Sentry Mode are only as good as the drive they're writing to. A cheap gas-station USB stick overheats, corrupts, and dies — usually the week you actually need the footage.",

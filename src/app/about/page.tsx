@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { shop2 } from "./img/shop-2";
+import { shop3 } from "./img/shop-3";
+import { shop4 } from "./img/shop-4";
 
 export const metadata: Metadata = {
   title: "About EV+ Auto Repair | Sun Valley, Los Angeles",
@@ -49,9 +52,9 @@ export default function About() {
             <p className="lede">This is where the work happens — drop by and say hi.</p>
             <div className="svc-grid" style={{ marginTop: 24 }}>
               {[
-                { src: "/images/shop-2.jpg", alt: "EV+ Auto Repair shop signage" },
-                { src: "/images/shop-3.jpg", alt: "EV+ Auto Repair building in Sun Valley" },
-                { src: "/images/shop-4.jpg", alt: "EV+ Auto Repair and EV+ Auto Rentals signage" },
+                { src: shop2, alt: "EV+ Auto Repair shop signage" },
+                { src: shop3, alt: "EV+ Auto Repair building in Sun Valley" },
+                { src: shop4, alt: "EV+ Auto Repair and EV+ Auto Rentals signage" },
               ].map((p) => (
                 <div key={p.src} style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "3/4" }}>
                   <img src={p.src} alt={p.alt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
