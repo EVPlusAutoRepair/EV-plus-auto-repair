@@ -44,6 +44,23 @@ export default function About() {
           <p className="lede">Tracey runs everything digital at EV+—the website, the booking flow, and the educational content across our social channels. If you've learned something about your Tesla from one of our videos, that was him. He&rsquo;s the reason you can watch a repair happen on your phone and then book the same job online.</p>
 
           <div style={{ marginTop: 56 }}>
+            <div className="kicker">The shop</div>
+            <h2>9755 Glenoaks Blvd, Sun Valley.</h2>
+            <p className="lede">This is where the work happens — drop by and say hi.</p>
+            <div className="svc-grid" style={{ marginTop: 24 }}>
+              {[
+                { src: "/images/shop-2.jpg", alt: "EV+ Auto Repair shop signage" },
+                { src: "/images/shop-3.jpg", alt: "EV+ Auto Repair building in Sun Valley" },
+                { src: "/images/shop-4.jpg", alt: "EV+ Auto Repair and EV+ Auto Rentals signage" },
+              ].map((p) => (
+                <div key={p.src} style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "3/4" }}>
+                  <img src={p.src} alt={p.alt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ marginTop: 56 }}>
             <div className="kicker">Learn with us</div>
             <h2>Want the educational stuff?</h2>
             <p className="lede">Real repairs, real explanations—no fluff. Follow along:</p>
