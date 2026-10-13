@@ -100,6 +100,7 @@ export default function Home() {
             <div className="q">&ldquo;Great service. They resolved my suspension issue within a few minutes. I&rsquo;ve used them before and have always been satisfied with their service and work. I highly recommend them.&rdquo;<div className="who">— Gabriel Paz · Google review</div></div>
             <div className="q">&ldquo;I recently brought my car in for accident damage, and they did an incredible job—my Tesla looks brand new again! They also handled everything related to the insurance claim. Professional, precise, timely, and very communicative.&rdquo;<div className="who">— Preni Amijanian · Google review</div></div>
             <div className="q">&ldquo;There really is no place better to take your car to be treated as if it was their own. They are honest, reliable, and have an incredible attention to detail. I highly recommend.&rdquo;<div className="who">— Tanner Dominic · Google review</div></div>
+            <div className="q">&ldquo;Amazing experience!! Thank you for taking care my Tesla Model X. Highly recommend this place&hellip;&rdquo;<div className="who">— Ray Steven Guadron · Google review</div></div>
           </div>
           <div className="hero-ctas" style={{ marginTop: 30, justifyContent: "flex-start" }}>
             <a className="btn btn-ghost" href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer">Read all our Google reviews</a>
