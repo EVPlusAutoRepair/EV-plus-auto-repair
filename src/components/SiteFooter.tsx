@@ -10,6 +10,7 @@ export default function SiteFooter() {
           </div>
           <div>
             <h5>Shop</h5>
+            <a href="/shop">Tesla Accessories</a>
             <a href="/service">Tesla Service Center</a>
             <a href="/collision">Tesla Collision Center</a>
             <a href="/rentals">On-site Rentals</a>
@@ -27,7 +28,7 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="fine">
-          <span>© 2026 EV+ Auto Repair · Truck K30 Inc. DBA EV+ Auto Repair</span>
+          <span>© 2026 EV+ Auto Repair</span>
           <span>Rentals: EV+ Auto Rentals LLC</span>
         </div>
         <p style={{ fontSize: 12, marginTop: 16, color: "var(--dim)" }}>
