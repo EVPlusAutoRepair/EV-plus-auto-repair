@@ -6,7 +6,7 @@ export default function SiteFooter() {
           <div>
             <div className="logo" style={{ marginBottom: 16 }}><img src="/images/logo.png" alt="EV+ Auto Repair" /></div>
             <p>9755 Glenoaks Blvd, Sun Valley, CA 91352<br />(818) 281-7757<br />info@evplusautorepair.com</p>
-            <p style={{ marginTop: 14 }}>Mon–Fri 9:00 AM–5:00 PM<br />Sat 10:00 AM–3:00 PM · Sun closed</p>
+            <p style={{ marginTop: 14 }}>Mon–Fri 9:00 AM–5:00 PM<br />Sat 10:00 AM–3:00 PM<br />Sun closed</p>
           </div>
           <div>
             <h5>Shop</h5>
