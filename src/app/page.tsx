@@ -1,6 +1,6 @@
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
-import { shopSign } from "./img/shop-sign";
+import { whySign } from "./img/why-sign";
 import { rentalsTeslas } from "./img/rentals";
 
 export default function Home() {
@@ -71,7 +71,7 @@ export default function Home() {
       <section style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="why-grid">
-            <div className="why-img" style={{ backgroundImage: `url('${shopSign}')` }} />
+            <div className="why-img" style={{ backgroundImage: `url('${whySign}')` }} />
             <div>
               <div className="kicker">Why EV+</div>
               <h2>Tesla is our specialty.</h2>
