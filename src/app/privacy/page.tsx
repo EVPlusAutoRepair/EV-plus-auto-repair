@@ -23,47 +23,35 @@ export default function Privacy() {
         <div className="wrap">
           <div className="article-body" style={{ maxWidth: 760 }}>
             <p>
-              EV+ Auto Repair (“we,” “us”) respects your privacy. This policy explains what
-              information we collect through this website and how we use it.
+              EV+ Auto Repair (&ldquo;we,&rdquo; &ldquo;us&rdquo;) respects your privacy. This
+              policy explains what information we collect and how we handle it.
             </p>
-            <h2>Information you give us</h2>
+            <h2>What we collect</h2>
             <p>
-              When you submit a service request or accident intake, we collect the details
-              you provide: your name, phone number, email address, vehicle information
-              (model, year, VIN), insurance or claim details, and any photos or descriptions
-              of the issue or damage. We use this only to respond to your request, schedule
-              service, prepare estimates, and communicate about your repair.
+              We collect your name, phone, email, address, vehicle details (model, year,
+              VIN), insurance or claim details, and photos you send us, online or at the
+              shop.
             </p>
-            <h2>Information we don&rsquo;t collect</h2>
+            <h2>Who we share it with</h2>
             <p>
-              We don&rsquo;t sell your personal information. We don&rsquo;t share it with
-              third parties for marketing. We don&rsquo;t run accounts, newsletters, or
-              tracking pixels that follow you around the web.
+              We share it only with your insurance company, and with the service
+              providers, parts suppliers, and tow or rental companies we need to complete
+              your repair. We don&rsquo;t sell your information.
             </p>
-            <h2>Insurance and third parties</h2>
             <p>
-              If you ask us to work with your insurance company on a claim, we share the
-              repair-related information needed to process that claim — and nothing more.
+              Mobile numbers and texting consent are never shared with third parties for
+              marketing.
             </p>
-            <h2>Data security</h2>
+            <h2>How to review or change your information</h2>
             <p>
-              We take reasonable steps to protect the information you send us. No method of
-              internet transmission is 100% secure, so we keep what we collect to the minimum
-              needed to serve you.
-            </p>
-            <h2>Your choices</h2>
-            <p>
-              Prefer not to use the online forms? Call or text us at{" "}
+              To see, correct, or delete your information, call{" "}
               <a href="tel:+18182817757">(818) 281-7757</a> or email{" "}
-              <a href="mailto:info@evplusautorepair.com">info@evplusautorepair.com</a> instead.
-              To ask what information we have about you, or to ask us to delete it, contact
-              us at either of those.
+              <a href="mailto:info@evplusautorepair.com">info@evplusautorepair.com</a>.
             </p>
+            <h2>Do Not Track</h2>
+            <p>Our site does not respond to Do Not Track signals.</p>
             <h2>Changes</h2>
-            <p>
-              If this policy changes, we&rsquo;ll update the date above. Continued use of
-              the site after changes means you accept the updated policy.
-            </p>
+            <p>If this policy changes, we&rsquo;ll update the date at the top.</p>
           </div>
         </div>
       </section>
