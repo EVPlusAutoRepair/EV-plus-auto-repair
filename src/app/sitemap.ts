@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { connection } from "next/server";
 import { POSTS, isPublished } from "./blog/posts";
 
+// Rendered per-request (not prerendered) so posts with a future publishDate
+// appear in the sitemap automatically on their publish date.
 const URL = "https://evplusautorepair.com";
 
 const serviceSlugs = [
