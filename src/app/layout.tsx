@@ -9,9 +9,9 @@ const CLARITY_ID = "yy0b1zw9j4";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://evplusautorepair.com"),
-  title: "Tesla Service Center & Collision Center in Los Angeles | EV+ Auto Repair",
+  title: "Tesla Service & EV Collision Repair in Sun Valley | EV+ Auto Repair",
   description:
-    "Family-owned Tesla service center & collision center in Los Angeles (Sun Valley). Maintenance, battery service, accident repair, insurance claims handled. Free estimates—call/text (818) 281-7757.",
+    "Family-owned Tesla service center and collision repair for all EVs in Sun Valley, Los Angeles. Maintenance, batteries, accident repair, insurance claims. Free estimates: (818) 281-7757.",
   openGraph: {
     title: "EV+ Auto Repair—Tesla Service & Collision Center, Los Angeles",
     description:
