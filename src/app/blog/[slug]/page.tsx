@@ -8,7 +8,7 @@ import { POSTS, getPost, getRelated, isPublished, type Block } from "../posts";
 import { connection } from "next/server";
 
 export async function generateStaticParams() {
-  return POSTS.map((p) => ({ slug: p.slug }));
+  return POSTS.filter(isPublished).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) return {};
+  if (!post || !isPublished(post)) return {};
   return {
     title: post.title,
     description: post.description,
