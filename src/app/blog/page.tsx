@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { connection } from "next/server";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import { getPublishedPosts } from "./posts";
-
-export const instant = false;
 
 export const metadata: Metadata = {
   title: "EV+ Blog—Tesla Tips From the Shop | EV+ Auto Repair",
@@ -12,8 +11,24 @@ export const metadata: Metadata = {
     "Tesla maintenance, battery, and repair knowledge from the technicians at EV+ Auto Repair in Sun Valley, Los Angeles. Real shop experience, no fluff.",
 };
 
-export default async function BlogIndex() {
+async function BlogList() {
+  // Runs at request time so posts with a future publishDate appear automatically.
   await connection();
+  return (
+    <div className="blog-grid">
+      {getPublishedPosts().map((post) => (
+        <a className="post-card" key={post.slug} href={`/blog/${post.slug}`}>
+          <div className="tag">{post.tag}</div>
+          <h3>{post.h1}</h3>
+          <p>{post.excerpt}</p>
+          <div className="post-meta">{post.date} · EV+ Auto Repair</div>
+        </a>
+      ))}
+    </div>
+  );
+}
+
+export default function BlogIndex() {
   return (
     <>
       <SiteNav />
@@ -30,16 +45,9 @@ export default async function BlogIndex() {
 
       <section>
         <div className="wrap">
-          <div className="blog-grid">
-            {getPublishedPosts().map((post) => (
-              <a className="post-card" key={post.slug} href={`/blog/${post.slug}`}>
-                <div className="tag">{post.tag}</div>
-                <h3>{post.h1}</h3>
-                <p>{post.excerpt}</p>
-                <div className="post-meta">{post.date} · EV+ Auto Repair</div>
-              </a>
-            ))}
-          </div>
+          <Suspense fallback={<div className="blog-grid" aria-busy="true" />}>
+            <BlogList />
+          </Suspense>
 
           <div className="cta-band">
             <h2>Questions about your Tesla? Start with a free inspection.</h2>

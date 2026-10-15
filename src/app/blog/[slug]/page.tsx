@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import InstagramEmbed from "@/components/InstagramEmbed";
 import { POSTS, getPost, getRelated, isPublished, type Block } from "../posts";
 import { connection } from "next/server";
-
-export const instant = false;
 
 export async function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
@@ -49,6 +48,29 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  return (
+    <Suspense fallback={<PostSkeleton />}>
+      <PostContent slug={slug} />
+    </Suspense>
+  );
+}
+
+function PostSkeleton() {
+  return (
+    <>
+      <SiteNav />
+      <div className="page-hero" aria-busy="true">
+        <div className="wrap">
+          <div className="kicker">EV+ Blog</div>
+        </div>
+      </div>
+      <SiteFooter />
+    </>
+  );
+}
+
+async function PostContent({ slug }: { slug: string }) {
+  // Runs at request time so future-dated posts stay hidden until publish day.
   await connection();
   const post = getPost(slug);
   if (!post || !isPublished(post)) notFound();
