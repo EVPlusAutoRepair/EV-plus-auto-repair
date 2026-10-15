@@ -5,6 +5,7 @@ import MobileCallBar from "@/components/MobileCallBar";
 import ChatWidget from "@/components/ChatWidget";
 
 const GA4_ID = "G-Q8E63EG89R";
+const CLARITY_ID = "yy0b1zw9j4";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://evplusautorepair.com"),
@@ -60,6 +61,13 @@ export default function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA4_ID}');`}
+        </Script>
+        <Script id="clarity-init" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "${CLARITY_ID}");`}
         </Script>
       </head>
       <body>{children}<MobileCallBar /><ChatWidget /></body>
