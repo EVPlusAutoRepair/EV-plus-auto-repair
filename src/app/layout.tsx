@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import MobileCallBar from "@/components/MobileCallBar";
 import ChatWidget from "@/components/ChatWidget";
+
+const GA4_ID = "G-Q8E63EG89R";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://evplusautorepair.com"),
@@ -51,6 +54,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_ID}');`}
+        </Script>
       </head>
       <body>{children}<MobileCallBar /><ChatWidget /></body>
     </html>
