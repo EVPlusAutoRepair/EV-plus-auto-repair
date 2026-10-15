@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense, useEffect, useState } from "react";
+import CalendlyEmbed from "./CalendlyEmbed";
 import { useSearchParams } from "next/navigation";
 import DatePicker from "@/components/DatePicker";
 
@@ -71,7 +72,11 @@ async function postForm(form: HTMLFormElement, lane: Lane): Promise<{ ok: boolea
   return { ok: false, error: json.error || "Something went wrong. Please call or text (818) 281-7757." };
 }
 
-function SentCard({ accident }: { accident?: boolean }) {
+const CALENDLY_INSPECTION = "https://calendly.com/evplusautorepair-info/inspection";
+const CALENDLY_DIAGNOSTIC = "https://calendly.com/evplusautorepair-info/diagnostic";
+
+function SentCard({ accident, service }: { accident?: boolean; service?: string | null }) {
+  const calendlyUrl = service === "diagnostics" ? CALENDLY_DIAGNOSTIC : CALENDLY_INSPECTION;
   return (
     <div className="form-card" style={{ textAlign: "center" }}>
       <h3 style={{ fontSize: 24, marginBottom: 12 }}>Request received.</h3>
@@ -82,6 +87,13 @@ function SentCard({ accident }: { accident?: boolean }) {
           <>Thanks — we&rsquo;ll call or text you shortly to confirm. Need us now? Call <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>.</>
         )}
       </p>
+      {!accident && (
+        <>
+          <h4 style={{ fontSize: 20, margin: "28px 0 6px" }}>Want to lock in your time now?</h4>
+          <p className="form-note" style={{ marginTop: 0 }}>Pick a slot below — or just wait for our call/text to confirm.</p>
+          <CalendlyEmbed url={calendlyUrl} />
+        </>
+      )}
     </div>
   );
 }
@@ -114,20 +126,24 @@ const privacyNote = (
 function ServiceForm({ defaultService }: { defaultService?: string | null }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [sentService, setSentService] = useState<string | null>(null);
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
     setError("");
+    const svc = new FormData(e.currentTarget).get("service");
     const r = await postForm(e.currentTarget, "service");
-    if (r.ok) setStatus("sent");
-    else {
+    if (r.ok) {
+      setSentService(typeof svc === "string" ? svc : null);
+      setStatus("sent");
+    } else {
       setStatus("error");
       setError(r.error || "");
     }
   };
 
-  if (status === "sent") return <SentCard />;
+  if (status === "sent") return <SentCard service={sentService} />;
   return (
     <form className="form-card" onSubmit={submit}>
       <h3 style={{ fontSize: 24, marginBottom: 6 }}>Book service</h3>
