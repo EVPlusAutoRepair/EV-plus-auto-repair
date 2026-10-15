@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { connection } from "next/server";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
-import { POSTS } from "./posts";
+import { getPublishedPosts } from "./posts";
+
+export const instant = false;
 
 export const metadata: Metadata = {
   title: "EV+ Blog—Tesla Tips From the Shop | EV+ Auto Repair",
@@ -9,7 +12,8 @@ export const metadata: Metadata = {
     "Tesla maintenance, battery, and repair knowledge from the technicians at EV+ Auto Repair in Sun Valley, Los Angeles. Real shop experience, no fluff.",
 };
 
-export default function BlogIndex() {
+export default async function BlogIndex() {
+  await connection();
   return (
     <>
       <SiteNav />
@@ -27,7 +31,7 @@ export default function BlogIndex() {
       <section>
         <div className="wrap">
           <div className="blog-grid">
-            {POSTS.map((post) => (
+            {getPublishedPosts().map((post) => (
               <a className="post-card" key={post.slug} href={`/blog/${post.slug}`}>
                 <div className="tag">{post.tag}</div>
                 <h3>{post.h1}</h3>

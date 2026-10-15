@@ -10,6 +10,8 @@ export interface Post {
   description: string;
   tag: string;
   date: string;
+  /** ISO date (YYYY-MM-DD) when the post becomes visible. Absent = always visible. */
+  publishDate?: string;
   excerpt: string;
   videoUrl?: string;
   body: Block[];
@@ -509,16 +511,393 @@ export const POSTS: Post[] = [
     ],
     serviceLink: { href: "/service/hv-battery-service", label: "HV battery replacement" },
   },
+  {
+    slug: "tesla-cabin-filter-replacement-why-it-matters",
+    title: "Tesla Cabin Filter Replacement: Why It Matters | EV+ Auto Repair",
+    h1: "Your Tesla's Cabin Filter Matters More Than You Think",
+    description:
+      "Musty AC smell? Weak airflow? Your Tesla's cabin filter is overdue. Here's why it matters, how often to replace it, and what the service involves.",
+    tag: "Maintenance",
+    date: "October 29, 2026",
+    publishDate: "2026-10-29",
+    excerpt:
+      "That musty smell when the AC kicks on is your cabin filter begging for retirement. Here's what it does, when to replace it, and what the service looks like at our Sun Valley shop.",
+    body: [
+      {
+        type: "p",
+        text: "You know that sour, locker-room smell when the AC kicks on? We hear about it every week. Nine times out of ten, it's a cabin filter that's been in there way too long. Your Tesla's cabin filter is the only thing standing between you and everything floating around outside — Valley dust, freeway exhaust, wildfire smoke, pollen. When it's clogged, you breathe all of it.",
+      },
+      { type: "h2", text: "What the cabin filter actually does" },
+      {
+        type: "p",
+        text: "The cabin filter scrubs the air coming through your HVAC system before it reaches your face. A fresh filter means cleaner air, stronger airflow, and an AC that doesn't have to fight to push air through a wall of dust. A clogged one means weak airflow, stale smells, and a blower motor working overtime.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "Some owners assume cabin air quality doesn't matter because the car 'filters everything.' It doesn't — the cabin filter is the filter, and once it's saturated, everything it was catching goes straight into your lungs.",
+      },
+      { type: "h2", text: "How often should you replace it?" },
+      {
+        type: "p",
+        text: "Tesla recommends replacing the cabin filter every 2 years. In the San Fernando Valley, we'd nudge you toward the sooner end of that — dust season and wildfire smoke load these filters up fast. If your allergies flare up every time you drive, that's your filter talking.",
+      },
+      { type: "h2", text: "What the service involves" },
+      {
+        type: "p",
+        text: "On Model 3 and Model Y, the filters sit behind a cover in the passenger footwell. We pull the cover, slide out the old filters, and install fresh ones — no drama, no upsell. While we're in there, we check the blower and the evaporator area for anything that needs attention. If your Tesla's AC smells off or the airflow feels weak, don't wait for it to get worse — book our free 1-hour inspection and we'll check the cabin filter along with the rest of the car.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How do I know my cabin filter needs replacing?",
+        a: "The classic signs: a musty or sour smell when the AC runs, noticeably weaker airflow from the vents, and allergy symptoms that show up when you drive. If any of those sound familiar, the filter is overdue.",
+      },
+      {
+        q: "Can I replace the cabin filter myself?",
+        a: "You can — the filters are behind a panel in the passenger footwell on Model 3 and Model Y. But the trim clips are easy to break if you haven't done it before, and a shop visit lets us check the blower and evaporator at the same time. Most owners decide it's worth having us handle it.",
+      },
+      {
+        q: "Does Tesla's warranty cover the cabin filter?",
+        a: "No — it's a wear item, like wiper blades. Replacement is routine maintenance, and it's quick.",
+      },
+      {
+        q: "Do Model 3 and Model Y use the same filter setup?",
+        a: "They use the same style of setup — two filter elements on most model years. Bring it in and we'll make sure the right filters go in your specific car.",
+      },
+    ],
+    serviceLink: { href: "/service/cabin-filters-radiator-cleaning", label: "Cabin filter replacement" },
+  },
+  {
+    slug: "tesla-12v-battery-warning-signs",
+    title: "Tesla 12V Battery Warning Signs | EV+ Auto Repair",
+    h1: "Your Tesla's 12V Battery Is Trying to Tell You Something",
+    description:
+      "Your Tesla's 12V battery can strand you with no warning. Learn the warning signs, what to do when it dies, and why replacing it early beats a tow.",
+    tag: "Battery",
+    date: "November 12, 2026",
+    publishDate: "2026-11-12",
+    excerpt:
+      "The battery that strands Tesla owners isn't the big one — it's the little 12V. Here's how to spot trouble before you're locked out of a dead car.",
+    body: [
+      {
+        type: "p",
+        text: "Everybody worries about the big high-voltage battery. But the battery that actually strands Tesla owners is the little 12V one under the frunk. It runs your locks, your windows, your computers — everything that has to work before the car can even wake up. When it dies, you're not driving anywhere.",
+      },
+      { type: "h2", text: "The warning your Tesla gives you" },
+      {
+        type: "p",
+        text: "Most of the time, the car tells you: a '12V battery needs service' alert pops up on the screen, sometimes with a 'schedule service soon' message. Take it seriously. That alert means the battery is on its way out, and the clock is ticking — days or weeks, not months.",
+      },
+      { type: "h2", text: "When there's no warning at all" },
+      {
+        type: "p",
+        text: "Here's the part that catches people: sometimes the 12V just quits. You walk up to the car and nothing happens — doors won't unlock, the app won't connect, the screens stay dark. On Model 3 and Model Y, the fix starts with popping the small tow-eye cover on the front bumper and applying 12V to the leads behind it to release the frunk, so you can reach the battery and jump it. It works, but it's not how you want to start your morning.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "A lot of owners assume the big battery keeps the 12V charged forever, so it never needs attention. The car does top up the 12V while it can — but the 12V is still a regular battery with a finite life. It ages out just like the one in a gas car, usually in 2 to 4 years.",
+      },
+      { type: "h2", text: "Proactive replacement beats a tow" },
+      {
+        type: "p",
+        text: "A 12V battery that's three or more years old — or one that's already thrown the service alert — is living on borrowed time. Replacing it on your schedule, in our shop, takes a fraction of the time and hassle of a dead car in a parking structure, a tow truck, and a ruined day. If you've seen the 12V warning, or you can't remember the last time the battery was touched, bring the car in — our free 1-hour inspection includes a 12V health check, and we'll take care of it before it takes care of your schedule.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does a Tesla 12V battery last?",
+        a: "Typically 2 to 4 years, depending on climate and use. Heat is hard on them, so Valley summers don't do them any favors. If yours is past year three, have it tested.",
+      },
+      {
+        q: "Will my Tesla always warn me before the 12V dies?",
+        a: "Usually — the '12V battery needs service' alert is the common heads-up. But not always, which is exactly why a sudden no-start still surprises owners. Don't treat the absence of a warning as a clean bill of health on an old battery.",
+      },
+      {
+        q: "Can you jump-start a Tesla like a gas car?",
+        a: "The 12V battery itself can be jumped once you can reach it. The trick is getting the frunk open when the car is dead — on Model 3 and Model Y that means the tow-eye cover procedure. If that sounds like a hassle, that's the point: replace the battery before it comes to that.",
+      },
+      {
+        q: "Does a 12V replacement affect my Tesla's warranty?",
+        a: "The 12V battery is a wear item and isn't covered under the vehicle warranty. Replacing it is routine maintenance — and it has nothing to do with your high-voltage battery or drive unit coverage.",
+      },
+    ],
+    serviceLink: { href: "/service/12v-battery-replacement", label: "12V battery replacement" },
+  },
+  {
+    slug: "why-we-replace-the-full-control-arm",
+    title: "Why We Replace the Full Control Arm, Never Just the Bushing | EV+ Auto Repair",
+    h1: "Why We Replace the Full Control Arm (Never Just the Bushing)",
+    description:
+      "Some shops press a new bushing into a worn control arm and call it fixed. Here's why EV+ Auto Repair replaces the full arm on Teslas, every time.",
+    tag: "Suspension",
+    date: "November 26, 2026",
+    publishDate: "2026-11-26",
+    excerpt:
+      "A new bushing in a worn arm is a shortcut that doesn't last. Here's why we replace the full control arm on your Tesla — and why it matters.",
+    body: [
+      {
+        type: "p",
+        text: "Creaking, clunking, or a loose feeling over bumps on your Tesla usually means a control arm is worn out. When we give you the estimate, you'll see a full control arm on it — not a bushing. That's deliberate, and it's one of the things we're strictest about in the shop.",
+      },
+      { type: "h2", text: "The bushing is pressed into the arm" },
+      {
+        type: "p",
+        text: "The bushing is a rubber insert pressed into the control arm itself. It can only be replaced by pressing the old one out and forcing a new one in — and that pressing is exactly the problem. It stresses the arm, and it assumes the arm is still in good shape. On a Tesla with real miles on it, it usually isn't.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "A bushing-only replacement doesn't save you money — it buys you the same repair twice. The arm keeps wearing, the noise comes back, and you pay for the labor all over again.",
+      },
+      { type: "h2", text: "The arm itself wears out too" },
+      {
+        type: "p",
+        text: "Control arms take every pothole, speed bump, and hard turn your Tesla sees. Ball joints loosen, the metal fatigues, and the mounting points wear. Swapping a bushing into that arm is like putting a new hinge on a rotten door. We see bushing-only jobs come back to us from other shops — the customer paid once for the shortcut, then pays again for the real fix.",
+      },
+      { type: "h2", text: "What a full replacement gets you" },
+      {
+        type: "p",
+        text: "A new control arm means new bushings, new ball joints, and straight, unworn metal — everything in that corner of the suspension back to spec at once. Then we align it, road test it, and back the labor with our 6-12 month labor warranty. It's the repair done once, done right.",
+      },
+      {
+        type: "p",
+        text: "If your Tesla is creaking or clunking up front, don't guess. Book our free 1-hour inspection at EV+ Auto Repair in Sun Valley — we'll put it on the lift, show you exactly what's worn, and tell you straight whether it's the control arms or something else. Call (818) 281-7757 or book online.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Why won't you just replace the bushing?",
+        a: "Because the bushing is pressed into the arm, and the arm itself wears. A bushing-only job leaves worn ball joints and fatigued metal in place, so the noise and play come back. We replace the full arm so the repair lasts.",
+      },
+      {
+        q: "How do I know if my control arms are worn?",
+        a: "The classic signs are creaking or clunking from the front over bumps, a loose or wandering feeling in the steering, and uneven tire wear. A lift inspection confirms it — which is why our 1-hour inspection is free.",
+      },
+      {
+        q: "Is the repair covered by a warranty?",
+        a: "Yes. Our labor is backed by a 6-12 month labor warranty, depending on the job. We'll tell you exactly what yours covers before any work starts.",
+      },
+      {
+        q: "Do you work on non-Tesla vehicles?",
+        a: "Our service and maintenance work is Tesla-only. If your suspension concern is on another EV or a gas vehicle, that's something our collision center may be able to look at — call us and we'll tell you straight.",
+      },
+    ],
+    serviceLink: { href: "/service/suspension-steering", label: "Suspension & steering" },
+  },
+  {
+    slug: "tesla-collision-repair-what-to-expect",
+    title: "Tesla Collision Repair: What Actually Happens After an Accident | EV+ Auto Repair",
+    h1: "What Actually Happens After Your Tesla Is in an Accident",
+    description:
+      "From estimate to insurance to paint and calibration — here's the real Tesla collision repair process, and what to ask any shop before you hand over the keys.",
+    tag: "Collision",
+    date: "December 10, 2026",
+    publishDate: "2026-12-10",
+    excerpt:
+      "Estimate, insurance, parts, paint, calibration — here's the real step-by-step of Tesla collision repair and what to ask before you hand over your keys.",
+    body: [
+      {
+        type: "p",
+        text: "An accident is stressful enough without wondering what happens to your car next. Here's the honest step-by-step of how collision repair works at a Tesla-focused shop like ours — so you know what's supposed to happen, and you can spot it when a shop skips steps.",
+      },
+      { type: "h2", text: "Step 1: The estimate" },
+      {
+        type: "p",
+        text: "We inspect the damage in person — not just from photos — and write a detailed estimate. On Teslas, hidden damage is common: a bumper that looks scuffed can hide a damaged sensor, a bent bracket, or a cracked mounting tab underneath. A proper estimate accounts for what we can see and flags what we need to check once panels come off.",
+      },
+      { type: "h2", text: "Step 2: Insurance coordination" },
+      {
+        type: "p",
+        text: "We work directly with your insurance company on the claim — sending the estimate, documenting the damage, and handling supplements if we find more once teardown starts. You don't have to play middleman between the shop and the adjuster. That's our job.",
+      },
+      { type: "h2", text: "Step 3: Parts, repair, and paint" },
+      {
+        type: "p",
+        text: "Tesla parts come through proper channels, and panels are repaired or replaced to spec — no bondo mountains, no close-enough fits. Paint is matched to your car, not just to the color code, because factory paint fades and shifts over time. A good match means blending into the surrounding panels so the repair disappears.",
+      },
+      { type: "h2", text: "Step 4: Calibration and final checks" },
+      {
+        type: "p",
+        text: "This is the step cheap shops skip. Teslas are full of cameras and sensors — Autopilot cameras, parking sensors, radar — and any of them can need recalibration after body work, even if they weren't directly hit. We verify every system reads correctly before the car goes back to you, then road test it.",
+      },
+      { type: "h2", text: "What to ask any collision shop" },
+      {
+        type: "p",
+        text: "Before you hand over the keys anywhere, ask three things: do they document hidden damage or just quote what's visible, do they handle the insurance supplements themselves, and do they calibrate cameras and sensors after the repair. If a shop stumbles on any of those, keep looking.",
+      },
+      {
+        type: "p",
+        text: "One more thing worth knowing: our collision center isn't Tesla-only. While our service and maintenance work is strictly Tesla, the collision side also handles other EVs and gas vehicles. So if the accident involved a second car in the family, we can likely take care of both. Call EV+ Auto Repair at (818) 281-7757 or start your claim online — and if you're not sure how bad the damage is, our free 1-hour inspection applies here too.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you work with my insurance company?",
+        a: "Yes. We coordinate directly with your insurer — estimate, documentation, and supplements — so you don't have to manage the back-and-forth yourself.",
+      },
+      {
+        q: "Do you only repair Teslas?",
+        a: "Our service and maintenance work is Tesla-only, but our collision center also repairs other EVs and gas vehicles. If you have questions about a specific car, call us at (818) 281-7757.",
+      },
+      {
+        q: "Will my Tesla's cameras and sensors work properly after repair?",
+        a: "They should — but only if they're recalibrated after body work. We check and calibrate cameras, parking sensors, and related systems as part of every collision repair, then verify them before delivery.",
+      },
+      {
+        q: "Is the repair work warrantied?",
+        a: "Yes. Our collision work is backed by our 6-12 month labor warranty. We'll go over exactly what's covered for your repair before we start.",
+      },
+    ],
+    serviceLink: { href: "/collision", label: "Collision center" },
+  },
+  {
+    slug: "rent-a-tesla-while-yours-is-in-the-shop",
+    title: "In the Shop? Rent a Tesla and Keep Moving | EV+ Auto Repair",
+    h1: "Drop Off Your Tesla, Drive Off in a Tesla",
+    description:
+      "While your Tesla is being repaired at EV+ Auto Repair, rent one of our Teslas. Subject to availability — perfect during multi-day collision repairs.",
+    tag: "Rentals",
+    date: "December 24, 2026",
+    publishDate: "2026-12-24",
+    excerpt:
+      "Nobody wants to be without a car while theirs is in the shop. Our Tesla rentals keep you moving while we handle the repair.",
+    body: [
+      {
+        type: "p",
+        text: "Here is the part of car repair nobody talks about: the repair itself might be straightforward, but being without your car for days is the real headache. Work, school runs, errands — life does not pause because your Tesla is on a lift. We see it every day, which is exactly why we keep Teslas available to rent while yours is with us.",
+      },
+      { type: "h2", text: "Why a Tesla rental just makes sense" },
+      {
+        type: "p",
+        text: "If you drive a Tesla every day, switching to some random gas rental for a week is miserable. Different charging, different driving, different everything. Staying in a Tesla means zero learning curve — you already know how it drives, where to charge, and how your phone key works. It is the closest thing to not having your car in the shop at all.",
+      },
+      { type: "h2", text: "Perfect for repairs that take days" },
+      {
+        type: "p",
+        text: "This matters most during collision repairs, which can take several days while panels are ordered, painted, and fitted. Instead of piecing together rides or paying for a rental car company, you drop off your Tesla and drive off in a Tesla. Ask about a rental when you book — rentals are subject to availability, so the earlier you mention it, the better.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "People assume a shop rental means getting stuck with whatever is left on the lot. Our rentals are Teslas, maintained by the same techs who work on your car. You are not downgrading for the week.",
+      },
+      { type: "h2", text: "How it works" },
+      {
+        type: "p",
+        text: "It is simple. When you schedule your repair, let us know you will need a rental. Bring proof of full-coverage insurance when you drop off your car, and we will get you set up in a rental Tesla for the duration of the repair. When your car is done, you swap back. One trip, no juggling.",
+      },
+      {
+        type: "p",
+        text: "Not sure what your Tesla needs yet? Start with our free 1-hour inspection. We will diagnose the issue, give you a straight answer on the repair, and sort out a rental at the same time if the job is going to take a few days. Call (818) 281-7757 or book online.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How do I reserve a rental Tesla?",
+        a: "Mention it when you book your repair. Rentals are subject to availability, so booking early gives you the best shot.",
+      },
+      {
+        q: "Do I need insurance to take a rental?",
+        a: "Yes. You will need to show proof of full-coverage insurance when you pick up the rental.",
+      },
+      {
+        q: "How long can I keep the rental?",
+        a: "For the duration of your repair. When your Tesla is finished, you bring the rental back and drive yours home.",
+      },
+      {
+        q: "What if no rentals are available?",
+        a: "We will tell you upfront when you book. Availability changes week to week, so it is always worth asking.",
+      },
+    ],
+    serviceLink: { href: "/rentals", label: "Tesla rentals" },
+  },
+  {
+    slug: "tesla-tire-rotation-why-evs-need-it",
+    title: "Why Tire Rotation Matters More on Your Tesla | EV+ Auto Repair",
+    h1: "Your Tesla Eats Tires Faster Than You Think",
+    description:
+      "EVs wear tires faster and unevenly thanks to instant torque and battery weight. Tesla recommends rotation every 6,250 miles. Here is why it matters.",
+    tag: "Maintenance",
+    date: "January 7, 2027",
+    publishDate: "2027-01-07",
+    excerpt:
+      "Instant torque and a heavy battery pack mean your Tesla wears tires harder than any gas car you have owned. Rotation is not optional — it is how you protect your range and your wallet.",
+    body: [
+      {
+        type: "p",
+        text: "We see Teslas come in every week with tires worn down thousands of miles early, and the owner had no idea anything was wrong. No warning light, no noise — just rubber quietly disappearing. On a gas car you might get away with skipping rotations. On a Tesla, it costs you real money.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "Some owners assume EVs are low-maintenance enough that tire rotation does not matter. The opposite is true. A Tesla is heavier than a comparable gas car and puts down instant torque from a stop, which chews through tread faster and far less evenly. Rotation matters more on your Tesla, not less.",
+      },
+      { type: "h2", text: "Why EVs are so hard on tires" },
+      {
+        type: "p",
+        text: "Two things work against your tires. First, weight: the battery pack alone can add hundreds of pounds compared to a gas equivalent, and every pound presses down on the contact patch. Second, torque: an electric motor delivers full power the instant you touch the pedal, which scrubs the driven tires every time you accelerate. The result is wear that is both faster and more uneven than what most drivers are used to.",
+      },
+      { type: "h2", text: "What happens when you skip it" },
+      {
+        type: "p",
+        text: "Uneven wear does more than shorten tire life. As tread wears unevenly, rolling resistance goes up — and on an EV, rolling resistance comes straight out of your range. We have seen owners lose noticeable range to nothing more than neglected rotations. Past a point, uneven wear also means replacing tires in pairs or full sets instead of getting the full life out of all four.",
+      },
+      {
+        type: "p",
+        text: "Tesla recommends rotating your tires every 6,250 miles. That is more often than most gas cars, and it is not a suggestion to ignore. When you bring your Tesla to us, we check tread depth and wear patterns as part of the visit and rotate on that schedule so all four tires wear evenly and last as long as they should.",
+      },
+      {
+        type: "p",
+        text: "Not sure where your tires stand? Our free 1-hour inspection includes a tread and wear check. We will tell you straight whether a rotation is due or your tires have something else going on. Call (818) 281-7757 or book online — it takes an hour and it could save you a set of tires.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How often should I rotate my Tesla's tires?",
+        a: "Tesla recommends every 6,250 miles. Because EVs wear tires faster and more unevenly, sticking to that interval matters more than it would on a gas car.",
+      },
+      {
+        q: "Does skipping rotation really hurt my range?",
+        a: "Yes. Uneven tread increases rolling resistance, and on an EV that resistance comes directly out of your driving range.",
+      },
+      {
+        q: "Can I rotate the tires myself?",
+        a: "Some owners do, but Teslas with staggered wheel setups cannot be rotated the usual front-to-back way. We will check your setup and wear pattern first so the rotation actually helps.",
+      },
+      {
+        q: "How do I know if my tires are already unevenly worn?",
+        a: "Look for one edge of the tread wearing faster than the other, or the front tires looking very different from the rears. If you are not sure, our free inspection includes a tread depth and wear check.",
+      },
+    ],
+    serviceLink: { href: "/service/tire-rotation", label: "Tire rotation" },
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
   return POSTS.find((p) => p.slug === slug);
 }
 
+/** True when the post should be publicly visible (publish date reached). */
+export function isPublished(post: Post): boolean {
+  if (!post.publishDate) return true;
+  return post.publishDate <= new Date().toISOString().slice(0, 10);
+}
+
+/** Posts visible right now, newest first (dated posts by publish date, then the rest in array order). */
+export function getPublishedPosts(): Post[] {
+  const dated = POSTS.filter((p) => p.publishDate && isPublished(p)).sort((a, b) =>
+    (b.publishDate as string) < (a.publishDate as string) ? -1 : 1
+  );
+  const undated = POSTS.filter((p) => !p.publishDate);
+  return [...dated, ...undated];
+}
+
 export function getRelated(slug: string, count = 3): Post[] {
   const current = getPost(slug);
   if (!current) return [];
-  const others = POSTS.filter((p) => p.slug !== slug);
+  const others = getPublishedPosts().filter((p) => p.slug !== slug);
   const sameTag = others.filter((p) => p.tag === current.tag);
   const rest = others.filter((p) => p.tag !== current.tag);
   return [...sameTag, ...rest].slice(0, count);

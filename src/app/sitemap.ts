@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+import { connection } from "next/server";
+import { POSTS, isPublished } from "./blog/posts";
 
 const URL = "https://evplusautorepair.com";
 
@@ -22,20 +24,8 @@ const collisionSlugs = [
   "before-after-gallery",
   "gas-vehicle-collision",
 ];
-const blogSlugs = [
-  "tesla-hv-battery-replacement-what-it-looks-like",
-  "does-your-tesla-need-an-oil-change",
-  "tesla-drive-unit-fluid-lifetime-myth",
-  "tesla-drive-unit-oil-100k-miles",
-  "tesla-model-3-vibration-fix",
-  "tesla-battery-replacement-cost",
-  "do-teslas-need-maintenance",
-  "tesla-front-suspension-creaking",
-  "tesla-battery-health-charging-tips",
-  "tesla-model-y-battery-warranty",
-];
-
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  await connection();
   const now = new Date();
   const pages: MetadataRoute.Sitemap = [
     { url: URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
@@ -50,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pages.push({ url: `${URL}/service/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
   for (const s of collisionSlugs)
     pages.push({ url: `${URL}/collision/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
-  for (const s of blogSlugs)
-    pages.push({ url: `${URL}/blog/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.6 });
+  for (const p of POSTS.filter(isPublished))
+    pages.push({ url: `${URL}/blog/${p.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.6 });
   return pages;
 }
