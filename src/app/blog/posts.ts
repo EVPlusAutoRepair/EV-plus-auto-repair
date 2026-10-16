@@ -927,66 +927,7 @@ export const POSTS: Post[] = [
     ],
     serviceLink: { href: "/service/cabin-filters-radiator-cleaning", label: "Cabin Filters & Radiator Cleaning" },
   },
-  {
-    slug: "tesla-glass-replacement-roof-windshield",
-    title: "Tesla Glass Replacement: Roof & Windshield | EV+ Auto Repair",
-    h1: "Cracked Tesla Glass: Repair It or Replace It?",
-    description:
-      "Cracked Tesla roof glass or windshield? Learn when a chip can be repaired vs. replaced, what OEM glass replacement involves, and why calibration matters.",
-    tag: "Collision",
-    date: "November 10, 2026",
-    publishDate: "2026-11-10",
-    excerpt:
-      "A rock hits your windshield on the 101. Now there's a crack spreading across the glass — and on a Tesla, what happens next is different from a gas car. Here's how to know whether it can be repaired or needs full replacement.",
-    image: shopSign,
-    imageAlt: "Tesla glass replacement in Sun Valley — cracked roof glass repair at EV+ Auto Repair",
-    videoUrl: "https://www.instagram.com/reel/DYlyohKtjfU/",
-    body: [
-      {
-        type: "p",
-        text: "A rock kicks up on the freeway and suddenly there's a crack in your windshield — or worse, in that huge fixed roof glass panel. On most cars, glass is glass. On a Tesla, it isn't. The roof on a Model 3 or Model Y is one massive piece of glass spanning nearly the whole cabin. The windshield has cameras mounted behind it that your Autopilot depends on. And the glass itself is specially coated to block UV and infrared heat. So when it cracks, the real question isn't just whether someone can fix it — it's whether the repair leaves your Tesla safe, quiet, and seeing the road properly.",
-      },
-      { type: "h2", text: "When a chip can be repaired" },
-      {
-        type: "p",
-        text: "Small chips can often be repaired without replacing the glass. The rule of thumb: if the damage is smaller than a quarter, it sits outside the driver's direct line of sight, and it hasn't reached the edge of the glass, a resin repair usually works. The technician injects a clear resin into the chip, cures it with UV light, and polishes it smooth. It won't be invisible — you'll spot a faint blemish if you look for it — but it stops the crack from spreading and restores the glass's strength. The key word is small. Valley heat makes cracks grow fast: a chip you ignore in June can become a foot-long crack by August, because the glass expands in the heat and the weak spot gives way.",
-      },
-      { type: "h2", text: "When replacement is the only option" },
-      {
-        type: "p",
-        text: "Long cracks, cracks that reach the edge of the glass, damage in the driver's critical viewing area, or several chips clustered together — those all mean replacement. So does significant damage to the fixed roof glass, which is one enormous panel that can't be patched like a small windshield chip. Roof glass replacement is a bigger job than most owners expect: the headliner trim comes down, the old panel is cut out of its urethane adhesive bed, the frame is prepped, and the new glass is set in fresh adhesive. It has to be OEM Tesla glass — not just for fit, but because Tesla's glass carries specific UV and infrared coatings and acoustic properties. Aftermarket glass that 'fits' can leave you with a hotter cabin, more road noise, and cameras that don't see quite right. Cost depends on which panel needs replacing — roof glass runs more than a windshield — plus labor, adhesive, trim work, and the calibration step below.",
-      },
-      {
-        type: "myth",
-        label: "The myth busted",
-        text: "Glass is glass — any shop can swap a windshield. On a Tesla, the windshield is a mounting surface for the Autopilot camera assembly, and the glass itself is part of the car's thermal and acoustic design. The wrong glass or a sloppy install doesn't just look bad — it can degrade the safety systems you paid for.",
-      },
-      { type: "h2", text: "What replacement actually involves" },
-      {
-        type: "p",
-        text: "A proper Tesla glass replacement starts with OEM Tesla glass and the correct urethane adhesive, applied the way Tesla specifies. The technician removes the interior trim, cuts out the damaged glass, preps the bonding surface, sets the new glass, and reinstalls everything. Then comes the step most general glass shops skip: camera calibration. The front-facing cameras behind the windshield have to be recalibrated so Autopilot, lane keeping, and emergency braking work correctly — we do that as part of every glass job, not as an optional add-on. If your Tesla has cracked glass, bring it in for a free 1-hour inspection and we'll tell you honestly whether it can be repaired or needs replacement. Our collision center handles all EVs plus gas vehicles, every job carries our 6–12 month labor warranty, and if your car needs to stay with us, we have Tesla rentals available on-site, subject to availability. Call (818) 281-7757 or book online.",
-      },
-    ],
-    faqs: [
-      {
-        q: "Can a cracked Tesla windshield be repaired, or does it always need replacement?",
-        a: "Small chips — smaller than a quarter, outside the driver's direct line of sight, and away from the glass edge — can usually be repaired with resin. Long cracks, edge cracks, or damage in the driver's viewing area mean replacement. Bring it in and we'll tell you honestly which one yours needs.",
-      },
-      {
-        q: "Does Tesla glass replacement require OEM glass?",
-        a: "We strongly recommend it. Tesla's glass has specific UV and infrared coatings plus acoustic properties, and the windshield carries the mounting for the Autopilot camera assembly. Aftermarket glass may fit, but it can change cabin heat, road noise, and camera performance.",
-      },
-      {
-        q: "How long does a Tesla windshield or roof glass replacement take?",
-        a: "Plan on the car being with us for the day — the urethane adhesive needs proper cure time, and camera calibration has to be completed and verified before the car goes back to you. We'll give you a straight timeline when you book.",
-      },
-      {
-        q: "Will my insurance cover Tesla glass replacement?",
-        a: "Usually, yes, under comprehensive coverage — and in California you choose the shop, not the insurer. We handle insurance claims directly, including documentation and supplements, so you don't have to fight that battle alone.",
-      },
-    ],
-    serviceLink: { href: "/collision", label: "Collision Center" },
-  },
+  
   {
     slug: "tesla-adas-camera-calibration",
     title: "Tesla ADAS Camera Calibration Explained | EV+ Auto Repair",
