@@ -16,6 +16,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  // Dynamic so publish-date gating (which reads the current date) never
+  // runs during prerender, where `new Date()` is forbidden.
+  await connection();
   const { slug } = await params;
   const post = getPost(slug);
   if (!post || !isPublished(post)) return {};
@@ -95,6 +98,21 @@ async function PostContent({ slug }: { slug: string }) {
       <section>
         <div className="wrap">
           <div className="article-body" style={{ maxWidth: 760 }}>
+            {post.image && (
+              <div
+                role="img"
+                aria-label={post.imageAlt || post.title}
+                style={{
+                  width: "100%",
+                  aspectRatio: "16 / 9",
+                  borderRadius: 12,
+                  marginBottom: 32,
+                  backgroundImage: `url('${post.image}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            )}
             {post.body.map(renderBlock)}
 
             {post.videoUrl && (

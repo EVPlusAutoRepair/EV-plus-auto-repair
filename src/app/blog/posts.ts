@@ -3,6 +3,13 @@ export type Block =
   | { type: "h2"; text: string }
   | { type: "myth"; label: string; text: string };
 
+import { shop2 } from "../img/shop-2";
+import { shop3 } from "../img/shop-3";
+import { shop4 } from "../img/shop-4";
+import { shopSign, usbDrive } from "../img/shop-sign";
+import { whySign } from "../img/why-sign";
+import { rentalsTeslas } from "../img/rentals";
+
 export interface Post {
   slug: string;
   title: string;
@@ -14,6 +21,10 @@ export interface Post {
   publishDate?: string;
   excerpt: string;
   videoUrl?: string;
+  /** Data-URI or path for the post hero image. */
+  image?: string;
+  /** Descriptive alt text for the hero image (SEO). */
+  imageAlt?: string;
   body: Block[];
   faqs: { q: string; a: string }[];
   serviceLink: { href: string; label: string };
@@ -518,10 +529,13 @@ export const POSTS: Post[] = [
     description:
       "Musty AC smell? Weak airflow? Your Tesla's cabin filter is overdue. Here's why it matters, how often to replace it, and what the service involves.",
     tag: "Maintenance",
-    date: "October 29, 2026",
-    publishDate: "2026-10-29",
+    date: "October 16, 2026",
+    publishDate: "2026-10-16",
+    image: shop3,
+    imageAlt: "Tesla cabin filter replacement at EV+ Auto Repair in Sun Valley",
     excerpt:
       "That musty smell when the AC kicks on is your cabin filter begging for retirement. Here's what it does, when to replace it, and what the service looks like at our Sun Valley shop.",
+    videoUrl: "https://www.instagram.com/reel/DWYKoe_jbqu/",
     body: [
       {
         type: "p",
@@ -575,8 +589,10 @@ export const POSTS: Post[] = [
     description:
       "Your Tesla's 12V battery can strand you with no warning. Learn the warning signs, what to do when it dies, and why replacing it early beats a tow.",
     tag: "Battery",
-    date: "November 12, 2026",
-    publishDate: "2026-11-12",
+    date: "October 20, 2026",
+    publishDate: "2026-10-20",
+    image: shop4,
+    imageAlt: "Tesla 12V battery warning signs — service at EV+ Auto Repair Sun Valley",
     excerpt:
       "The battery that strands Tesla owners isn't the big one — it's the little 12V. Here's how to spot trouble before you're locked out of a dead car.",
     body: [
@@ -632,8 +648,10 @@ export const POSTS: Post[] = [
     description:
       "Some shops press a new bushing into a worn control arm and call it fixed. Here's why EV+ Auto Repair replaces the full arm on Teslas, every time.",
     tag: "Suspension",
-    date: "November 26, 2026",
-    publishDate: "2026-11-26",
+    date: "October 22, 2026",
+    publishDate: "2026-10-22",
+    image: whySign,
+    imageAlt: "Tesla control arm replacement at EV+ Auto Repair — full arm, never just the bushing",
     excerpt:
       "A new bushing in a worn arm is a shortcut that doesn't last. Here's why we replace the full control arm on your Tesla — and why it matters.",
     body: [
@@ -693,8 +711,10 @@ export const POSTS: Post[] = [
     description:
       "From estimate to insurance to paint and calibration — here's the real Tesla collision repair process, and what to ask any shop before you hand over the keys.",
     tag: "Collision",
-    date: "December 10, 2026",
-    publishDate: "2026-12-10",
+    date: "October 27, 2026",
+    publishDate: "2026-10-27",
+    image: shopSign,
+    imageAlt: "Tesla collision repair at EV+ Auto Repair in Sun Valley, Los Angeles",
     excerpt:
       "Estimate, insurance, parts, paint, calibration — here's the real step-by-step of Tesla collision repair and what to ask before you hand over your keys.",
     body: [
@@ -759,8 +779,10 @@ export const POSTS: Post[] = [
     description:
       "While your Tesla is being repaired at EV+ Auto Repair, rent one of our Teslas. Subject to availability — perfect during multi-day collision repairs.",
     tag: "Rentals",
-    date: "December 24, 2026",
-    publishDate: "2026-12-24",
+    date: "October 29, 2026",
+    publishDate: "2026-10-29",
+    image: rentalsTeslas,
+    imageAlt: "Rent a Tesla while yours is in the shop at EV+ Auto Repair",
     excerpt:
       "Nobody wants to be without a car while theirs is in the shop. Our Tesla rentals keep you moving while we handle the repair.",
     body: [
@@ -820,8 +842,10 @@ export const POSTS: Post[] = [
     description:
       "EVs wear tires faster and unevenly thanks to instant torque and battery weight. Tesla recommends rotation every 6,250 miles. Here is why it matters.",
     tag: "Maintenance",
-    date: "January 7, 2027",
-    publishDate: "2027-01-07",
+    date: "November 3, 2026",
+    publishDate: "2026-11-03",
+    image: shop2,
+    imageAlt: "Tesla tire rotation service at EV+ Auto Repair Sun Valley",
     excerpt:
       "Instant torque and a heavy battery pack mean your Tesla wears tires harder than any gas car you have owned. Rotation is not optional — it is how you protect your range and your wallet.",
     body: [
@@ -873,6 +897,559 @@ export const POSTS: Post[] = [
     ],
     serviceLink: { href: "/service/tire-rotation", label: "Tire rotation" },
   },
+  {
+    slug: "tesla-radiator-condenser-cleaning",
+    title: "Tesla Radiator & Condenser Cleaning | EV+ Auto Repair",
+    h1: "Your Tesla's Radiator Is Choking on Valley Dust",
+    description: "Weak Tesla AC? Valley dust clogs the radiator and condenser, hurting cooling and battery health. $150 radiator cleaning in Sun Valley — (818) 281-7757.",
+    tag: "Maintenance",
+    date: "November 5, 2026",
+    publishDate: "2026-11-05",
+    excerpt: "Your Tesla's radiator sits low behind the bumper, collecting Valley dust that chokes AC performance and battery cooling. Our $150 cleaning, roughly once a year, keeps it breathing.",
+    image: shop3,
+    imageAlt: "Tesla radiator and condenser cleaning service in the San Fernando Valley",
+    videoUrl: "https://www.instagram.com/reel/DX_IzPwtCrl/",
+    body: [
+      { type: "p", text: "Your Tesla's radiator and condenser sit low behind the front bumper, right where the road throws everything: dust, leaves, cottonwood fluff, plastic bags, and the fine grit the San Fernando Valley is famous for. Every mile packs more of it into the fins, and airflow drops a little more. On a Tesla, that radiator is not cooling an engine — it is cooling your battery, your drive unit, your power electronics, and the cabin AC. Most owners never look down there until something goes wrong, which is a shame, because what goes wrong is entirely preventable." },
+      { type: "h2", text: "Why the Valley is especially rough on radiators" },
+      { type: "p", text: "Most places get one debris season. The Valley gets several: spring winds, summer dust, Santa Ana season blowing everything sideways, and wildfire smoke and ash in bad years — the same stuff that loads up cabin filters loads up radiators. Add construction grit from every widened freeway and the leaf drop from street trees, and a Tesla driven here can pack its condenser solid in a single year. If you park under trees or commute the 101 daily, yours fills up even faster. Cars in milder climates can go longer between cleanings. Yours probably cannot." },
+      { type: "h2", text: "What a clogged condenser actually does" },
+      { type: "p", text: "When airflow through the condenser drops, your AC works harder for less cooling. The classic complaint is AC that feels weak at idle or in stop-and-go traffic but fine on the freeway — at speed, ram air compensates; at a standstill, nothing does. Less obvious is what happens to the battery. The thermal management system shares that cooling loop, so a clogged radiator means the car works harder to keep the battery at temperature. That costs efficiency every single day, and over time the battery spends more hours outside its ideal temperature range. The cooling fan also runs louder and longer trying to compensate, which is why 'my Tesla sounds like a jet preparing for takeoff' is a sentence we hear every summer." },
+      { type: "myth", label: "The myth, busted", text: "Radiators are a gas-car thing. A Tesla has no engine to overheat, but it has plenty of heat to reject — from the battery, the drive unit, and the power electronics. The radiator and condenser work every time you drive. Ignore them and the entire thermal system pays for it." },
+      { type: "p", text: "The signs are straightforward: weak AC, especially at low speeds; the cooling fan roaring constantly; visible debris packed in the lower grille; in bad cases, thermal warnings on the screen. But by the time you notice symptoms, airflow has been restricted for a while — which is why we recommend cleaning roughly once a year, ideally in spring before AC season hits. Our radiator and condenser cleaning is $150. We remove the front ducting, clear the debris packed between the condenser and radiator where a hose cannot reach, straighten bent fins, and verify fan operation. It is something we check during the free 1-hour inspection, so if you are already coming in, we will tell you honestly whether yours needs it. No upsell — if it is clean, we will tell you it is clean. The work carries our 6–12 month labor warranty." },
+      { type: "p", text: "If your AC is not what it used to be, or it has been a year since the last cleaning, book a free inspection online or call us at (818) 281-7757. Family-owned in Sun Valley since 2016, Tesla is all we do. It is a small service that protects very expensive parts." },
+    ],
+    faqs: [
+      { q: "How often should the radiator be cleaned?", a: "Roughly once a year in the San Fernando Valley — dust, leaves, and wind-blown debris pack in fast here. If you park under trees or drive the freeway daily, you may need it sooner. We check the radiator's condition during every free inspection, so you will always know where yours stands." },
+      { q: "Can I just hose it out myself?", a: "You can rinse the surface, but the real blockage packs between the condenser and the radiator where a hose cannot reach. Getting to it means removing ducting and trim, and done wrong you bend the fins and make airflow worse. The $150 service exists because the proper way takes actual disassembly." },
+      { q: "Does a dirty radiator hurt the battery?", a: "Indirectly, yes. The battery thermal management system rejects heat through that same radiator. Restricted airflow means the system works harder and the battery spends more time outside its ideal temperature range. It is not an emergency, but it is not nothing either." },
+      { q: "Is the cleaning included in the free inspection?", a: "The inspection includes checking the radiator's condition and telling you whether it needs cleaning. The $150 cleaning itself is a separate service. If yours is clean, we will say so and you will pay nothing." },
+    ],
+    serviceLink: { href: "/service/cabin-filters-radiator-cleaning", label: "Cabin Filters & Radiator Cleaning" },
+  },
+  {
+    slug: "tesla-glass-replacement-roof-windshield",
+    title: "Tesla Glass Replacement: Roof & Windshield | EV+ Auto Repair",
+    h1: "Cracked Tesla Glass: Repair It or Replace It?",
+    description:
+      "Cracked Tesla roof glass or windshield? Learn when a chip can be repaired vs. replaced, what OEM glass replacement involves, and why calibration matters.",
+    tag: "Collision",
+    date: "November 10, 2026",
+    publishDate: "2026-11-10",
+    excerpt:
+      "A rock hits your windshield on the 101. Now there's a crack spreading across the glass — and on a Tesla, what happens next is different from a gas car. Here's how to know whether it can be repaired or needs full replacement.",
+    image: shopSign,
+    imageAlt: "Tesla glass replacement in Sun Valley — cracked roof glass repair at EV+ Auto Repair",
+    videoUrl: "https://www.instagram.com/reel/DYlyohKtjfU/",
+    body: [
+      {
+        type: "p",
+        text: "A rock kicks up on the freeway and suddenly there's a crack in your windshield — or worse, in that huge fixed roof glass panel. On most cars, glass is glass. On a Tesla, it isn't. The roof on a Model 3 or Model Y is one massive piece of glass spanning nearly the whole cabin. The windshield has cameras mounted behind it that your Autopilot depends on. And the glass itself is specially coated to block UV and infrared heat. So when it cracks, the real question isn't just whether someone can fix it — it's whether the repair leaves your Tesla safe, quiet, and seeing the road properly.",
+      },
+      { type: "h2", text: "When a chip can be repaired" },
+      {
+        type: "p",
+        text: "Small chips can often be repaired without replacing the glass. The rule of thumb: if the damage is smaller than a quarter, it sits outside the driver's direct line of sight, and it hasn't reached the edge of the glass, a resin repair usually works. The technician injects a clear resin into the chip, cures it with UV light, and polishes it smooth. It won't be invisible — you'll spot a faint blemish if you look for it — but it stops the crack from spreading and restores the glass's strength. The key word is small. Valley heat makes cracks grow fast: a chip you ignore in June can become a foot-long crack by August, because the glass expands in the heat and the weak spot gives way.",
+      },
+      { type: "h2", text: "When replacement is the only option" },
+      {
+        type: "p",
+        text: "Long cracks, cracks that reach the edge of the glass, damage in the driver's critical viewing area, or several chips clustered together — those all mean replacement. So does significant damage to the fixed roof glass, which is one enormous panel that can't be patched like a small windshield chip. Roof glass replacement is a bigger job than most owners expect: the headliner trim comes down, the old panel is cut out of its urethane adhesive bed, the frame is prepped, and the new glass is set in fresh adhesive. It has to be OEM Tesla glass — not just for fit, but because Tesla's glass carries specific UV and infrared coatings and acoustic properties. Aftermarket glass that 'fits' can leave you with a hotter cabin, more road noise, and cameras that don't see quite right. Cost depends on which panel needs replacing — roof glass runs more than a windshield — plus labor, adhesive, trim work, and the calibration step below.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "Glass is glass — any shop can swap a windshield. On a Tesla, the windshield is a mounting surface for the Autopilot camera assembly, and the glass itself is part of the car's thermal and acoustic design. The wrong glass or a sloppy install doesn't just look bad — it can degrade the safety systems you paid for.",
+      },
+      { type: "h2", text: "What replacement actually involves" },
+      {
+        type: "p",
+        text: "A proper Tesla glass replacement starts with OEM Tesla glass and the correct urethane adhesive, applied the way Tesla specifies. The technician removes the interior trim, cuts out the damaged glass, preps the bonding surface, sets the new glass, and reinstalls everything. Then comes the step most general glass shops skip: camera calibration. The front-facing cameras behind the windshield have to be recalibrated so Autopilot, lane keeping, and emergency braking work correctly — we do that as part of every glass job, not as an optional add-on. If your Tesla has cracked glass, bring it in for a free 1-hour inspection and we'll tell you honestly whether it can be repaired or needs replacement. Our collision center handles all EVs plus gas vehicles, every job carries our 6–12 month labor warranty, and if your car needs to stay with us, we have Tesla rentals available on-site, subject to availability. Call (818) 281-7757 or book online.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can a cracked Tesla windshield be repaired, or does it always need replacement?",
+        a: "Small chips — smaller than a quarter, outside the driver's direct line of sight, and away from the glass edge — can usually be repaired with resin. Long cracks, edge cracks, or damage in the driver's viewing area mean replacement. Bring it in and we'll tell you honestly which one yours needs.",
+      },
+      {
+        q: "Does Tesla glass replacement require OEM glass?",
+        a: "We strongly recommend it. Tesla's glass has specific UV and infrared coatings plus acoustic properties, and the windshield carries the mounting for the Autopilot camera assembly. Aftermarket glass may fit, but it can change cabin heat, road noise, and camera performance.",
+      },
+      {
+        q: "How long does a Tesla windshield or roof glass replacement take?",
+        a: "Plan on the car being with us for the day — the urethane adhesive needs proper cure time, and camera calibration has to be completed and verified before the car goes back to you. We'll give you a straight timeline when you book.",
+      },
+      {
+        q: "Will my insurance cover Tesla glass replacement?",
+        a: "Usually, yes, under comprehensive coverage — and in California you choose the shop, not the insurer. We handle insurance claims directly, including documentation and supplements, so you don't have to fight that battle alone.",
+      },
+    ],
+    serviceLink: { href: "/collision", label: "Collision Center" },
+  },
+  {
+    slug: "tesla-adas-camera-calibration",
+    title: "Tesla ADAS Camera Calibration Explained | EV+ Auto Repair",
+    h1: "Your Tesla's Cameras Are Blind After Body Work",
+    description:
+      "Tesla cameras need recalibration after body work or glass replacement. Here's what ADAS calibration involves — and what goes wrong when a shop skips it.",
+    tag: "Collision",
+    date: "November 12, 2026",
+    publishDate: "2026-11-12",
+    excerpt:
+      "Your Tesla came back from the body shop looking perfect. But the cameras behind that fresh paint are pointing somewhere they shouldn't be — and every safety system that depends on them is compromised. That's what ADAS calibration fixes.",
+    image: shop3,
+    imageAlt: "Tesla ADAS camera calibration after collision repair at EV+ Auto Repair",
+    videoUrl: "https://www.instagram.com/reel/DVsVUETjT1Z/",
+    body: [
+      {
+        type: "p",
+        text: "Your Tesla sees the world through cameras: three facing forward behind the windshield, one in each B-pillar, one in each front fender, and one at the rear. Autopilot, lane keeping, automatic emergency braking, blind-spot monitoring — all of it depends on those cameras agreeing precisely about where everything is. Now imagine a fender gets replaced, a bumper gets repainted, or a windshield comes out. The cameras go back on, but they sit a millimeter or two off from where they were. To you, the car looks perfect. To the car, the world just shifted. Every distance estimate, every lane position, every closing-speed calculation now starts from a wrong assumption. That's why calibration isn't a nice-to-have — it's the difference between safety systems that work and ones that quietly don't.",
+      },
+      { type: "h2", text: "Why a Tesla's cameras care about body work" },
+      {
+        type: "p",
+        text: "Cameras don't have opinions — they have geometry. Each camera's view has to line up with the others and with the car's actual dimensions, so the software can judge distances, lane positions, and closing speeds. Move a camera even slightly during a repair and that geometry breaks. The car might think a lane line sits six inches from where it really is, or misjudge how fast the car ahead is slowing down. This applies to more repairs than most owners expect: bumper covers, fenders, doors with B-pillar cameras, windshields, roof glass, even side mirrors on some models. And it's not only collision work — any glass replacement near a camera triggers the same requirement. If a repair touched anything near a camera, calibration belongs on the work order. Skipping it doesn't trigger a check-engine light — the car has no way to tell you its eyes are misaligned.",
+      },
+      { type: "h2", text: "What calibration actually involves" },
+      {
+        type: "p",
+        text: "Tesla's calibration is a drive-based procedure. The car is put into calibration mode and driven on well-marked roads, so the cameras can relearn their positions against real lane lines and landmarks. The touchscreen shows calibration progress as it happens, and Autopilot features stay limited until the procedure completes. The whole process typically takes one drive cycle on suitable roads, though heavy traffic or poorly marked streets can extend it. A proper shop doesn't just send you driving and hope for the best — we initiate the procedure correctly, drive a suitable calibration route, and verify it finished with every camera reporting properly before the car goes back to you. Then we confirm Autopilot, lane keeping, and emergency braking are fully functional again. Calibration isn't done when the car looks done. It's done when we've verified it.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "The car calibrates itself, so the shop doesn't need to do anything. The car does run the calibration routine — but only if someone initiates it properly, drives the right kind of roads, and verifies it finished. 'The car figures it out' is how cars leave shops with blind cameras and owners who never know.",
+      },
+      { type: "h2", text: "What happens when a shop skips it" },
+      {
+        type: "p",
+        text: "Here's the unsettling part: a Tesla with uncalibrated cameras usually still drives fine. What breaks is quieter. Autopilot may refuse to engage. Lane keeping can wander. Blind-spot warnings might cry wolf — or stay silent when they matter most. Automatic emergency braking can't be trusted to judge distances it's mismeasuring. Sometimes the car throws camera-related warnings; sometimes it throws nothing at all while its safety systems quietly underperform. If your Tesla has had body work, glass replacement, or any repair near a camera, ask the shop directly whether calibration was performed and verified — and don't accept a vague answer. At EV+, ADAS calibration is part of every qualifying repair: not an add-on, not a surprise line item. Our collision center handles all EVs plus gas vehicles, every job carries our 6–12 month labor warranty, and if your car needs to stay with us, we have Tesla rentals available on-site, subject to availability. Call (818) 281-7757 or book a free inspection online.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is ADAS calibration?",
+        a: "ADAS (advanced driver-assistance systems) calibration is the process of realigning your Tesla's cameras after a repair, so Autopilot, lane keeping, emergency braking, and blind-spot monitoring work correctly. Without it, the cameras' geometry is off and the safety systems can't be trusted.",
+      },
+      {
+        q: "Which repairs require camera calibration on a Tesla?",
+        a: "Windshield or roof glass replacement, bumper or fender work, door repairs near the B-pillar cameras, and side mirror replacement, among others. The rule is simple: if a repair touched anything near a camera, calibration belongs on the work order.",
+      },
+      {
+        q: "How do I know if my Tesla's cameras are calibrated?",
+        a: "After a proper calibration, the car completes its calibration routine — visible as progress on the touchscreen — and all driver-assistance features return to full function. If Autopilot won't engage or you're seeing camera warnings after body work, the calibration was likely skipped or left incomplete. Bring it in and we'll check.",
+      },
+      {
+        q: "Can any body shop calibrate Tesla cameras?",
+        a: "In theory, any shop can run the drive procedure — but in practice, many skip it entirely or never verify it completed. A Tesla-specialized collision shop knows which repairs trigger calibration, how to initiate it properly, and how to verify every camera before the car leaves. That's the difference.",
+      },
+    ],
+    serviceLink: { href: "/collision/adas-calibration", label: "ADAS Calibration" },
+  },
+  {
+    slug: "tesla-coolant-leak-supermanifold",
+    title: "Tesla Coolant Leak: Symptoms & Repair | EV+ Auto Repair",
+    h1: "A Tesla Coolant Leak Is Never 'Just a Little Leak'",
+    description:
+      "Tesla coolant leak symptoms: low coolant warnings, visible leaks, overheating. What the Supermanifold is and how we fix it. Sun Valley: (818) 281-7757.",
+    tag: "Maintenance",
+    date: "November 17, 2026",
+    publishDate: "2026-11-17",
+    excerpt:
+      "That low coolant warning on your Tesla is telling you something specific — usually a leak at a fitting, a hose, or the Supermanifold itself. Here's how we find it and fix it.",
+    image: shop4,
+    imageAlt: "Tesla coolant leak repair — Supermanifold service at EV+ Auto Repair Sun Valley",
+    videoUrl: "https://www.instagram.com/reel/DcxjJcDtRtD/",
+    body: [
+      {
+        type: "p",
+        text: "Teslas don't have engines, but they absolutely have coolant — and coolant leaks are one of the sneakiest problems these cars develop. The car has no oil dipstick for you to check and no temperature gauge climbing into the red like an old gas car. What you get instead is a warning message, a puddle where you parked, or a cooling fan working harder than it should. Catching a coolant leak early is the difference between a hose or a fitting and a repair that touches the battery cooling loop. Ignore it long enough and the car protects itself by limiting power — or worse, it doesn't protect itself in time.",
+      },
+      { type: "h2", text: "The symptoms owners actually notice" },
+      {
+        type: "p",
+        text: "The most common sign is a low coolant warning on the screen. It might come and go at first — coolant level drops, you add some, the warning disappears for a while, then it's back. That's the signature of a slow leak, and it's the one that tricks people into treating the symptom instead of the cause. Other signs: a sweet-smelling puddle under the front of the car (Tesla coolant smells faintly sweet, like any glycol coolant), visible wetness around the frunk area, the cooling fan running loud and long on drives where it used to be quiet, or reduced Supercharging speed — the thermal system throttles charging when it can't keep temperatures where they belong. If you're seeing any of these, stop topping off the coolant and get the leak found. Topping off without finding the leak is how a $300 repair becomes a $3,000 one.",
+      },
+      {
+        type: "p",
+        text: "On Model 3 and Model Y, the coolant system runs through a single central assembly Tesla calls the Supermanifold — a compact octovalve block that routes coolant between the battery, the drive units, the cabin heat pump, and the power electronics. It's an elegant piece of engineering: one component doing the work that used to take a maze of separate valves and hoses. But elegant doesn't mean indestructible. Leaks develop at hose connections, at the fittings where lines meet the manifold, and occasionally in the pipes themselves — road debris, heat cycling, and age all take their toll. Diagnosing it means pressure-testing the system, tracing the wet trail with the frunk trim out, and confirming exactly which joint or pipe is weeping before anything gets replaced.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "Coolant leaks are a gas-car problem. A Tesla's thermal system is arguably more important than a gas car's — it protects the battery, and the battery is the most expensive part of the vehicle. A leak that a gas car would shrug off for months can put a Tesla into reduced-power mode on a hot Valley afternoon.",
+      },
+      { type: "h2", text: "How the repair works" },
+      {
+        type: "p",
+        text: "Once we find the leak, the fix is usually straightforward: replace the damaged pipe, hose, or fitting, refill the system with the correct coolant, bleed the air out properly, and verify the repair holds under pressure. The critical part is the diagnosis — coolant travels, so the wettest spot isn't always the source, and guessing means replacing parts until the leak stops. Our $180 diagnostic applies here, and it's credited toward the repair. The work carries our 6–12 month labor warranty. If your car needs to stay with us, we have Tesla rentals available on-site, subject to availability.",
+      },
+      {
+        type: "p",
+        text: "If you're getting low coolant warnings or you've spotted fluid under the front of your Tesla, book a free 1-hour inspection online or call us at (818) 281-7757. Family-owned in Sun Valley since 2016, Tesla is all we do. Coolant leaks don't fix themselves — but they do get found, and found early they're a routine repair.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I just keep topping off the coolant?",
+        a: "You can, but you're treating the symptom while the leak gets worse — and coolant loss can put the car into reduced-power mode without much warning. Finding the leak now is cheaper than finding it after the thermal system has been stressed for months.",
+      },
+      {
+        q: "What does a Tesla coolant leak smell or look like?",
+        a: "The coolant is a glycol-based fluid with a faintly sweet smell, usually visible as a clear or slightly colored puddle under the front of the car. Don't confuse it with plain water from the AC drain, which is normal — coolant has that sweet scent and a slightly oily feel.",
+      },
+      {
+        q: "Is a coolant leak dangerous to drive with?",
+        a: "A small leak is usually safe for a short drive to the shop, but it's not something to live with. Low coolant can trigger reduced power, limit Supercharging, and in a bad case stress the battery thermal system. Get it checked promptly.",
+      },
+      {
+        q: "How long does a coolant leak repair take?",
+        a: "Most are same-week appointments at our Sun Valley shop. Diagnosis first — we confirm the exact source with a pressure test — then the repair, refill, bleed, and a pressure verification. Book online or call (818) 281-7757.",
+      },
+    ],
+    serviceLink: { href: "/service/diagnostics", label: "Diagnostics" },
+  },
+  {
+    slug: "tesla-sentry-mode-dashcam-usb-setup",
+    title: "Tesla Sentry Mode & Dashcam USB Setup Guide | EV+ Auto Repair",
+    h1: "Your Tesla's Cameras Record Nothing Without This",
+    description:
+      "Your Tesla's cameras record nothing without a USB drive in the glovebox port. Setup steps, formatting tips, and the 128GB OEM drive we sell for $29.99.",
+    tag: "Accessories",
+    date: "November 19, 2026",
+    publishDate: "2026-11-19",
+    excerpt:
+      "Sentry Mode and Dashcam are useless without a USB drive in the glovebox port. Here's the five-minute setup — and the drive we recommend.",
+    image: usbDrive,
+    imageAlt: "128GB Tesla USB drive for Sentry Mode and Dashcam recording",
+    videoUrl: "https://www.instagram.com/reel/DcSrHeCNYP1/",
+    body: [
+      {
+        type: "p",
+        text: "Your Tesla has cameras watching in every direction — while you drive and while it's parked. But here's what most owners don't realize until they need the footage: those cameras record nothing unless a USB drive is plugged into the glovebox port. No drive, no Dashcam clips. No drive, no Sentry Mode events. The car won't warn you loudly about it, either. If you've never set this up, your Tesla's cameras are currently just expensive decorations.",
+      },
+      { type: "h2", text: "What Dashcam and Sentry Mode actually record" },
+      {
+        type: "p",
+        text: "Dashcam records while you drive, keeping roughly the last hour of footage in a rolling buffer. Tap the dashcam icon — or honk, if you've enabled 'save on honk' — and it locks in the last ten minutes permanently. Sentry Mode is the parked guard: when the car is locked and someone gets close or disturbs it, the cameras record the event and the screen warns them they're being filmed. Both features write to the same USB drive, and both silently do nothing without one. After a hit-and-run or a parking lot ding, that footage is often the only evidence you'll ever get.",
+      },
+      { type: "h2", text: "Setting it up takes five minutes" },
+      {
+        type: "p",
+        text: "Plug the drive into the USB port inside the glovebox — that's the designated port for Dashcam and Sentry, and it's lockable, which matters if the footage ever becomes evidence. Then go to Controls, then Safety, and tap Format USB Drive; the car formats it correctly itself, so you don't need a computer. Finally, make sure Dashcam and Sentry Mode are enabled in your settings. Use a drive with enough capacity — 128GB is the sweet spot, holding weeks of Sentry events and plenty of Dashcam clips — and a quality drive, because this drive is writing nearly every time the car is on or disturbed.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "Any cheap flash drive will not cut it. Dashcam and Sentry write constantly, and bargain drives overheat, corrupt footage, or die within months. Spend the extra few dollars on a proper drive — like the OEM Tesla drive — instead of a bargain-bin stick. It's the difference between evidence and a corrupted file when it matters.",
+      },
+      {
+        type: "p",
+        text: "One more habit worth building: when something happens — a near-miss, a parking lot scrape, anything — save the footage immediately. Dashcam's rolling buffer overwrites itself, and Sentry events pile up until old ones are pushed out. The drivers who get their insurance claims paid smoothly are the ones who pull the drive, copy the clips to their phone or computer, and have video ready before anyone asks for it.",
+      },
+      {
+        type: "p",
+        text: "We sell the 128GB OEM Tesla USB drive for $29.99 — pick one up at our Sun Valley shop or have it shipped to you. And if you ever need footage pulled or explained after an incident, that's the kind of thing we're happy to help with at your free inspection.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What size USB drive do I need for Tesla Dashcam and Sentry Mode?",
+        a: "128GB is the sweet spot — it holds weeks of Sentry events and plenty of Dashcam clips without filling up. Smaller drives work but fill fast; bigger ones are fine but unnecessary for most drivers.",
+      },
+      {
+        q: "Which USB port should I plug the drive into?",
+        a: "The glovebox USB port — it's the designated port for Dashcam and Sentry Mode, and the glovebox locks, which matters if the footage ever becomes evidence.",
+      },
+      {
+        q: "How do I format a USB drive for my Tesla?",
+        a: "Plug it in, then go to Controls, then Safety, and tap Format USB Drive. The car handles the formatting itself — no computer needed.",
+      },
+      {
+        q: "Where can I buy the right USB drive?",
+        a: "We sell the 128GB OEM Tesla USB drive for $29.99 at EV+ Auto Repair in Sun Valley — pick it up in person or have it shipped to you.",
+      },
+    ],
+    serviceLink: { href: "/shop/tesla-usb-drive-128gb", label: "128GB Tesla USB Drive" },
+  },
+  {
+    slug: "tesla-half-shaft-axle-clicking-noise",
+    title: "Tesla Clicking Noise When Turning? Half Shaft | EV+ Auto Repair",
+    h1: "That Clicking Noise When You Turn Is Your Half Shaft Talking",
+    description:
+      "Clicking or tapping noise when turning your Tesla? It's usually a worn half shaft (CV axle). How we diagnose and replace it. Sun Valley: (818) 281-7757.",
+    tag: "Maintenance",
+    date: "November 24, 2026",
+    publishDate: "2026-11-24",
+    excerpt:
+      "A clicking or tapping sound from the front end when you turn — especially at low speed — is the classic sign of a worn half shaft. Here's what's happening and how we fix it.",
+    image: shop2,
+    imageAlt: "Tesla half shaft axle replacement at EV+ Auto Repair Sun Valley",
+    videoUrl: "https://www.instagram.com/reel/DXBTphsjcZV/",
+    body: [
+      {
+        type: "p",
+        text: "You back out of a parking spot, turn the wheel, and hear it — click, click, click from the front end, in rhythm with the wheels. Turn the wheel back straight and it disappears. If that sounds familiar, you're hearing a worn half shaft, also called a CV axle. It's one of the most recognizable sounds a Tesla makes, and it's telling you something specific: the constant-velocity joint on one of your front axles has worn past the point where it can do its job quietly. It won't fix itself, and it only gets louder — but the good news is it's a well-understood repair with a clear diagnosis.",
+      },
+      { type: "h2", text: "Why Teslas wear half shafts" },
+      {
+        type: "p",
+        text: "The half shaft connects the drive unit to the wheel, delivering power through a joint that has to flex as the wheel turns and the suspension moves. On a Tesla, that joint works harder than on most gas cars for two reasons: instant electric torque hits the joint with full force from a standstill, and the front drive unit on dual-motor cars is always engaged, so the front axles never get a rest. Over tens of thousands of miles the joint's internal bearings and races wear, the grease breaks down or escapes past a torn boot, and metal starts moving against metal. The clicking you hear is the worn joint articulating under load — quiet when driving straight, loud the moment the wheel turns and the joint has to bend.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "A clicking axle just needs grease. Once a CV joint is clicking, the internal surfaces are already worn — regreasing a damaged joint is like putting oil on a worn-out bearing. The joint is done. Replacement is the honest fix, and it's the only one that lasts.",
+      },
+      { type: "h2", text: "How we diagnose it" },
+      {
+        type: "p",
+        text: "Diagnosis starts with the sound itself — a rhythmic click that appears when turning and changes with wheel speed is a half shaft until proven otherwise. We confirm it on the lift: checking the axle boots for tears and grease spray, feeling for play in the joint, and inspecting the companion side, because when one half shaft is worn, the other has lived the same life. We don't guess and replace — we verify which axle is the culprit before quoting anything. Our $180 diagnostic is credited toward the repair, so the diagnosis costs you nothing if you have us do the work.",
+      },
+      { type: "h2", text: "What replacement involves" },
+      {
+        type: "p",
+        text: "We remove the worn half shaft and install a replacement axle, torque everything to spec, and road-test to confirm the noise is gone. It's a same-week job in most cases. The work carries our 6–12 month labor warranty, and our service center is Tesla-only — half shafts are something we do regularly, not a job we're figuring out on your car. If your Tesla needs to stay with us, we have Tesla rentals available on-site, subject to availability.",
+      },
+      {
+        type: "p",
+        text: "If your Tesla clicks when you turn, don't wait for it to get worse — a failing joint puts extra stress on everything around it. Book a free 1-hour inspection online or call us at (818) 281-7757. Family-owned in Sun Valley since 2016. Ten minutes on the lift and we'll tell you exactly what you're hearing.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it safe to drive with a clicking half shaft?",
+        a: "For a short time, usually — but a worn joint only deteriorates, and in a worst case it can fail completely and leave you stranded. Get it diagnosed soon rather than driving on it for months.",
+      },
+      {
+        q: "Does the clicking always mean the half shaft?",
+        a: "Clicking that appears when turning and follows wheel speed is a half shaft in the large majority of cases. Other front-end noises — clunks over bumps, creaks at low speed — point to suspension instead, which is why we verify on the lift before quoting.",
+      },
+      {
+        q: "Should I replace both half shafts at once?",
+        a: "Not automatically. We replace the failed one and inspect the other — if it shows the same wear, we'll tell you honestly and let you decide. No pressure either way.",
+      },
+      {
+        q: "How long does half shaft replacement take?",
+        a: "It's typically a same-week appointment at our Sun Valley shop. Book a free inspection first and we'll confirm the diagnosis, quote the repair, and get you scheduled.",
+      },
+    ],
+    serviceLink: { href: "/service/suspension-steering", label: "Suspension & Steering" },
+  },
+  {
+    slug: "tesla-inspection-vs-diagnostic",
+    title: "Tesla Inspection vs Diagnostic: Which Do You Need? | EV+ Auto Repair",
+    h1: "Free Inspection or Paid Diagnostic? Here's How to Choose",
+    description:
+      "EV+ offers a free 1-hour Tesla inspection and a $180 diagnostic. They do different jobs. Here's what each covers and which one to book. Sun Valley, LA.",
+    tag: "Service",
+    date: "November 26, 2026",
+    publishDate: "2026-11-26",
+    excerpt:
+      "We get this question every day: should I book the free inspection or the diagnostic? They're not the same appointment — here's exactly what each one does.",
+    image: whySign,
+    imageAlt: "Tesla inspection vs diagnostic — which appointment to book at EV+ Auto Repair",
+    videoUrl: "https://www.instagram.com/reel/DeGWlVMNrl1/",
+    body: [
+      {
+        type: "p",
+        text: "Two of our most-booked appointments sound similar, and people mix them up constantly: the free 1-hour inspection and the $180 diagnostic. They are not the same thing, they are not interchangeable, and booking the wrong one wastes your time. So here is the plain-English difference, what each one actually covers, and how to know which one your situation calls for.",
+      },
+      { type: "h2", text: "The free 1-hour inspection: a full walkaround" },
+      {
+        type: "p",
+        text: "The inspection is our eyes-and-hands look at your whole car. We check tires and brakes — tread depth, wear patterns, pad and rotor condition. We check the suspension for play and wear, because front-end creaks and clunks are some of the most common Tesla complaints we see. We test the 12V battery's health, check the cabin filters, look over the cooling system for debris and leaks, and run a scan for stored warnings and fault codes — including ones that haven't lit up your dashboard yet. It takes about an hour, it costs nothing, and you get a straight report: what needs attention now, what can wait, and what's fine. If your Tesla is fine, we will tell you it's fine and send you home. That is not a sales pitch. Most of our best long-term customers started with an inspection where we told them everything looked good.",
+      },
+      { type: "h2", text: "The $180 diagnostic: going deeper" },
+      {
+        type: "p",
+        text: "Sometimes a walkaround isn't enough. A warning light is on and the cause isn't obvious. The car is doing something strange electrically — glitchy screen, phantom warnings, a system that misbehaves intermittently. Something the inspection flagged needs a deeper look before anyone can quote a repair. That is what the diagnostic is for: methodical, step-by-step troubleshooting with proper equipment, tracing the actual root cause instead of guessing. Electrical diagnosis in particular can take real time — pulling codes is the easy part; figuring out whether the fault is the module, the wiring, the connector, or the software is the actual work. The $180 fee covers that labor, and it is credited toward the repair if you have us do the work. You are never paying for the diagnosis and then paying full price on top of it.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "A free inspection is a funnel into expensive repairs. If that were true, it would be a terrible business model for a shop that lives on repeat customers and referrals. An inspection that finds nothing still earns us something — your trust. And a diagnostic fee isn't a surcharge; it's skilled labor with proper equipment, and we credit it toward the fix.",
+      },
+      { type: "h2", text: "Which one should you book?" },
+      {
+        type: "p",
+        text: "Book the free inspection when: you hear a new noise and want it identified, you want a general checkup or a pre-purchase look at a used Tesla, your tires are wearing unevenly, or it's just been a while and you want to know where your car stands. Book the diagnostic when: a warning light is on and won't clear, the car has an electrical gremlin that comes and goes, a previous inspection flagged something that needs deeper investigation, or another shop already guessed at the problem and you want a real answer. And when in doubt, start with the free inspection — if what we find needs the deeper dive, we'll tell you exactly why before anything costs you a dollar. That is how the two appointments are designed to work together.",
+      },
+      {
+        type: "p",
+        text: "Booking either one takes about a minute online, or call us at (818) 281-7757 and we'll help you pick. We're family-owned in Sun Valley since 2016, our service center is Tesla-only, and every repair carries our 6–12 month labor warranty. If the car needs to stay with us, we have Teslas available to rent on-site, subject to availability. Come in, get answers, and drive out knowing exactly where you stand.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is the free inspection really free, with no catch?",
+        a: "Yes — one full hour, no charge, no obligation. If your car is fine, we say so. If something needs a deeper look, we explain why before the $180 diagnostic ever comes up.",
+      },
+      {
+        q: "When is the diagnostic fee credited toward the repair?",
+        a: "Always, when you have us do the repair the diagnostic identified. The $180 covers the troubleshooting labor; once we fix the problem, that amount comes off your repair bill.",
+      },
+      {
+        q: "Can the free inspection find electrical problems?",
+        a: "It can find the symptoms — stored fault codes, warning histories, things that show up on a scan. But tracing an intermittent electrical fault to its root cause is diagnostic work, and that's what the $180 appointment is for.",
+      },
+      {
+        q: "I already know what's wrong. Do I still need either appointment?",
+        a: "If you're confident about the problem, call us at (818) 281-7757 and tell us what's going on — we may be able to quote the repair directly. But if there's any doubt, the free inspection confirms it before you spend anything.",
+      },
+    ],
+    serviceLink: { href: "/book", label: "Book Your Appointment" },
+  },
+  {
+    slug: "how-to-choose-tesla-body-shop-avoid-scams",
+    title: "How to Choose a Tesla Body Shop (Avoid Scams) | EV+ Auto Repair",
+    h1: "5 Signs a Body Shop Is Scamming You — and How to Pick an Honest One",
+    description:
+      "A client came to us after another body shop scammed them. Here are the 5 warning signs of a dishonest shop and what to research before handing over your Tesla.",
+    tag: "Collision",
+    date: "December 1, 2026",
+    publishDate: "2026-12-01",
+    excerpt:
+      "We see the aftermath of body-shop scams more often than we'd like — inflated bills, hostage cars, work that was never needed. Here's how to protect yourself.",
+    image: shopSign,
+    imageAlt: "How to choose an honest Tesla body shop — EV+ Auto Repair Sun Valley",
+    videoUrl: "https://www.instagram.com/reel/DYIiUPtya8o/",
+    body: [
+      {
+        type: "p",
+        text: "A client came to us recently after a nightmare at another body shop — a bill that kept growing, work they never approved, and weeks of getting the runaround trying to get their own car back. It was not the first time we've seen it, and it won't be the last. After an accident you're stressed, you're in a hurry, and you're trusting strangers with a very expensive car. That is exactly when dishonest shops do their best work. So here are the five warning signs we tell everyone to watch for, and what to research before you hand over your keys.",
+      },
+      { type: "h2", text: "Sign 1: The estimate that keeps growing" },
+      {
+        type: "p",
+        text: "The classic bait: a quote far below everyone else's to win your business, then a parade of 'surprises' once your car is apart. Some cost growth is legitimate — hidden damage does get found during teardown, and honest shops document it with photos and call you before proceeding. The scam version never calls first. It just bills. Protect yourself by getting the estimate in writing, asking what's included and what could change, and being deeply suspicious of any quote dramatically lower than the rest. In body work, the cheapest estimate is very often the most expensive bill.",
+      },
+      { type: "h2", text: "Sign 2: Urgent work you never asked about" },
+      {
+        type: "p",
+        text: "Fear is a sales tool. 'Your frame is bent, it's unsafe to drive, we need to start today' — delivered with urgency and no evidence. A legitimate safety concern comes with photos, measurements, and an explanation you can understand. A pressure tactic comes with a clipboard and a pen. Any shop that won't show you the damage, explain it plainly, and give you time to think is a shop you should walk away from. Your car survived the accident; it can survive you taking a day to get a second opinion.",
+      },
+      { type: "h2", text: "Sign 3: They won't let you take your car back" },
+      {
+        type: "p",
+        text: "This is the one that traps people. The shop has your car disassembled, the bill has ballooned, and when you say you want to take it elsewhere, suddenly there are 'storage fees,' 'teardown fees,' and delays. A reputable shop gives you a written authorization before touching your car that spells out exactly what happens if you change your mind — including any diagnostic or teardown charge, agreed up front. Never sign a blank work order. Never authorize repairs verbally without a written estimate. And know this: in California, a shop cannot hold your car hostage over a disputed bill without following proper lien procedures — which most scam shops are counting on you not knowing.",
+      },
+      { type: "h2", text: "Sign 4: No itemized invoice, ever" },
+      {
+        type: "p",
+        text: "An honest repair produces paperwork: a written estimate before work starts, a supplement record if hidden damage is found, and an itemized final invoice showing parts, labor hours, materials, and sublet work like calibration. If a shop hands you a single number on a napkin — or worse, gets annoyed when you ask for an itemized bill — that is not a paperwork preference. That is concealment. You have every right to know what you paid for, part by part and hour by hour.",
+      },
+      { type: "h2", text: "Sign 5: Your insurer picks the shop for you" },
+      {
+        type: "p",
+        text: "This one isn't the shop's scam — it's your insurer's. 'We recommend you use one of our network shops' sounds helpful. In California, you have the legal right to choose your own repair shop, and an insurer steering you to theirs is illegal. Network shops aren't necessarily bad, but the arrangement exists to control the insurer's costs, not to get you the best repair. For a Tesla — aluminum panels, specific repair procedures, cameras and sensors that must be recalibrated — you want the shop that's best at Teslas, not the one that's cheapest for your insurer.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "All body shops are basically the same, so just pick the cheapest or closest. A Tesla is not a Camry with a different badge — aluminum body work, parts lead times, and ADAS calibration make shop expertise the single biggest variable in your repair. The shop matters more than the estimate.",
+      },
+      { type: "h2", text: "What to research before you hand over the keys" },
+      {
+        type: "p",
+        text: "Read the reviews — not just the stars, the actual words, especially how the shop handles problems. Ask how often they work on Teslas specifically, and what their process is for camera and sensor calibration after structural or glass work. Ask whether they use OEM parts and how they handle supplements with your insurer. Ask about the warranty on their work. And get everything in writing before the first bolt comes off. A good shop welcomes all of these questions. A bad shop gets defensive about every single one — which tells you everything you need to know.",
+      },
+      {
+        type: "p",
+        text: "If your Tesla needs body work, bring it to us for a free inspection at our Sun Valley shop. We document everything with photos, give written estimates, handle the insurance paperwork and supplements directly, and calibrate ADAS systems as part of the repair. Our collision center handles all EVs plus gas vehicles, and if your car needs to stay with us, we have Tesla rentals available on-site, subject to availability. Call (818) 281-7757 or book online.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What should I do if a shop is holding my car over a disputed bill?",
+        a: "Don't pay under pressure just to get your car back — document everything in writing first. In California, shops must follow proper lien procedures and can't simply keep your car over a disagreement. If you're in this situation, you may want to consult a consumer attorney; the Bureau of Automotive Repair also takes complaints.",
+      },
+      {
+        q: "Is it normal for a body-shop estimate to increase after teardown?",
+        a: "Some increase can be legitimate — hidden damage is real, especially behind bumpers and panels. The difference is documentation: an honest shop photographs the hidden damage, calls you with a revised written estimate, and waits for your approval before proceeding.",
+      },
+      {
+        q: "Should I use my insurance company's recommended shop?",
+        a: "You don't have to. In California, the choice of repair shop is legally yours. Insurer-recommended shops aren't automatically bad, but get your own estimate from a Tesla-experienced shop and compare before deciding.",
+      },
+      {
+        q: "What paperwork should I get from a body shop?",
+        a: "A written estimate before work begins, written authorization that you sign, photo documentation of damage found during teardown, supplement records for any additional work, and an itemized final invoice. If a shop resists any of this, walk away.",
+      },
+    ],
+    serviceLink: { href: "/collision", label: "Collision Center" },
+  },
+  {
+    slug: "tesla-total-loss-vs-repairable",
+    title: "Is My Tesla Totaled? Total Loss vs Repairable | EV+ Auto Repair",
+    h1: "Totaled or Repairable? How the Decision Actually Works",
+    description:
+      "How insurers decide whether your Tesla is a total loss — the cost threshold, why Teslas total more easily, and your rights after the decision. EV+ explains.",
+    tag: "Collision",
+    date: "December 3, 2026",
+    publishDate: "2026-12-03",
+    excerpt:
+      "Your Tesla looks fixable to you, but the insurer says it's totaled — or the other way around. Here's the math behind the decision and what you can do about it.",
+    image: whySign,
+    imageAlt: "Tesla total loss vs repairable — how the decision works, EV+ Auto Repair",
+    videoUrl: "https://www.instagram.com/reel/DY6Ux0xNaPc/",
+    body: [
+      {
+        type: "p",
+        text: "After an accident, one question hangs over everything: is my car totaled? Sometimes the answer surprises people in both directions — a car that looks destroyed gets repaired, or a car that looks fixable gets declared a total loss. The decision isn't about how the car looks. It's math, and once you understand the math, the outcome stops feeling arbitrary — and you know what leverage you actually have.",
+      },
+      { type: "h2", text: "The math: repair cost vs. actual cash value" },
+      {
+        type: "p",
+        text: "An insurer declares a total loss when the cost to repair approaches the car's actual cash value — what it was worth the moment before the crash. The exact threshold varies by insurer and state, but it typically lands around 70 to 75 percent of the car's value. So a Tesla worth $30,000 with $23,000 in estimated repairs is likely totaled; the same damage on a $50,000 car probably isn't. Note the word estimated — the insurer works from their adjuster's number, which is exactly why getting your own estimate from a qualified shop matters. Two estimates on the same car can land on different sides of that line.",
+      },
+      { type: "h2", text: "Why Teslas total more easily than you'd expect" },
+      {
+        type: "p",
+        text: "Several things stack against Teslas in this math. Aluminum body panels cost more to repair or replace than steel, and they require specific procedures not every shop can do. Parts can carry real lead times, and every week of delay adds rental or storage costs to the claim. Then there's the battery: if the high-voltage pack is damaged or even suspect, that alone can push a repair over the threshold — battery packs are enormously expensive. Add ADAS camera and sensor calibration after structural work, and a repair estimate climbs fast. None of this means your Tesla is fragile. It means the economics of repairing one are different from a steel-bodied gas car, and the total-loss line gets crossed sooner.",
+      },
+      {
+        type: "myth",
+        label: "The myth busted",
+        text: "If the insurer totals it, the car must have been destroyed. Plenty of totaled Teslas look surprisingly intact — a straight-looking car with battery damage or extensive aluminum panel replacement can cross the threshold while a crumpled-looking gas car gets fixed. Total loss is a financial decision, not a damage report.",
+      },
+      { type: "h2", text: "What happens after the total-loss decision" },
+      {
+        type: "p",
+        text: "The insurer pays you the actual cash value of the car, minus your deductible — and that valuation is negotiable, which most people don't realize. If their number looks low, bring comparable listings for the same model, year, mileage, and trim in your area; insurers adjust valuations when presented with real comps. If you owe more than the payout, gap insurance covers the difference — worth checking whether you have it. You generally also have the option to keep the car as owner-retained salvage: the insurer deducts the salvage value from your payout and you keep the vehicle, which then gets a salvage title. That can make sense in narrow cases, but a salvage-titled Tesla comes with real complications — insurance, resale, and Supercharging access can all be affected — so go in with eyes open.",
+      },
+      { type: "h2", text: "Your rights in the process" },
+      {
+        type: "p",
+        text: "You have more leverage than the process suggests. You can dispute the valuation with comparable sales data. You can get your own repair estimate from a shop you trust — in California, you choose the shop, not the insurer — and a thorough shop estimate sometimes comes in under the threshold where the adjuster's didn't. You can request the full valuation report showing how they arrived at their number. And you don't have to accept the first offer; total-loss settlements are negotiations, not verdicts. The owners who get fair outcomes are the ones who treat it that way.",
+      },
+      {
+        type: "p",
+        text: "If your Tesla has been in an accident and you're facing this decision, bring it to us for a free inspection at our Sun Valley shop. We'll give you an honest, thorough estimate — documented with photos — that you can put next to the insurer's numbers. We handle insurance claims directly, including supplements and valuation questions, and our collision center repairs all EVs plus gas vehicles. If the car needs to stay with us, we have Tesla rentals available on-site, subject to availability. Call (818) 281-7757 or book online.",
+      },
+    ],
+    faqs: [
+      {
+        q: "At what point does an insurer total a Tesla?",
+        a: "Typically when estimated repairs reach about 70 to 75 percent of the car's actual cash value, though the exact threshold varies by insurer and state. Because Teslas have expensive aluminum panels, costly parts, and battery considerations, they can cross that line with less visible damage than you'd expect.",
+      },
+      {
+        q: "Can I dispute a total-loss valuation?",
+        a: "Yes. Bring comparable listings for the same model, year, mileage, and trim in your area, and request the insurer's full valuation report. Insurers do adjust valuations when presented with solid comparable data.",
+      },
+      {
+        q: "What does owner-retained salvage mean?",
+        a: "You keep the totaled car instead of surrendering it — the insurer deducts its salvage value from your payout. The car gets a salvage title, which can complicate insurance, resale, and in some cases Supercharging access. It occasionally makes sense, but understand the tradeoffs first.",
+      },
+      {
+        q: "Should I get my own estimate even if the insurer already did one?",
+        a: "Absolutely. In California you choose the repair shop, and an independent shop estimate is your best check on the insurer's numbers. A thorough estimate from a Tesla-experienced shop sometimes lands on a different side of the total-loss threshold.",
+      },
+    ],
+    serviceLink: { href: "/collision/insurance-claims", label: "Insurance Claims" },
+  },
+
 ];
 
 export function getPost(slug: string): Post | undefined {
