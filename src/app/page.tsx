@@ -11,7 +11,7 @@ export default function Home() {
       <header className="hero">
         <div className="hero-bg" style={{ backgroundImage: "url('/images/hero-shop.jpg')" }} />
         <div className="hero-in">
-          <h1>Your Tesla, serviced and repaired by people who specialize in Teslas.</h1>
+          <h1><a href="/service" style={{ color: "inherit", textDecoration: "none" }}>Your Tesla, serviced and repaired by people who specialize in Teslas.</a></h1>
           <p className="sub">EV+ Auto Repair is a family-owned Tesla service center and collision center in Los Angeles—maintenance, repairs, and accident recovery, all under one roof.</p>
           <div className="hero-ctas">
             <a className="btn" href="/service">I need service</a>
