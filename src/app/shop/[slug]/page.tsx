@@ -81,11 +81,47 @@ export default async function ProductPage({
           <div id="order" style={{ marginTop: 40 }}>
             <div className="kicker">Order</div>
             <h2>Get yours</h2>
-            <p className="lede">
-              Send us your order and we&rsquo;ll text you to confirm — free pickup in Sun Valley, or we ship anywhere in the US.
-            </p>
-            <OrderForm productName={p.name} priceLabel={p.priceLabel} />
+            {p.stripeLink ? (
+              <>
+                <div className="hero-ctas" style={{ justifyContent: "flex-start", margin: "20px 0 16px" }}>
+                  <a
+                    className="btn"
+                    href={p.stripeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: 18, padding: "16px 36px" }}
+                  >
+                    Buy now — {p.priceLabel}
+                  </a>
+                </div>
+                <p className="lede" style={{ fontSize: 14 }}>
+                  Secure checkout via Stripe. Free pickup in Sun Valley, or we ship anywhere in the US. Prefer to pay at pickup? Call or text{" "}
+                  <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="lede">
+                  Send us your order and we&rsquo;ll text you to confirm — free pickup in Sun Valley, or we ship anywhere in the US.
+                </p>
+                <OrderForm productName={p.name} priceLabel={p.priceLabel} />
+              </>
+            )}
           </div>
+
+          {p.setup && (
+            <div style={{ marginTop: 40 }}>
+              <div className="kicker">Setup</div>
+              <h2>{p.setup.title}</h2>
+              <ol style={{ marginTop: 16, paddingLeft: 22, display: "grid", gap: 12 }}>
+                {p.setup.steps.map((s, i) => (
+                  <li key={i} className="lede" style={{ fontSize: 15 }}>
+                    {s}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
 
           <div className="faq" style={{ marginTop: 40 }}>
             {p.faqs.map((f, i) => (
