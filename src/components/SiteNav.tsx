@@ -5,6 +5,8 @@ const links = [
   { href: "/service", label: "Service Center" },
   { href: "/collision", label: "Collision Center" },
   { href: "/rentals", label: "Rentals" },
+  // Shop hidden from nav until Stripe shipping is set up (Tracey, Oct 19) — page still live at /shop
+  // { href: "/shop", label: "Shop" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];

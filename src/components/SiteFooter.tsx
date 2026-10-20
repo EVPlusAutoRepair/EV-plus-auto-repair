@@ -10,7 +10,8 @@ export default function SiteFooter() {
           </div>
           <div>
             <h5>Shop</h5>
-            <a href="/shop">Tesla Accessories</a>
+            {/* Hidden until Stripe shipping is set up (Tracey, Oct 19) */}
+            {/* <a href="/shop">Tesla Accessories</a> */}
             <a href="/service">Tesla Service Center</a>
             <a href="/collision">Tesla Collision Center</a>
             <a href="/rentals">On-site Rentals</a>
