@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { t: "Collision repair", d: "Bumpers, panels, frames, glass. Tesla structural repair done right.", href: "/collision/collision-repair" },
+  { t: "Collision repair", d: "Bumpers, panels, frames. Tesla structural repair done right.", href: "/collision/collision-repair" },
   { t: "Paint & refinishing", d: "Factory paint matching, blending, refinishing.", href: "/collision/paint-refinishing" },
   { t: "ADAS / camera calibration", d: "Cameras, sensors, and autopilot systems recalibrated after repair.", href: "/collision/adas-calibration" },
   { t: "Insurance claims—we handle it", d: "We work directly with your insurer and adjuster, supplements included.", href: "/collision/insurance-claims" },
@@ -79,6 +79,20 @@ export default function CollisionCenter() {
                 <p>{f.a}</p>
               </div>
             ))}
+          </div>
+
+          <div style={{ marginTop: 56 }}>
+            <div className="kicker">Local collision pages</div>
+            <h2>Collision help, by neighborhood.</h2>
+            <p className="lede">
+              <a href="/bumper-repair-burbank" style={{ color: "var(--acc)" }}>Bumper Repair in Burbank</a>
+              {" · "}
+              <a href="/paint-refinish-van-nuys" style={{ color: "var(--acc)" }}>Paint &amp; Refinish in Van Nuys</a>
+              {" · "}
+              <a href="/collision-repair-glendale" style={{ color: "var(--acc)" }}>Collision Repair in Glendale</a>
+              {" · "}
+              <a href="/collision-repair-north-hollywood" style={{ color: "var(--acc)" }}>Collision Repair in North Hollywood</a>
+            </p>
           </div>
 
           <div className="cta-band">

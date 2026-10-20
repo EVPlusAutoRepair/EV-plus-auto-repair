@@ -26,6 +26,14 @@ const collisionSlugs = [
   "before-after-gallery",
   "gas-vehicle-collision",
 ];
+const localSlugs = [
+  "bumper-repair-burbank",
+  "paint-refinish-van-nuys",
+  "collision-repair-glendale",
+  "collision-repair-north-hollywood",
+  "tesla-suspension-repair-sherman-oaks",
+  "tesla-12v-battery-replacement-burbank",
+];
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   await connection();
   const now = new Date();
@@ -37,11 +45,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${URL}/book`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${URL}/tesla-repair-san-fernando-valley`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
   ];
   for (const s of serviceSlugs)
     pages.push({ url: `${URL}/service/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
   for (const s of collisionSlugs)
     pages.push({ url: `${URL}/collision/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
+  for (const s of localSlugs)
+    pages.push({ url: `${URL}/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
   for (const p of POSTS.filter(isPublished))
     pages.push({ url: `${URL}/blog/${p.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.6 });
   return pages;
