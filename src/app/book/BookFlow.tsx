@@ -153,7 +153,7 @@ function ServiceForm({ defaultService }: { defaultService?: string | null }) {
         <div><label>Full name *</label><input name="name" required placeholder="Jane Doe" autoComplete="name" /></div>
         <div><label>Phone *</label><input name="phone" required type="tel" placeholder="(818) 555-0123" autoComplete="tel" /></div>
       </div>
-      <label>Email</label><input name="email" type="email" placeholder="jane@email.com" autoComplete="email" />
+      <label>Email</label><input name="email" type="email" placeholder="jane@email.com" autoComplete="email" required />
       <div className="form-row">
         <div><label>Tesla model *</label>
           <select name="model" required defaultValue="">
@@ -211,7 +211,7 @@ function AccidentForm() {
         <div><label>Full name *</label><input name="name" required placeholder="Jane Doe" autoComplete="name" /></div>
         <div><label>Phone *</label><input name="phone" required type="tel" placeholder="(818) 555-0123" autoComplete="tel" /></div>
       </div>
-      <label>Email</label><input name="email" type="email" placeholder="jane@email.com" autoComplete="email" />
+      <label>Email</label><input name="email" type="email" placeholder="jane@email.com" autoComplete="email" required />
       <div className="form-row">
         <div><label>Tesla model *</label>
           <select name="model" required defaultValue="">

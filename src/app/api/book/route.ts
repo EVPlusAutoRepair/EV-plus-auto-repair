@@ -178,6 +178,58 @@ export async function POST(req: NextRequest) {
       text: lines.join("\n"),
       attachments,
     });
+
+    // Customer confirmation copy. This confirms we RECEIVED the request —
+    // it is not an appointment confirmation. A locked-in appointment time
+    // only comes from Calendly (which sends its own confirmation) or from
+    // our call/text back. Never fail the booking if this copy fails to send.
+    if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      const customerLines = isAccident
+        ? [
+            `Hi ${name},`,
+            "",
+            "Thanks for reaching out to EV+ Auto Repair — we received your accident intake.",
+            "",
+            `Tesla: ${year} ${model}`,
+            "",
+            "Tracey will call you personally to go over the damage and next steps. No need to do anything else right now — if you have photos you didn't attach, you can text them to (818) 281-7757.",
+            "",
+            "EV+ Auto Repair",
+            "9755 Glenoaks Blvd, Sun Valley, CA 91352",
+            "Call/text: (818) 281-7757",
+            "Hours: Mon–Fri 9–5, Sat 10–3",
+          ]
+        : [
+            `Hi ${name},`,
+            "",
+            "Thanks for booking with EV+ Auto Repair — we received your service request.",
+            "",
+            `Service needed: ${serviceLabel(str(form.get("service")))}`,
+            `Preferred date: ${str(form.get("date")) || "—"} (preferred only — not yet confirmed)`,
+            `Tesla: ${year} ${model}`,
+            "",
+            `We'll call or text you at ${phone} shortly to confirm your time. If you picked a time in the calendar on the next screen, that time is locked in and you'll also get a separate confirmation from Calendly.`,
+            "",
+            "Need us sooner? Call or text (818) 281-7757.",
+            "",
+            "EV+ Auto Repair",
+            "9755 Glenoaks Blvd, Sun Valley, CA 91352",
+            "Hours: Mon–Fri 9–5, Sat 10–3",
+          ];
+      try {
+        await transporter.sendMail({
+          from: `"EV+ Auto Repair" <${SMTP_USER}>`,
+          to: email,
+          subject: isAccident
+            ? "We received your accident intake — EV+ Auto Repair"
+            : "We received your service request — EV+ Auto Repair",
+          text: customerLines.join("\n"),
+        });
+      } catch {
+        // Shop copy already delivered; the on-screen confirmation still
+        // tells the customer we received it.
+      }
+    }
   } catch {
     return NextResponse.json(
       {
