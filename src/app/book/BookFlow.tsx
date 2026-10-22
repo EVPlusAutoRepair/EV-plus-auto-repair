@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import CalendlyEmbed from "./CalendlyEmbed";
 import { useSearchParams } from "next/navigation";
 import DatePicker from "@/components/DatePicker";
@@ -118,12 +118,99 @@ const honeypot = (
 
 const privacyNote = (
   <p className="form-note">
-    By sending, you agree to be contacted about your request. See our{" "}
+    By starting or sending a booking, you agree to be contacted about your request. See our{" "}
     <a href="/privacy" style={{ color: "var(--acc)" }}>Privacy Policy</a>.
   </p>
 );
 
+
+// Draft + partial-booking recovery.
+// - Saves what's typed to localStorage so a returning visitor finds the
+//   form pre-filled instead of feeling like their booking "didn't save".
+// - If the visitor leaves with a phone or email typed but never submits,
+//   beacons the partial details to /api/book/partial so the shop gets an
+//   email and can call them back.
+function useBookingDraft(lane: "service" | "accident") {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const sentOkRef = useRef(false);
+  const notifiedRef = useRef(false);
+  const key = `ev-book-draft-${lane}`;
+
+  // Restore a saved draft on mount.
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return;
+      const data = JSON.parse(raw) as Record<string, string>;
+      Object.entries(data).forEach(([k, v]) => {
+        const el = form.elements.namedItem(k) as
+          | HTMLInputElement
+          | HTMLSelectElement
+          | HTMLTextAreaElement
+          | null;
+        if (el && "value" in el && !el.value && v) el.value = v;
+      });
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const notifyPartial = useCallback(() => {
+    const form = formRef.current;
+    if (!form || sentOkRef.current || notifiedRef.current) return;
+    const data = new FormData(form);
+    data.set("lane", lane);
+    const phone = String(data.get("phone") || "").replace(/\D/g, "");
+    const email = String(data.get("email") || "");
+    if (phone.length < 7 && !email.includes("@")) return;
+    notifiedRef.current = true;
+    try {
+      navigator.sendBeacon("/api/book/partial", data);
+    } catch {}
+  }, [lane]);
+
+  useEffect(() => {
+    const onVis = () => {
+      if (document.visibilityState === "hidden") notifyPartial();
+    };
+    document.addEventListener("visibilitychange", onVis);
+    window.addEventListener("pagehide", notifyPartial);
+    return () => {
+      document.removeEventListener("visibilitychange", onVis);
+      window.removeEventListener("pagehide", notifyPartial);
+      // Unmount (back to lane picker, navigation) after typing counts too.
+      notifyPartial();
+    };
+  }, [notifyPartial]);
+
+  const onInput = useCallback(() => {
+    const form = formRef.current;
+    if (!form) return;
+    const data = new FormData(form);
+    const obj: Record<string, string> = {};
+    data.forEach((v, k) => {
+      if (typeof v === "string" && k !== "website" && k !== "photos") obj[k] = v;
+    });
+    try {
+      localStorage.setItem(key, JSON.stringify(obj));
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const markSent = useCallback(() => {
+    sentOkRef.current = true;
+    try {
+      localStorage.removeItem(key);
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return { formRef, onInput, markSent };
+}
+
 function ServiceForm({ defaultService }: { defaultService?: string | null }) {
+  const draft = useBookingDraft("service");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [sentService, setSentService] = useState<string | null>(null);
@@ -135,6 +222,7 @@ function ServiceForm({ defaultService }: { defaultService?: string | null }) {
     const svc = new FormData(e.currentTarget).get("service");
     const r = await postForm(e.currentTarget, "service");
     if (r.ok) {
+      draft.markSent();
       setSentService(typeof svc === "string" ? svc : null);
       setStatus("sent");
     } else {
@@ -145,7 +233,7 @@ function ServiceForm({ defaultService }: { defaultService?: string | null }) {
 
   if (status === "sent") return <SentCard service={sentService} />;
   return (
-    <form className="form-card" onSubmit={submit}>
+    <form className="form-card" onSubmit={submit} ref={draft.formRef} onInput={draft.onInput}>
       <h3 style={{ fontSize: 24, marginBottom: 6 }}>Book service</h3>
       <p className="form-note" style={{ marginTop: 0 }}>Fill this out — we confirm every request by phone or text.</p>
       {honeypot}
@@ -186,6 +274,7 @@ function ServiceForm({ defaultService }: { defaultService?: string | null }) {
 }
 
 function AccidentForm() {
+  const draft = useBookingDraft("accident");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -194,7 +283,10 @@ function AccidentForm() {
     setStatus("sending");
     setError("");
     const r = await postForm(e.currentTarget, "accident");
-    if (r.ok) setStatus("sent");
+    if (r.ok) {
+      draft.markSent();
+      setStatus("sent");
+    }
     else {
       setStatus("error");
       setError(r.error || "");
@@ -203,7 +295,7 @@ function AccidentForm() {
 
   if (status === "sent") return <SentCard accident />;
   return (
-    <form className="form-card" onSubmit={submit}>
+    <form className="form-card" onSubmit={submit} ref={draft.formRef} onInput={draft.onInput}>
       <h3 style={{ fontSize: 24, marginBottom: 6 }}>Accident intake</h3>
       <p className="form-note" style={{ marginTop: 0 }}>No self-booking for collision — send this and Tracey calls you back. The more detail, the faster your estimate.</p>
       {honeypot}
