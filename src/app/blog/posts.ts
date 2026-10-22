@@ -652,6 +652,7 @@ export const POSTS: Post[] = [
     publishDate: "2026-10-22",
     image: whySign,
     imageAlt: "Tesla control arm replacement at EV+ Auto Repair — full arm, never just the bushing",
+    videoUrl: "https://www.instagram.com/reel/DZ4LdI1tAM8/",
     excerpt:
       "A new bushing in a worn arm is a shortcut that doesn't last. Here's why we replace the full control arm on your Tesla — and why it matters.",
     body: [
