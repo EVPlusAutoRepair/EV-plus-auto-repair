@@ -5,8 +5,9 @@ const links = [
   { href: "/service", label: "Service Center" },
   { href: "/collision", label: "Collision Center" },
   { href: "/rentals", label: "Rentals" },
-  // Shop hidden from nav until Stripe shipping is set up (Tracey, Oct 19) — page still live at /shop
-  // { href: "/shop", label: "Shop" },
+  // Shop index still hidden from nav until Stripe shipping is set up (Tracey, Oct 19) — but the USB product
+  // link goes in the top menu (Tracey, Oct 22)
+  { href: "/shop/tesla-usb-drive-128gb", label: "USB Drive" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];
