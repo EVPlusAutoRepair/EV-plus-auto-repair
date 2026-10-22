@@ -61,7 +61,18 @@ async function postForm(form: HTMLFormElement, lane: Lane): Promise<{ ok: boolea
 
   const res = await fetch("/api/book", { method: "POST", body: data });
   const json = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
-  if (json.ok) return { ok: true };
+  if (json.ok) {
+    // GA4 conversion: one booking_submit event per successful website
+    // booking (marked as a Key event in GA4 Admin). Fire-and-forget —
+    // never let analytics break a booking.
+    try {
+      const w = window as unknown as {
+        gtag?: (command: string, event: string, params?: Record<string, string>) => void;
+      };
+      w.gtag?.("event", "booking_submit", { lane: lane || "", method: "website_form" });
+    } catch {}
+    return { ok: true };
+  }
   if (json.error === "not_configured") {
     return {
       ok: false,
