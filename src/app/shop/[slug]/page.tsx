@@ -95,7 +95,7 @@ export default async function ProductPage({
                   </a>
                 </div>
                 <p className="lede" style={{ fontSize: 14 }}>
-                  Secure checkout via Stripe. Free pickup in Sun Valley, or we ship anywhere in the US. Prefer to pay at pickup? Call or text{" "}
+                  Secure checkout via Stripe. Free pickup in Sun Valley, or USPS shipping anywhere in the US for $5.95 (4–7 business days). Prefer to pay at pickup? Call or text{" "}
                   <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>.
                 </p>
               </>

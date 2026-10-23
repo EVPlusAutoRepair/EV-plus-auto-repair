@@ -26,8 +26,9 @@ export const PRODUCTS: Product[] = [
     priceLabel: "$29.99",
     image: usbDrive,
     imageAlt: "Tesla 128GB USB flash drive for Dashcam and Sentry Mode",
-    // Tracey is creating the Stripe Payment Link; paste it here when she sends it.
-    stripeLink: "",
+    // Live Stripe Payment Link (verified Oct 22, 2026): collects shipping address + phone;
+    // USPS Ground Advantage $5.95 (4-7 business days) or free local pickup in Sun Valley.
+    stripeLink: "https://buy.stripe.com/fZubITeN28sm1GN1LE2Fa01",
     description: [
       "Dashcam and Sentry Mode are only as good as the drive they're writing to. A cheap gas-station USB stick overheats, corrupts, and dies — usually the week you actually need the footage.",
       "This is a pre-owned, genuine Tesla OEM 128GB drive — the same drive Tesla makes for Dashcam and Sentry Mode recording. It meets every Tesla spec: 128GB (Tesla's minimum is 64GB), USB 2.0 compatible, and fast enough for the car's sustained 4 MB/s write speed.",
@@ -48,7 +49,7 @@ export const PRODUCTS: Product[] = [
       "Genuine Tesla OEM 128GB USB drive — pre-owned",
       "128GB holds hours of Sentry clips plus Dashcam footage before anything overwrites",
       "Plug-and-play in the glovebox USB port",
-      "Free pickup in Sun Valley, or we ship it to you",
+      "Free pickup in Sun Valley, or USPS shipping for $5.95",
     ],
     faqs: [
       {
@@ -61,7 +62,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         q: "Pickup or delivery?",
-        a: "Both. Free pickup at 9755 Glenoaks Blvd, Sun Valley — or we ship anywhere in the US.",
+        a: "Both. Free pickup at 9755 Glenoaks Blvd, Sun Valley — or USPS shipping anywhere in the US for $5.95 (4–7 business days).",
       },
     ],
   },
