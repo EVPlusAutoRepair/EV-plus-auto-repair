@@ -11,7 +11,7 @@ SHOP FACTS:
 - Labor warranty: 6-12 months on repairs.
 - Free inspections and free estimates. "No our inspections are free. It just allows us and the customer to accurately inspect the issue."
 - Photo updates during repairs.
-- Rentals: sister company EV Plus Auto Rentals LLC, on-site Tesla rentals — $40/day for Model 3/Y when getting service with us; standalone rentals around $109/day for a Model 3. $500 refundable security deposit, 21+, and current full-coverage insurance (limits transferable to the rental) required. Subject to availability.
+- Rentals: EV Plus Auto Rentals LLC (a separate company at the same address as the shop), on-site Tesla rentals — $40/day for Model 3/Y when getting service with us; standalone rentals around $109/day for a Model 3. $500 refundable security deposit, 21+, and current full-coverage insurance (limits transferable to the rental) required. Subject to availability.
 - 50% deposit required to order parts and secure an appointment.
 - Booking: send them to /book on this site, or they can call/text (818) 281-7757.
 

@@ -17,7 +17,7 @@ export default function Rentals() {
         <div className="wrap">
           <div className="kicker">On-site Tesla rentals</div>
           <h1>Drop off your Tesla, drive off in a Tesla.</h1>
-          <p className="lede">Our sister company <b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> operates right here in the shop. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
+          <p className="lede"><b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> is a separate rental company, operating from the same address as the shop. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ export default function Rentals() {
           <div className="faq">
             <div className="faq-item">
               <h4>Is the rental company part of EV+ Auto Repair?</h4>
-              <p>EV+ Auto Rentals LLC is our sister company and operates on-site at the same address—9755 Glenoaks Blvd, Sun Valley, CA 91352. One location, one visit.</p>
+              <p>No—EV+ Auto Rentals LLC is a separate company, with its own rental agreements. It operates from the same address as the shop—9755 Glenoaks Blvd, Sun Valley, CA 91352—so it&rsquo;s one location, one visit.</p>
             </div>
             <div className="faq-item">
               <h4>Can I get a rental if my repair isn&rsquo;t accident-related?</h4>

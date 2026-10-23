@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Can I get a rental car while mine is repaired?",
-    a: "Yes—on-site Tesla rentals through our sister company, right at the shop. Drop off your car, pick up the rental, same trip.",
+    a: "Yes—on-site Tesla rentals through EV+ Auto Rentals LLC, a separate rental company at the same address. Drop off your car, pick up the rental, same trip.",
   },
   {
     q: "Do I have to use the shop my insurance recommends?",
@@ -56,7 +56,7 @@ export default function CollisionRepair() {
           <div style={{ marginTop: 56 }}>
             <div className="kicker">How we fix it</div>
             <h2>Factory specification. Photo updates. Rental available.</h2>
-            <p className="lede">From minor bumper damage to major structural repair: we disassemble, assess every panel, order the right parts, and repair to factory specification—panel gaps, fitment, paint, calibration. You get <b style={{ color: "var(--txt)" }}>photo updates throughout the repair</b>, so you always know where your car stands. And while it&rsquo;s with us, you&rsquo;re driving an <b style={{ color: "var(--txt)" }}>on-site Tesla rental</b> from our sister company—no Hertz run, and you won&rsquo;t be stranded.</p>
+            <p className="lede">From minor bumper damage to major structural repair: we disassemble, assess every panel, order the right parts, and repair to factory specification—panel gaps, fitment, paint, calibration. You get <b style={{ color: "var(--txt)" }}>photo updates throughout the repair</b>, so you always know where your car stands. And while it&rsquo;s with us, you&rsquo;re driving an <b style={{ color: "var(--txt)" }}>on-site Tesla rental</b> from EV+ Auto Rentals LLC—no Hertz run, and you won&rsquo;t be stranded.</p>
             <p className="lede" style={{ marginTop: 16 }}>We also <b style={{ color: "var(--txt)" }}>handle your entire insurance claim</b>—the estimate, the adjuster, the supplements—so the paperwork nightmare isn&rsquo;t yours.</p>
           </div>
 

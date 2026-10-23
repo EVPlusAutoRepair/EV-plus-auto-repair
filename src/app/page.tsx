@@ -46,7 +46,7 @@ export default function Home() {
             <div className="rentals-txt">
               <div className="kicker">On-site Tesla rentals</div>
               <h2>Drop off your Tesla,<br />drive off in a Tesla.</h2>
-              <p className="lede" style={{ marginTop: 16 }}>Our sister company <b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> operates right here in the shop. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
+              <p className="lede" style={{ marginTop: 16 }}><b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> is a separate rental company, operating from the same address as the shop. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
               <div className="hero-ctas" style={{ marginTop: 30 }}><a className="btn" href="/rentals">How rentals work</a></div>
             </div>
             <div className="rentals-img" style={{ backgroundImage: `url('${rentalsTeslas}')` }} />
@@ -61,7 +61,7 @@ export default function Home() {
           <div className="steps">
             <div className="step"><div className="n">01</div><h4>Call us</h4><p><a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>. Tell us about the issue or the damage; we schedule your free estimate.</p></div>
             <div className="step"><div className="n">02</div><h4>Drop off</h4><p>Bring your Tesla to <a href="https://maps.google.com/?q=9755+Glenoaks+Blvd,+Sun+Valley,+CA+91352" target="_blank" rel="noopener noreferrer" style={{ color: "var(--acc)" }}>9755 Glenoaks Blvd, Sun Valley, CA 91352</a>.</p></div>
-            <div className="step"><div className="n">03</div><h4>Rental car</h4><p>Ask about an on-site Tesla rental from our sister company—subject to availability.</p></div>
+            <div className="step"><div className="n">03</div><h4>Rental car</h4><p>Ask about an on-site Tesla rental from EV+ Auto Rentals LLC—subject to availability.</p></div>
             <div className="step"><div className="n">04</div><h4>Repairs &amp; updates</h4><p>We fix it and keep you updated with photos along the way.</p></div>
             <div className="step"><div className="n">05</div><h4>Pickup</h4><p>Back on the road, backed by our 6-12 months labor warranty.</p></div>
           </div>
