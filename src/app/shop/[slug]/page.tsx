@@ -19,7 +19,7 @@ export async function generateMetadata({
   if (!p) return {};
   return {
     title: `${p.name} — ${p.priceLabel} | EV+ Auto Repair`,
-    description: `${p.name} for ${p.priceLabel}. ${p.tagline} Free pickup in Sun Valley or US shipping. EV+ Auto Repair, (818) 281-7757.`,
+    description: `${p.name} for ${p.priceLabel}. ${p.tagline} USPS shipping anywhere in the US. EV+ Auto Repair, (818) 281-7757.`,
   };
 }
 
@@ -95,14 +95,14 @@ export default async function ProductPage({
                   </a>
                 </div>
                 <p className="lede" style={{ fontSize: 14 }}>
-                  Secure checkout via Stripe. Free pickup in Sun Valley, or USPS shipping anywhere in the US for $5.95 (4–7 business days). Prefer to pay at pickup? Call or text{" "}
+                  Secure checkout via Stripe — USPS shipping anywhere in the US for $5.95 (4–7 business days). Questions? Call or text{" "}
                   <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>.
                 </p>
               </>
             ) : (
               <>
                 <p className="lede">
-                  Send us your order and we&rsquo;ll text you to confirm — free pickup in Sun Valley, or we ship anywhere in the US.
+                  Send us your order and we&rsquo;ll text you to confirm — we ship anywhere in the US.
                 </p>
                 <OrderForm productName={p.name} priceLabel={p.priceLabel} />
               </>

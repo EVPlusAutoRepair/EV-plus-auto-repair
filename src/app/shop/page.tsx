@@ -6,7 +6,7 @@ import { PRODUCTS } from "./products";
 export const metadata: Metadata = {
   title: "Shop Tesla Accessories | EV+ Auto Repair",
   description:
-    "Genuine Tesla accessories from EV+ Auto Repair in Sun Valley, LA. 128GB USB drive for Dashcam & Sentry Mode. Free local pickup or US shipping. (818) 281-7757.",
+    "Genuine Tesla accessories from EV+ Auto Repair in Sun Valley, LA. 128GB USB drive for Dashcam & Sentry Mode. Shipped anywhere in the US. (818) 281-7757.",
 };
 
 export default function Shop() {
@@ -17,7 +17,7 @@ export default function Shop() {
         <div className="wrap">
           <div className="kicker">EV+ Shop</div>
           <h1>Tesla accessories, from your Tesla shop.</h1>
-          <p className="lede">The same parts we trust in our own work — available for pickup in Sun Valley or shipped to your door.</p>
+          <p className="lede">The same parts we trust in our own work — shipped to your door anywhere in the US.</p>
         </div>
       </div>
 
