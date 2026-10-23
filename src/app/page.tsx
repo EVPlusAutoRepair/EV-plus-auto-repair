@@ -46,7 +46,7 @@ export default function Home() {
             <div className="rentals-txt">
               <div className="kicker">On-site Tesla rentals</div>
               <h2>Drop off your Tesla,<br />drive off in a Tesla.</h2>
-              <p className="lede" style={{ marginTop: 16 }}><b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> is a separate rental company, operating from the same address as the shop. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
+              <p className="lede" style={{ marginTop: 16 }}>Our sister company <b style={{ color: "var(--txt)" }}>EV+ Auto Rentals LLC</b> operates from the same address. While we repair your car, ask about staying in a Tesla—no Hertz run, no Uber home, no downtime. Rentals are optional and based on availability, so mention it when you book.</p>
               <div className="hero-ctas" style={{ marginTop: 30 }}><a className="btn" href="/rentals">How rentals work</a></div>
             </div>
             <div className="rentals-img" style={{ backgroundImage: `url('${rentalsTeslas}')` }} />
