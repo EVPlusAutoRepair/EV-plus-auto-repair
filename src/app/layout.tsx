@@ -55,13 +55,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} strategy="afterInteractive" />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
+        {/* GA4 as plain static <script> tags in <head>: Next.js Script with
+            afterInteractive does not render into the served HTML head, and
+            Search Console's Google Analytics verification method requires a
+            static gtag.js snippet in <head>. Same tracking, static markup. */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA4_ID}');`}
-        </Script>
+gtag('config', '${GA4_ID}');`,
+          }}
+        />
         <Script id="clarity-init" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
