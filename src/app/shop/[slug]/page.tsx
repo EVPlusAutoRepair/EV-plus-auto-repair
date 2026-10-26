@@ -65,6 +65,24 @@ export default async function ProductPage({
             <div>
               <div className="kicker">Price</div>
               <p style={{ fontSize: 36, fontWeight: 800, margin: "4px 0 16px" }}>{p.priceLabel}</p>
+              {p.stripeLink && (
+                <>
+                  <div className="hero-ctas" style={{ justifyContent: "flex-start", margin: "0 0 12px" }}>
+                    <a
+                      className="btn"
+                      href={p.stripeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: 18, padding: "16px 36px" }}
+                    >
+                      Buy now — {p.priceLabel}
+                    </a>
+                  </div>
+                  <p className="lede" style={{ fontSize: 14, marginBottom: 20 }}>
+                    Secure checkout via Stripe · Ships via USPS for $5.95 (4–7 business days).
+                  </p>
+                </>
+              )}
               {p.description.map((d, i) => (
                 <p key={i} className="lede" style={{ fontSize: 15 }}>
                   {d}

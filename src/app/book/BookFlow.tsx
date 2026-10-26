@@ -348,24 +348,42 @@ function AccidentForm() {
 export default function BookFlow() {
   const [lane, setLane] = useState<Lane>(null);
   const [service, setService] = useState<string | null>(null);
+
+  // Analytics-only: record which lane a visitor enters, so the booking
+  // funnel can be read as views -> lane picked -> form submitted.
+  // Fire-and-forget — never let analytics break a booking.
+  const trackLane = (l: "service" | "accident") => {
+    try {
+      const w = window as unknown as {
+        gtag?: (command: string, event: string, params?: Record<string, string>) => void;
+      };
+      w.gtag?.("event", "lane_pick", { lane: l });
+    } catch {}
+  };
+
   return (
     <>
       <Suspense>
-        <LanePreselect onPick={(l, s) => { setLane((cur) => cur ?? l); if (s) setService(s); }} />
+        <LanePreselect onPick={(l, s) => { setLane((cur) => cur ?? l); if (s) setService(s); if (l) trackLane(l); }} />
       </Suspense>
       {!lane && (
+        <>
         <div className="lane-grid">
-          <div className="lane" onClick={() => setLane("service")} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && setLane("service")}>
+          <div className="lane" onClick={() => { setLane("service"); trackLane("service"); }} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && (setLane("service"), trackLane("service"))}>
             <h3>I need service</h3>
             <p>Maintenance, repairs, inspections, batteries, diagnostics — anything that isn&rsquo;t an accident.</p>
             <span className="btn">Start service request</span>
           </div>
-          <div className="lane" onClick={() => setLane("accident")} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && setLane("accident")}>
+          <div className="lane" onClick={() => { setLane("accident"); trackLane("accident"); }} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && (setLane("accident"), trackLane("accident"))}>
             <h3>I had an accident</h3>
             <p>Collision damage, insurance claim, photo estimate. Tracey calls you back personally.</p>
             <span className="btn">Start accident intake</span>
           </div>
         </div>
+        <p className="form-note" style={{ textAlign: "center", marginTop: 16 }}>
+          Takes under a minute — we confirm every request by phone or text.
+        </p>
+        </>
       )}
       {lane && (
         <div style={{ textAlign: "center", marginBottom: 8 }}>

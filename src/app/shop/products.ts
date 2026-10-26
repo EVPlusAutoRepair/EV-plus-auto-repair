@@ -53,6 +53,10 @@ export const PRODUCTS: Product[] = [
     ],
     faqs: [
       {
+        q: "How is this different from buying direct from Tesla?",
+        a: "It's a genuine Tesla OEM 128GB drive — the same capacity and spec Tesla sells (Tesla lists its 128GB drive at $45). Ours is $29.99 plus $5.95 USPS shipping.",
+      },
+      {
         q: "Will it work with my Tesla?",
         a: "Yes — any Model 3, Y, S, or X with a glovebox USB port.",
       },

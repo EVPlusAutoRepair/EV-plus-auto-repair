@@ -16,6 +16,7 @@ export default function Home() {
           <div className="hero-ctas">
             <a className="btn" href="/service">I need service</a>
             <a className="btn btn-light" href="/collision">I had an accident</a>
+            <a className="btn btn-light" href="/shop/tesla-usb-drive-128gb">Tesla USB drive — $29.99</a>
           </div>
           <div className="trust"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><b>★ 5.0</b> on Google</a> &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 6-12 months labor warranty</div>
         </div>
