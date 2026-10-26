@@ -79,6 +79,8 @@ export default function CabinFiltersRadiator() {
               <a href="/service/maintenance-inspections" style={{ color: "var(--acc)" }}>Maintenance &amp; Inspections</a>
               {" · "}
               <a href="/service/diagnostics" style={{ color: "var(--acc)" }}>Diagnostics</a>
+              {" · "}
+              <a href="/blog/tesla-cabin-filter-replacement-why-it-matters" style={{ color: "var(--acc)" }}>Tesla Cabin Filter Replacement: Why It Matters</a>
             </p>
           </div>
 

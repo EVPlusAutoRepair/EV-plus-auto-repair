@@ -79,6 +79,8 @@ export default function SuspensionSteering() {
               <a href="/service/maintenance-inspections" style={{ color: "var(--acc)" }}>Maintenance &amp; Inspections</a>
               {" · "}
               <a href="/service/diagnostics" style={{ color: "var(--acc)" }}>Diagnostics</a>
+              {" · "}
+              <a href="/blog/why-we-replace-the-full-control-arm" style={{ color: "var(--acc)" }}>Why We Replace the Full Control Arm</a>
             </p>
           </div>
 

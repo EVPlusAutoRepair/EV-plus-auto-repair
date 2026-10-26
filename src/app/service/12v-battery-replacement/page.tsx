@@ -91,6 +91,8 @@ export default function TwelveVBattery() {
               <a href="/service/diagnostics" style={{ color: "var(--acc)" }}>Diagnostics</a>
               {" · "}
               <a href="/service/maintenance-inspections" style={{ color: "var(--acc)" }}>Maintenance &amp; Inspections</a>
+              {" · "}
+              <a href="/blog/tesla-12v-battery-warning-signs" style={{ color: "var(--acc)" }}>Tesla 12V Battery Warning Signs</a>
             </p>
           </div>
 
