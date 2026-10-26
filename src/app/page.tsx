@@ -96,7 +96,7 @@ export default function Home() {
           <div className="rev-head">
             <h2 style={{ margin: 0 }}>What Tesla owners say.</h2>
           </div>
-          <div className="stars" style={{ marginBottom: 28 }}><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Google · 29 reviews</a></div>
+          <div className="stars" style={{ marginBottom: 28 }}><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><span>★★★★★</span> 5.0 on Google · 30 reviews</a></div>
           <div className="quotes">
             <div className="q">&ldquo;Great service. They resolved my suspension issue within a few minutes. I&rsquo;ve used them before and have always been satisfied with their service and work. I highly recommend them.&rdquo;<div className="who">— Gabriel Paz · Google review</div></div>
             <div className="q">&ldquo;I recently brought my car in for accident damage, and they did an incredible job—my Tesla looks brand new again! They also handled everything related to the insurance claim. Professional, precise, timely, and very communicative.&rdquo;<div className="who">— Preni Amijanian · Google review</div></div>
