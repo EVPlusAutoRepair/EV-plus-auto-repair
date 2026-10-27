@@ -42,7 +42,7 @@ export default function Shop() {
                   />
                 </div>
                 <div className="kicker" style={{ marginBottom: 6 }}>{p.priceLabel}</div>
-                <h3 style={{ margin: "0 0 8px" }}>{p.name}</h3>
+                <h3 style={{ margin: "0 0 8px", hyphens: "none", overflowWrap: "normal", wordBreak: "keep-all" }}>{p.name}</h3>
                 <p className="lede" style={{ fontSize: 14 }}>{p.tagline}</p>
                 <span className="btn" style={{ marginTop: 12, display: "inline-block" }}>View product</span>
               </a>

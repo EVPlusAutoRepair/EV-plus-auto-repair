@@ -21,7 +21,7 @@ export type Product = {
 export const PRODUCTS: Product[] = [
   {
     slug: "tesla-usb-drive-128gb",
-    name: "Tesla 128GB USB Drive",
+    name: "Tesla 128GB USB Drive (Pre‑Owned)",
     tagline: "Dashcam & Sentry Mode — your Tesla is always watching. Make sure it's actually recording.",
     price: 29.99,
     priceLabel: "$29.99",
@@ -73,7 +73,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "tesla-usb-drive-128gb-flat",
-    name: "Tesla 128GB USB Drive — Flat Design (Pre-Owned)",
+    name: "Tesla 128GB USB Drive — Flat Design (Pre‑Owned)",
     tagline: "Dashcam & Sentry Mode — the newer, flatter Tesla drive. Same 128GB recording, in a slimmer design that sits flatter in the glovebox port.",
     price: 34.99,
     priceLabel: "$34.99",

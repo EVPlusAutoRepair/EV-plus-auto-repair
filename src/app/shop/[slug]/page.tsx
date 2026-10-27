@@ -40,7 +40,7 @@ export default async function ProductPage({
           <div className="kicker">
             <a href="/shop" style={{ color: "var(--acc)" }}>Shop</a> / {p.name}
           </div>
-          <h1>{p.name}</h1>
+          <h1 style={{ hyphens: "none", overflowWrap: "normal", wordBreak: "keep-all" }}>{p.name}</h1>
           <p className="lede">{p.tagline}</p>
         </div>
       </div>
