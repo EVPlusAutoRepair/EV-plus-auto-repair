@@ -5,9 +5,8 @@ const links = [
   { href: "/service", label: "Service Center" },
   { href: "/collision", label: "Collision Center" },
   { href: "/rentals", label: "Rentals" },
-  // Shop index still hidden from nav until Stripe shipping is set up (Tracey, Oct 19) — but the USB product
-  // link goes in the top menu (Tracey, Oct 22)
-  { href: "/shop/tesla-usb-drive-128gb", label: "USB Drive" },
+  // Shop index in the top menu (Oct 27, 2026): both USB listings show on /shop
+  { href: "/shop", label: "USB Flash Drives" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];

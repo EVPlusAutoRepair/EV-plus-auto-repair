@@ -1,4 +1,5 @@
 import { usbDrive } from "../img/shop-sign";
+import { flatUsbDrive } from "../img/shop-flat";
 
 export type Product = {
   slug: string;
@@ -55,6 +56,63 @@ export const PRODUCTS: Product[] = [
       {
         q: "How is this different from buying direct from Tesla?",
         a: "It's a genuine Tesla OEM 128GB drive — the same capacity and spec Tesla sells. Ours is $29.99 plus $5.95 USPS shipping.",
+      },
+      {
+        q: "Will it work with my Tesla?",
+        a: "It works with any Model 3, Model Y, Model S or Model X that supports Dashcam and Sentry Mode. Some older cars, depending on build date and configuration, can't record to USB. Plug it into the glovebox USB port if your car has one. Otherwise, use a front USB port in the center console. Rear USB ports only charge devices. To set it up, go to Controls > Safety > Format USB Drive. On 2015-2020 Model S and X, Sentry is under Controls > Safety > Sentry Mode.",
+      },
+      {
+        q: "Why not just use any USB stick?",
+        a: "Consumer sticks aren't made for constant video rewriting — they can corrupt and fail, usually silently, and usually when it matters. This is Tesla's own drive, made for exactly this job.",
+      },
+      {
+        q: "How does shipping work?",
+        a: "We ship anywhere in the US via USPS for $5.95 (4–7 business days).",
+      },
+    ],
+  },
+  {
+    slug: "tesla-usb-drive-128gb-flat",
+    name: "Tesla 128GB USB Drive — Flat Design (Pre-Owned)",
+    tagline: "Dashcam & Sentry Mode — the newer, flatter Tesla drive. Same 128GB recording, in a slimmer design that sits flatter in the glovebox port.",
+    price: 34.99,
+    priceLabel: "$34.99",
+    image: flatUsbDrive,
+    imageAlt: "Flat silver Tesla 128GB USB flash drive for Dashcam and Sentry Mode",
+    // NO Stripe link yet (Oct 27, 2026) — Stripe link is PREP ONLY and must be created separately
+    // for $34.99 + $5.95 shipping with a 20-unit limit. Do NOT reuse the $29.99 link.
+    // Until then the Buy button stays hidden and the order form below is shown.
+    // Stock (owner-confirmed Oct 27, 2026): 20 units.
+    description: [
+      "Dashcam and Sentry Mode are only as good as the drive they're writing to. A cheap gas-station USB stick overheats, corrupts, and dies — usually the week you actually need the footage.",
+      "This is a pre-owned, genuine Tesla OEM 128GB drive in the newer, flatter design — the same design Tesla includes with new deliveries, but this unit itself is pre-owned, not new. It works the same as new. It meets every Tesla spec: 128GB (Tesla's minimum is 64GB), USB 2.0 compatible, and meets Tesla's minimum sustained write speed of 4 MB/s.",
+      "128GB holds hours of Sentry clips plus Dashcam footage before anything overwrites. Setup takes about two minutes in the car — full instructions below.",
+    ],
+    setup: {
+      title: "How to set it up (Tesla's official steps)",
+      steps: [
+        "Use the glovebox USB port if your car has one; otherwise use a front USB port in the center console. Don't use a rear port, since those only charge devices.",
+        "Let the car format the drive: on the touchscreen, tap Controls > Safety > Format USB Drive. The car formats it as exFAT and creates the required TeslaCam folder automatically. Heads up: formatting erases anything on the drive.",
+        "Wait a few seconds for the car to recognize the drive. When the Dashcam and Sentry Mode icons appear under Controls, it's ready to record.",
+        "Turn Sentry Mode on: Controls > Sentry. (Dashcam records while you drive; Sentry watches while you're parked — you want both.)",
+        "Test it: while parked, tap the Dashcam icon to open the Viewer and confirm a saved clip plays. Then lock the car, walk around it, and check that a Sentry clip was captured. On a computer, footage lives in the TeslaCam folder (SavedClips and SentryClips).",
+        "Keep it healthy: footage records in a loop and overwrites the oldest clips, and a full drive can't save new footage. Every few weeks, move clips you want to keep to a computer and clear space (Controls > Safety > Delete Dashcam Clips).",
+      ],
+    },
+    bullets: [
+      "Pre-owned, genuine Tesla OEM 128GB USB drive — newer, flatter design; works the same as new",
+      "128GB holds hours of Sentry clips plus Dashcam footage before anything overwrites",
+      "Plug-and-play in the glovebox USB port",
+      "Ships anywhere in the US via USPS — $5.95",
+    ],
+    faqs: [
+      {
+        q: "How is this different from the $29.99 Tesla USB drive?",
+        a: "It's the newer, flatter design — same 128GB capacity and same Tesla spec, in a slimmer drive that sits flatter in the glovebox port. It is not a faster-recording drive; the difference is the fit and the newer design. The older wedge-style drive stays listed at $29.99.",
+      },
+      {
+        q: "How is this different from buying direct from Tesla?",
+        a: "It's a pre-owned, genuine Tesla OEM 128GB drive — the same capacity and spec Tesla sells, and it works the same as new. Ours is $34.99 plus $5.95 USPS shipping.",
       },
       {
         q: "Will it work with my Tesla?",

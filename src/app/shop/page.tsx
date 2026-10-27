@@ -6,7 +6,7 @@ import { PRODUCTS } from "./products";
 export const metadata: Metadata = {
   title: "Shop Tesla Accessories | EV+ Auto Repair",
   description:
-    "Genuine Tesla accessories from EV+ Auto Repair in Sun Valley, LA. 128GB USB drive for Dashcam & Sentry Mode. Shipped anywhere in the US. (818) 281-7757.",
+    "Genuine Tesla accessories from EV+ Auto Repair in Sun Valley, LA. 128GB USB flash drives for Dashcam & Sentry Mode, including the newer flat design. Shipped anywhere in the US. (818) 281-7757.",
 };
 
 export default function Shop() {
