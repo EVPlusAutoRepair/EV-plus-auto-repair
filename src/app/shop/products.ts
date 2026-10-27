@@ -79,10 +79,10 @@ export const PRODUCTS: Product[] = [
     priceLabel: "$34.99",
     image: flatUsbDrive,
     imageAlt: "Flat silver Tesla 128GB USB flash drive for Dashcam and Sentry Mode",
-    // NO Stripe link yet (Oct 27, 2026) — Stripe link is PREP ONLY and must be created separately
-    // for $34.99 + $5.95 shipping with a 20-unit limit. Do NOT reuse the $29.99 link.
-    // Until then the Buy button stays hidden and the order form below is shown.
-    // Stock (owner-confirmed Oct 27, 2026): 20 units.
+    // Live Stripe Payment Link (verified Oct 27, 2026, read-only checkout check):
+    // $34.99 + USPS Ground Advantage $5.95 = $40.94, live mode, US-only, phone required.
+    // Do NOT reuse the $29.99 link. Stock (owner-confirmed Oct 27, 2026): 20 units.
+    stripeLink: "https://buy.stripe.com/3cIfZ9dIYeQK2KRdum2Fa03",
     description: [
       "Dashcam and Sentry Mode are only as good as the drive they're writing to. A cheap gas-station USB stick overheats, corrupts, and dies — usually the week you actually need the footage.",
       "This is a pre-owned, genuine Tesla OEM 128GB drive in the newer, flatter design — the same design Tesla includes with new deliveries, but this unit itself is pre-owned, not new. It works the same as new. It meets every Tesla spec: 128GB (Tesla's minimum is 64GB), USB 2.0 compatible, and meets Tesla's minimum sustained write speed of 4 MB/s.",
