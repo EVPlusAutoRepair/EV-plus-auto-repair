@@ -1,4 +1,4 @@
-import { usbDrive } from "../img/shop-sign";
+import { usbDriveRotated } from "../img/shop-original-rotated";
 import { flatUsbDrive } from "../img/shop-flat";
 
 export type Product = {
@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Dashcam & Sentry Mode — your Tesla is always watching. Make sure it's actually recording.",
     price: 29.99,
     priceLabel: "$29.99",
-    image: usbDrive,
+    image: usbDriveRotated,
     imageAlt: "Tesla 128GB USB flash drive for Dashcam and Sentry Mode",
     // Live Stripe Payment Link (verified Oct 22, 2026): collects shipping address + phone;
     // USPS Ground Advantage $5.95 (4-7 business days). Shipping only — no local pickup (Tracey, Oct 22).
