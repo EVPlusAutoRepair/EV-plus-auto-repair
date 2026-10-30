@@ -8,11 +8,16 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 100vw; height: 100vh; overflow: hidden; background: #0b0b0e; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: #fff; }
   .deck { width: 100vw; height: 100vh; position: relative; }
-  .slide { position: absolute; inset: 0; display: none; text-align: center; }
+  .slide { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none; text-align: center; }
   .slide.active { display: block; }
   /* Centering via absolute + translate: the Samsung TV browser does not honor
      flexbox centering on these slides (content renders ~20% left of center),
-     while absolute positioning (dots, progress bar) centers correctly. */
+     while absolute positioning (dots, progress bar) centers correctly.
+     NOTE: this TV's browser also does NOT support the `inset` shorthand,
+     `min()` or `aspect-ratio` (old Tizen Chromium) — `inset: 0` was silently
+     dropped, collapsing each slide to shrink-to-fit width at the top-left,
+     which pushed content off the left edge. Everything here uses explicit
+     top/left/right/bottom and plain vh/vw sizes only. */
   .cbox { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 92vw; text-align: center; }
   .kicker { font-size: 2.2vh; letter-spacing: .35em; text-transform: uppercase; color: #f5c518; font-weight: 700; margin-bottom: 2vh; }
   h1 { font-size: 7vh; line-height: 1.05; font-weight: 900; margin-bottom: 2vh; }
@@ -31,9 +36,9 @@
   .live { animation: pulse 3s ease-in-out infinite; color: #f5c518; font-weight: 800; }
   /* video slide: video starts centered, then docks left while bullets fade in on the right */
   .vslide { text-align: left; }
-  .vwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(46vh, 34vw); transition: left 1.4s ease, transform 1.4s ease, width 1.4s ease; z-index: 2; }
-  .vslide.docked .vwrap { left: 5vw; transform: translate(0, -50%); width: min(40vh, 26vw); }
-  .vplayer { width: 100%; aspect-ratio: 9 / 16; max-height: 82vh; border-radius: 1.5vh; background: #17171a; display: block; }
+  .vwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 46vh; height: 82vh; transition: left 1.4s ease, transform 1.4s ease, width 1.4s ease, height 1.4s ease; z-index: 2; }
+  .vslide.docked .vwrap { left: 5vw; transform: translate(0, -50%); width: 39vh; height: 70vh; }
+  .vplayer { width: 100%; height: 100%; object-fit: cover; border-radius: 1.5vh; background: #17171a; display: block; }
   .vinfo { position: absolute; right: 4vw; top: 50%; transform: translateY(-50%); width: 50vw; text-align: left; opacity: 0; transition: opacity 1s ease; }
   .vslide.docked .vinfo { opacity: 1; }
   .why { text-align: left; margin-top: 1.6vh; }
