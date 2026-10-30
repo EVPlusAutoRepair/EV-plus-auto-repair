@@ -53,8 +53,8 @@
     <div class="phone">(818) 281-7757</div>
     <div class="foot">EV+ Auto Repair · 9755 Glenoaks Blvd, Sun Valley, CA</div>
   </section>
-  <section class="slide vslide" data-secs="27" data-video="https://drive.google.com/uc?export=download&id=1UW8cHllsQD_0eQ0coZ1q7y-DGJZo-Rq7">
-    <div class="vwrap"><video class="vplayer" src="https://drive.google.com/uc?export=download&id=1UW8cHllsQD_0eQ0coZ1q7y-DGJZo-Rq7" playsinline preload="auto"></video></div>
+  <section class="slide vslide" data-secs="27" data-video="https://drive.usercontent.google.com/download?id=1UW8cHllsQD_0eQ0coZ1q7y-DGJZo-Rq7&export=download">
+    <div class="vwrap"><video class="vplayer" data-src="https://drive.usercontent.google.com/download?id=1UW8cHllsQD_0eQ0coZ1q7y-DGJZo-Rq7&export=download" playsinline preload="auto"></video></div>
     <div class="vinfo">
       <div class="kicker">Radiator Cleaning</div>
       <h2>Your Tesla&rsquo;s radiator gets clogged. Most owners never look.</h2>
@@ -67,8 +67,8 @@
     <div class="price">$150 <small>once a year</small></div>
     <div class="meta">Tesla charges $330–$350 for the same cleaning.</div>
   </section>
-  <section class="slide vslide" data-secs="27" data-video="https://drive.google.com/uc?export=download&id=1Dom0KZZ_3R0BzYU-9Ea0Bh9GKexrgBzQ">
-    <div class="vwrap"><video class="vplayer" src="https://drive.google.com/uc?export=download&id=1Dom0KZZ_3R0BzYU-9Ea0Bh9GKexrgBzQ" playsinline preload="auto"></video></div>
+  <section class="slide vslide" data-secs="27" data-video="https://drive.usercontent.google.com/download?id=1Dom0KZZ_3R0BzYU-9Ea0Bh9GKexrgBzQ&export=download">
+    <div class="vwrap"><video class="vplayer" data-src="https://drive.usercontent.google.com/download?id=1Dom0KZZ_3R0BzYU-9Ea0Bh9GKexrgBzQ&export=download" playsinline preload="auto"></video></div>
     <div class="vinfo">
       <div class="kicker">Drive Unit Oil Change</div>
       <h2>Yes — your Tesla has oil. Just not engine oil.</h2>
@@ -81,8 +81,8 @@
     <div class="price">$280 <small>per drive unit · $560 dual motor</small></div>
     <div class="meta">Around 100,000 miles, or after the drive-unit warranty ends.</div>
   </section>
-  <section class="slide vslide" data-secs="27" data-video="https://drive.google.com/uc?export=download&id=1kyEZG7rd-2CQhXoZjbwJL9MSGqsa3aSw">
-    <div class="vwrap"><video class="vplayer" src="https://drive.google.com/uc?export=download&id=1kyEZG7rd-2CQhXoZjbwJL9MSGqsa3aSw" playsinline preload="auto"></video></div>
+  <section class="slide vslide" data-secs="27" data-video="https://drive.usercontent.google.com/download?id=1kyEZG7rd-2CQhXoZjbwJL9MSGqsa3aSw&export=download">
+    <div class="vwrap"><video class="vplayer" data-src="https://drive.usercontent.google.com/download?id=1kyEZG7rd-2CQhXoZjbwJL9MSGqsa3aSw&export=download" playsinline preload="auto"></video></div>
     <div class="vinfo">
       <div class="kicker">12V Battery Replacement</div>
       <h2>A dead 12V can lock you out of your own Tesla.</h2>
@@ -95,8 +95,8 @@
     <div class="price">~$250 <small>in shop · $350 mobile, same-day</small></div>
     <div class="meta">Mobile service: battery + labor, 50% Zelle deposit to order.</div>
   </section>
-  <section class="slide vslide" data-secs="27" data-video="https://drive.google.com/uc?export=download&id=1KKUuOezlRJYn7QqA5lzsPKvrlFMdkm-j">
-    <div class="vwrap"><video class="vplayer" src="https://drive.google.com/uc?export=download&id=1KKUuOezlRJYn7QqA5lzsPKvrlFMdkm-j" playsinline preload="auto"></video></div>
+  <section class="slide vslide" data-secs="27" data-video="https://drive.usercontent.google.com/download?id=1KKUuOezlRJYn7QqA5lzsPKvrlFMdkm-j&export=download">
+    <div class="vwrap"><video class="vplayer" data-src="https://drive.usercontent.google.com/download?id=1KKUuOezlRJYn7QqA5lzsPKvrlFMdkm-j&export=download" playsinline preload="auto"></video></div>
     <div class="vinfo">
       <div class="kicker">Front Control Arm Replacement</div>
       <h2>Creaking up front? Don&rsquo;t replace just the bushing.</h2>
@@ -160,7 +160,8 @@
     timer = setTimeout(function(){ show(idx + 1); }, secs * 1000);
     var vid = s.querySelector('video');
     if (vid) {
-      vid.currentTime = 0; vid.volume = 0.6; vid.muted = false;
+      if (vid.src) { try { vid.currentTime = 0; } catch(e){} }
+      vid.volume = 0.6; vid.muted = false;
       vid.play().catch(function(){});
       phaseTimer = setTimeout(function(){
         s.classList.add('docked');
@@ -176,6 +177,24 @@
       voAudio.play().catch(function(){});
     }
   }
+  // Drive serves the clips as downloads (Content-Disposition: attachment), which a
+  // <video> tag refuses to play. Fetch them as data instead (Drive allows cross-origin
+  // reads) and play each from a local blob URL.
+  function wireVideo(v) {
+    fetch(v.getAttribute('data-src')).then(function(r){
+      if (!r.ok) throw new Error('video fetch ' + r.status);
+      return r.blob();
+    }).then(function(b){
+      v.src = URL.createObjectURL(b);
+      v.load();
+      if (v.closest('.slide').classList.contains('active')) {
+        try { v.currentTime = 0; } catch(e){}
+        v.volume = 0.6; v.muted = false;
+        v.play().catch(function(){});
+      }
+    }).catch(function(){});
+  }
+  document.querySelectorAll('video.vplayer').forEach(wireVideo);
   show(0);
   var fsBtn = document.getElementById('fsBtn');
   var statusEl = document.getElementById('status');
