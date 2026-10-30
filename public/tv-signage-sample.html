@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>EV+ Auto Repair — Waiting Room Board (Test Slide)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    background: #0b0b0e;
+    overscroll-behavior: none;
+    -webkit-user-select: none; user-select: none;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  body.hide-cursor, body.hide-cursor * { cursor: none !important; }
+
+  /* ---------- BOARD (portrait 9:16 by default) ---------- */
+  #board {
+    width: 100vw; height: 100vh;
+    position: fixed; inset: 0;
+    overflow: hidden;
+    background: linear-gradient(178deg, #101014 0%, #17171c 55%, #0e2a3a 100%);
+    color: #fff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: space-between;
+    text-align: center;
+    padding: 7vh 7vw 5vh;
+  }
+  .badge {
+    font-size: clamp(18px, 3.2vw, 34px);
+    letter-spacing: .35em; font-weight: 700;
+    color: #f5c518; text-transform: uppercase;
+  }
+  .bolt { font-size: clamp(64px, 16vw, 150px); line-height: 1; margin-top: 2vh; }
+  h1 {
+    font-size: clamp(44px, 9vw, 96px);
+    line-height: 1.04; font-weight: 900; letter-spacing: -0.01em;
+  }
+  h1 span { color: #f5c518; }
+  .sub {
+    font-size: clamp(22px, 4.4vw, 46px);
+    line-height: 1.35; color: #d7d7de; font-weight: 400;
+    max-width: 88vw;
+  }
+  .sub b { color: #fff; }
+  .services {
+    display: flex; flex-direction: column; gap: 2.2vh;
+    width: 100%; margin-top: 1vh;
+  }
+  .service {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 18px;
+    padding: 2.4vh 4vw;
+    font-size: clamp(24px, 4.6vw, 48px);
+    font-weight: 700; text-align: left;
+    display: flex; align-items: center; gap: 3vw;
+  }
+  .service .ic { font-size: 1.25em; }
+  .service small { display: block; font-weight: 400; color: #c9c9d2; font-size: .62em; margin-top: .4vh; }
+  .cta {
+    background: #f5c518; color: #111;
+    border-radius: 18px; width: 100%;
+    padding: 2.6vh 4vw;
+  }
+  .cta .phone { font-size: clamp(34px, 7.4vw, 78px); font-weight: 900; letter-spacing: .02em; }
+  .cta .book { font-size: clamp(20px, 3.8vw, 40px); font-weight: 700; margin-top: .6vh; }
+  .foot {
+    font-size: clamp(16px, 2.8vw, 30px);
+    color: #9a9aa5; letter-spacing: .06em;
+  }
+  .foot b { color: #d7d7de; }
+
+  /* ---------- LANDSCAPE VARIANT (toggle) ---------- */
+  #board.landscape { padding: 5vh 6vw 4vh; }
+  #board.landscape .bolt { display: none; }
+  #board.landscape h1 { font-size: clamp(34px, 6.2vw, 72px); }
+  #board.landscape .services { flex-direction: row; gap: 2vw; }
+  #board.landscape .service { flex: 1; flex-direction: column; align-items: flex-start; gap: 1vh; font-size: clamp(18px, 2.6vw, 32px); }
+  #board.landscape .cta { display: flex; align-items: center; justify-content: space-between; gap: 4vw; text-align: left; }
+  #board.landscape .cta .phone { font-size: clamp(28px, 4.6vw, 56px); }
+
+  /* ---------- CONTROLS ---------- */
+  #fsBtn {
+    position: fixed; right: 18px; bottom: 18px; z-index: 9999;
+    font-size: 28px; padding: 14px 22px; border-radius: 12px; border: 0;
+    background: #f5c518; color: #111; font-weight: 800; cursor: pointer;
+    box-shadow: 0 4px 24px rgba(0,0,0,.5);
+  }
+  #orientBtn {
+    position: fixed; left: 18px; bottom: 18px; z-index: 9999;
+    font-size: 22px; padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4);
+    background: rgba(0,0,0,.55); color: #fff; font-weight: 700; cursor: pointer;
+  }
+  #status {
+    position: fixed; left: 18px; top: 14px; z-index: 9999;
+    font-size: 17px; line-height: 1.5; color: #cfcfd8;
+    background: rgba(0,0,0,.55); border-radius: 10px; padding: 10px 14px;
+    font-family: monospace; max-width: 70vw;
+  }
+  #status b { color: #f5c518; }
+  /* Gentle motion so the screen never counts as "static" (stay-awake fallback) */
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .82; } }
+  .bolt { animation: pulse 4s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<div id="board">
+  <div>
+    <div class="badge">Sun Valley &bull; Los Angeles</div>
+    <div class="bolt">&#9889;</div>
+    <h1>Tesla Service<br>&amp; <span>Collision Repair</span></h1>
+  </div>
+
+  <p class="sub">Family-owned. Tesla specialists.<br><b>Free inspection</b> while you wait.</p>
+
+  <div class="services">
+    <div class="service"><span class="ic">&#128736;</span><span>Service &amp; Maintenance<small>12V battery, brakes, suspension, filters</small></span></div>
+    <div class="service"><span class="ic">&#128663;</span><span>Collision &amp; Body Work<small>Insurance claims handled for you</small></span></div>
+    <div class="service"><span class="ic">&#128268;</span><span>Tesla USB Drives<small>128GB OEM &mdash; from $29.99, ships to you</small></span></div>
+  </div>
+
+  <div class="cta">
+    <div class="phone">(818) 281-7757</div>
+    <div class="book">Book at evplusautorepair.com</div>
+  </div>
+
+  <div class="foot"><b>EV+ Auto Repair</b> &nbsp;&bull;&nbsp; 9755 Glenoaks Blvd, Sun Valley, CA &nbsp;&bull;&nbsp; info@evplusautorepair.com</div>
+</div>
+
+<div id="status">TEST SLIDE &mdash; status:<br>
+  Fullscreen: <b id="stFs">NO &mdash; tap FULLSCREEN</b><br>
+  Wake Lock: <b id="stWl">not tried yet</b><br>
+  <span id="stNote">Tap FULLSCREEN once. Then leave it alone 30+ min.</span>
+</div>
+
+<button id="orientBtn">&#8646; Portrait / Landscape</button>
+<button id="fsBtn">&#9974; FULLSCREEN</button>
+
+<!-- Silent 1px looping video fallback is added by JS only if Wake Lock is unsupported.
+     (No external video file is bundled, so nothing can fail to load.) -->
+
+<script>
+  var fsBtn = document.getElementById('fsBtn');
+  var stFs = document.getElementById('stFs');
+  var stWl = document.getElementById('stWl');
+  var stNote = document.getElementById('stNote');
+  var board = document.getElementById('board');
+
+  /* ---------- FULLSCREEN: must be called directly inside the tap ---------- */
+  function goFullscreen() {
+    var el = document.documentElement;
+    var p = null;
+    if (el.requestFullscreen) p = el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) p = el.webkitRequestFullscreen();
+    else if (el.mozRequestFullScreen) p = el.mozRequestFullScreen();
+    else if (el.msRequestFullscreen) p = el.msRequestFullscreen();
+    else { stFs.textContent = 'NOT SUPPORTED in this browser'; }
+    if (p && p.catch) p.catch(function (e) {
+      stFs.textContent = 'BLOCKED (' + (e && e.name ? e.name : 'error') + ') — use a kiosk browser';
+      stNote.textContent = 'Fullscreen was refused by the browser/iframe. See the deep-dive report, Fix 2 (Fully Kiosk Browser).';
+    });
+  }
+  fsBtn.addEventListener('click', function () {
+    goFullscreen();
+    requestWakeLock();
+  });
+  document.addEventListener('fullscreenchange', function () {
+    if (document.fullscreenElement) {
+      stFs.textContent = 'YES';
+      stNote.textContent = 'Fullscreen is ON. Buttons hide in 5s — move the remote to bring them back.';
+      setTimeout(function () {
+        fsBtn.style.display = 'none';
+        document.getElementById('orientBtn').style.display = 'none';
+        document.getElementById('status').style.display = 'none';
+      }, 5000);
+    } else {
+      stFs.textContent = 'NO — tap FULLSCREEN';
+      fsBtn.style.display = 'block';
+      document.getElementById('orientBtn').style.display = 'block';
+      document.getElementById('status').style.display = 'block';
+      fsBtn.textContent = '⛶ FULLSCREEN';
+    }
+  });
+  // Any remote movement brings the controls back while fullscreen
+  document.addEventListener('mousemove', function () {
+    if (document.fullscreenElement) {
+      fsBtn.style.display = 'block';
+      document.getElementById('orientBtn').style.display = 'block';
+      document.getElementById('status').style.display = 'block';
+    }
+  });
+
+  /* ---------- WAKE LOCK with fallback ---------- */
+  var wakeLock = null;
+  async function requestWakeLock() {
+    if (!('wakeLock' in navigator)) {
+      stWl.textContent = 'NOT SUPPORTED — using motion fallback';
+      startMotionFallback();
+      return false;
+    }
+    try {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', function () { wakeLock = null; });
+      stWl.textContent = 'YES — screen held awake';
+      return true;
+    } catch (e) {
+      stWl.textContent = 'REFUSED (' + (e && e.name ? e.name : 'error') + ') — using motion fallback';
+      startMotionFallback();
+      return false;
+    }
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') requestWakeLock();
+  });
+
+  /* Fallback: keep the DOM changing so the display never counts as "static".
+     A tiny periodic nudge (rotating the bolt is already animated in CSS;
+     this also flips a data attribute every 20s). */
+  var fallbackOn = false;
+  function startMotionFallback() {
+    if (fallbackOn) return;
+    fallbackOn = true;
+    setInterval(function () {
+      board.setAttribute('data-tick', String(Date.now()));
+    }, 20000);
+  }
+
+  /* ---------- PORTRAIT / LANDSCAPE TOGGLE ---------- */
+  document.getElementById('orientBtn').addEventListener('click', function () {
+    board.classList.toggle('landscape');
+  });
+
+  /* ---------- HOURLY RELOAD (clears leaks, re-establishes wake lock) ---------- */
+  setTimeout(function () { location.reload(); }, 3600000);
+
+  /* ---------- HIDE CURSOR WHEN IDLE ---------- */
+  var cursorTimer;
+  document.addEventListener('mousemove', function () {
+    document.body.classList.remove('hide-cursor');
+    clearTimeout(cursorTimer);
+    cursorTimer = setTimeout(function () {
+      document.body.classList.add('hide-cursor');
+    }, 3000);
+  });
+</script>
+</body>
+</html>
