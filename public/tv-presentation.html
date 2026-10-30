@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>EV+ Auto Repair — Waiting Room Presentation</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100vw; height: 100vh; overflow: hidden; background: #0b0b0e; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: #fff; }
+  .deck { width: 100vw; height: 100vh; position: relative; }
+  .slide { position: absolute; inset: 0; display: none; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 6vh 5vw; }
+  .slide.active { display: flex; }
+  /* Horizontal service slide: vertical reel on the left, info + graphics on the right */
+  .slide.split { flex-direction: row; justify-content: center; align-items: center; text-align: left; gap: 4vw; }
+  .split .reel-wrap { flex: 0 0 auto; text-align: center; }
+  .split .info { flex: 1 1 auto; max-width: 52vw; }
+  .kicker { font-size: 2.2vh; letter-spacing: .35em; text-transform: uppercase; color: #f5c518; font-weight: 700; margin-bottom: 2vh; }
+  h1 { font-size: 7vh; line-height: 1.05; font-weight: 900; margin-bottom: 2vh; }
+  h2 { font-size: 4.6vh; line-height: 1.1; font-weight: 900; margin-bottom: 1.8vh; }
+  p { font-size: 3vh; line-height: 1.45; color: #d7d7de; max-width: 80vw; }
+  .price { font-size: 8vh; font-weight: 900; color: #f5c518; margin: 2vh 0 .8vh; }
+  .price small { font-size: 2.8vh; color: #d7d7de; font-weight: 600; }
+  .meta { display: inline-block; font-size: 2.6vh; color: #fff; background: #1d1d22; border: 1px solid #33333a; border-radius: 2vh; padding: 1.2vh 1.6vw; margin-top: 1.6vh; }
+  .why { text-align: left; margin-top: 1.6vh; }
+  .why li { font-size: 2.9vh; line-height: 1.45; color: #d7d7de; margin-bottom: 1.1vh; list-style: none; }
+  .why li b { color: #fff; }
+  .why li::before { content: "⚡ "; }
+  .phone { font-size: 4.5vh; font-weight: 900; margin-top: 2vh; }
+  .foot { position: absolute; bottom: 2.5vh; left: 0; right: 0; text-align: center; font-size: 2vh; color: #8a8a94; }
+  .reel { width: min(44vh, 30vw); aspect-ratio: 9 / 16; max-height: 78vh; border: 0; border-radius: 1.5vh; background: #17171a; }
+  .tap { font-size: 2.2vh; color: #8a8a94; margin-top: 1.2vh; }
+  .bar { position: absolute; top: 0; left: 0; height: .8vh; background: #f5c518; width: 0%; z-index: 5; transition: width linear; }
+  #fsBtn { position: absolute; right: 2vw; top: 2vh; z-index: 10; background: #f5c518; color: #111; border: 0; border-radius: 1.2vh; padding: 1.2vh 2.2vw; font-size: 2.6vh; font-weight: 800; cursor: pointer; }
+  #status { position: absolute; left: 2vw; top: 2vh; z-index: 10; font-size: 1.9vh; color: #8a8a94; background: rgba(0,0,0,.45); padding: .8vh 1.2vw; border-radius: 1vh; }
+  .dots { position: absolute; bottom: 6vh; left: 0; right: 0; text-align: center; z-index: 5; font-size: 2vh; letter-spacing: .5em; color: #55555e; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+  .live { animation: pulse 3s ease-in-out infinite; color: #f5c518; font-weight: 800; }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+  <div class="bar" id="bar"></div>
+  <button id="fsBtn">⛶ FULLSCREEN</button>
+  <div id="status">Fullscreen: NO — tap FULLSCREEN · Wake Lock: not tried yet</div>
+
+  <!-- INTRO -->
+  <section class="slide active" data-secs="12">
+    <div class="kicker">EV+ Auto Repair · Sun Valley</div>
+    <h1>Tesla Service<br>&amp; Collision Repair</h1>
+    <p>Family-owned. Tesla specialists.<br>While you wait — a few things worth knowing about your Tesla.</p>
+    <div class="phone">(818) 281-7757</div>
+    <div class="foot">EV+ Auto Repair · 9755 Glenoaks Blvd, Sun Valley, CA</div>
+  </section>
+
+  <!-- RADIATOR: video left, info right -->
+  <section class="slide split" data-secs="30">
+    <div class="reel-wrap">
+      <iframe class="reel" src="https://www.instagram.com/reel/DYZJfljtoQr/embed/captioned/" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+      <div class="tap">Tap the video to play with sound</div>
+    </div>
+    <div class="info">
+      <div class="kicker">Radiator Cleaning</div>
+      <h2>Your Tesla's radiator gets clogged. Most owners never look.</h2>
+      <ul class="why">
+        <li><b>Dead bugs, dirt &amp; debris</b> block airflow to the cooling system.</li>
+        <li>Cooling drops, <b>AC gets weaker</b>, and parts run hotter than they should.</li>
+        <li>We clean the radiator &amp; condenser so air flows like it should.</li>
+      </ul>
+      <div class="price">$150 <small>once a year</small></div>
+      <div class="meta">Tesla charges $330–$350 for the same cleaning.</div>
+    </div>
+  </section>
+
+  <!-- DRIVE UNIT OIL: video left, info right -->
+  <section class="slide split" data-secs="30">
+    <div class="reel-wrap">
+      <iframe class="reel" src="https://www.instagram.com/reel/DZcBMaKtCmn/embed/captioned/" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+      <div class="tap">Tap the video to play with sound</div>
+    </div>
+    <div class="info">
+      <div class="kicker">Drive Unit Oil Change</div>
+      <h2>Yes — your Tesla has oil. Just not engine oil.</h2>
+      <ul class="why">
+        <li>The drive unit has <b>gearbox fluid</b> that wears out — ours comes out dark after high mileage.</li>
+        <li>Tesla calls it "lifetime" fluid. <b>Fresh fluid protects the gears</b> and keeps the drive unit healthy.</li>
+        <li>We change the fluid <b>and the filter</b> — not just a top-up.</li>
+      </ul>
+      <div class="price">$280 <small>per drive unit · $560 dual motor</small></div>
+      <div class="meta">Around 100,000 miles, or after the drive-unit warranty ends.</div>
+    </div>
+  </section>
+
+  <!-- 12V: video left, info right -->
+  <section class="slide split" data-secs="30">
+    <div class="reel-wrap">
+      <iframe class="reel" src="https://www.instagram.com/reel/DXqkPqVDXkC/embed/captioned/" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+      <div class="tap">Tap the video to play with sound</div>
+    </div>
+    <div class="info">
+      <div class="kicker">12V Battery Replacement</div>
+      <h2>A dead 12V can lock you out of your own Tesla.</h2>
+      <ul class="why">
+        <li>Old 12V batteries <b>die with no warning</b> — doors won't open, car won't wake up.</li>
+        <li>We test yours and replace it <b>before</b> it strands you.</li>
+      </ul>
+      <div class="price">~$250 <small>in shop · $350 mobile, same-day</small></div>
+      <div class="meta">Mobile service: battery + labor, 50% Zelle deposit to order.</div>
+    </div>
+  </section>
+
+  <!-- CABIN FILTER -->
+  <section class="slide" data-secs="18">
+    <div class="kicker">Cabin Filter Replacement</div>
+    <h2>Smelly AC? Weak airflow?<br>It's probably the filters.</h2>
+    <ul class="why" style="text-align:left;max-width:70vw">
+      <li>Both cabin filters trap dust, pollen &amp; smells — and they clog up.</li>
+      <li>Fresh filters mean <b>cleaner air and stronger airflow</b>.</li>
+    </ul>
+    <div class="price">$115 <small>both filters · ~30 min</small></div>
+    <div class="foot">Ask at the front desk — we can usually do it while your car is already here.</div>
+  </section>
+
+  <!-- TIRE ROTATION -->
+  <section class="slide" data-secs="18">
+    <div class="kicker">Tire Rotation</div>
+    <h2>Teslas wear tires unevenly.<br>Rotation keeps them alive longer.</h2>
+    <ul class="why" style="text-align:left;max-width:70vw">
+      <li>Even wear = <b>longer tire life</b> and a quieter, smoother ride.</li>
+    </ul>
+    <div class="price">$60</div>
+    <div class="foot">Ask at the front desk — we can usually do it while your car is already here.</div>
+  </section>
+
+  <!-- CONTROL ARM: video left, info right -->
+  <section class="slide split" data-secs="30">
+    <div class="reel-wrap">
+      <iframe class="reel" src="https://www.instagram.com/reel/Db4z8XoNC9e/embed/captioned/" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+      <div class="tap">Tap the video to play with sound</div>
+    </div>
+    <div class="info">
+      <div class="kicker">Front Control Arm Replacement</div>
+      <h2>Creaking up front? Don't replace just the bushing.</h2>
+      <ul class="why">
+        <li>Worn bushings cause <b>creaking, clunking &amp; uneven tire wear</b>.</li>
+        <li>We replace the <b>full control arm</b> — never just the bushing — so the fix lasts.</li>
+      </ul>
+      <div class="price">~$600</div>
+      <div class="meta">Customer brings parts? Labor $180/side · $360 both · 2–3 hours.</div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="slide" data-secs="14">
+    <div class="kicker">EV+ Auto Repair · Sun Valley</div>
+    <h1>While you're here,<br>ask us about your Tesla.</h1>
+    <p>Free inspection · Insurance claims handled for you<br>Radiator cleaning · Drive unit oil · 12V · Filters · Tires · Suspension</p>
+    <div class="phone">(818) 281-7757</div>
+    <p style="margin-top:2vh">Book at evplusautorepair.com</p>
+    <div class="foot"><span class="live">● PLAYING</span> · EV+ Auto Repair · 9755 Glenoaks Blvd, Sun Valley, CA · info@evplusautorepair.com</div>
+  </section>
+
+  <div class="dots" id="dots"></div>
+</div>
+<script>
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var idx = 0, timer = null;
+  var bar = document.getElementById('bar');
+  var dots = document.getElementById('dots');
+  dots.textContent = slides.map(function(_, i){ return i === 0 ? '●' : '○'; }).join(' ');
+  function show(i) {
+    slides[idx].classList.remove('active');
+    idx = (i + slides.length) % slides.length;
+    slides[idx].classList.add('active');
+    dots.textContent = slides.map(function(_, j){ return j === idx ? '●' : '○'; }).join(' ');
+    var secs = parseInt(slides[idx].getAttribute('data-secs') || '18', 10);
+    clearTimeout(timer);
+    bar.style.transition = 'none'; bar.style.width = '0%';
+    setTimeout(function(){ bar.style.transition = 'width ' + secs + 's linear'; bar.style.width = '100%'; }, 50);
+    timer = setTimeout(function(){ show(idx + 1); }, secs * 1000);
+  }
+  show(0);
+  var fsBtn = document.getElementById('fsBtn');
+  var statusEl = document.getElementById('status');
+  function updateStatus() {
+    var fs = document.fullscreenElement ? 'YES' : 'NO — tap FULLSCREEN';
+    statusEl.textContent = 'Fullscreen: ' + fs + ' · Wake Lock: ' + (window._wl || 'not tried yet');
+  }
+  fsBtn.addEventListener('click', function(){
+    var el = document.documentElement;
+    if (el.requestFullscreen) el.requestFullscreen().catch(function(){});
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    requestWakeLock();
+    setTimeout(updateStatus, 500);
+  });
+  document.addEventListener('fullscreenchange', updateStatus);
+  var wakeLock = null;
+  function requestWakeLock() {
+    if (!('wakeLock' in navigator)) { window._wl = 'not supported on this TV'; updateStatus(); return; }
+    navigator.wakeLock.request('screen').then(function(lock){
+      wakeLock = lock; window._wl = 'YES';
+      lock.addEventListener('release', function(){ window._wl = 'released — re-requesting'; requestWakeLock(); });
+      updateStatus();
+    }).catch(function(){ window._wl = 'blocked'; updateStatus(); });
+  }
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) requestWakeLock(); });
+  requestWakeLock();
+  setInterval(function(){ if (!document.hidden) requestWakeLock(); }, 60000);
+  document.getElementById('deck').addEventListener('click', function(e){
+    if (e.target === fsBtn) return;
+    if (timer) { clearTimeout(timer); timer = null; }
+    else { show(idx + 1); }
+  });
+</script>
+</body>
+</html>
