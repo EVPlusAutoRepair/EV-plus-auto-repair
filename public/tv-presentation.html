@@ -30,7 +30,7 @@
   .vwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(46vh, 34vw); transition: left 1.4s ease, transform 1.4s ease, width 1.4s ease; z-index: 2; }
   .vslide.docked .vwrap { left: 5vw; transform: translate(0, -50%); width: min(40vh, 26vw); }
   .vplayer { width: 100%; aspect-ratio: 9 / 16; max-height: 82vh; border-radius: 1.5vh; background: #17171a; display: block; }
-  .vinfo { opacity: 0; transition: opacity 1s ease; flex: 1 1 auto; max-width: 54vw; margin-left: 34vw; }
+  .vinfo { position: absolute; right: 4vw; top: 50%; transform: translateY(-50%); width: 50vw; text-align: left; opacity: 0; transition: opacity 1s ease; }
   .vslide.docked .vinfo { opacity: 1; }
   .why { text-align: left; margin-top: 1.6vh; }
   .why li { font-size: 2.9vh; line-height: 1.45; color: #d7d7de; margin-bottom: 1.1vh; list-style: none; opacity: 0; transform: translateY(1.2vh); transition: opacity .8s ease, transform .8s ease; }
