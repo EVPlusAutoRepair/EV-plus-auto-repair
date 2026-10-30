@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TV video diagnostic</title>
+<style>
+  body { background:#111; color:#fff; font: 20px/1.5 monospace; padding: 24px; }
+  pre { white-space: pre-wrap; word-break: break-all; }
+  video { width: 300px; display: block; margin-top: 16px; background:#333; }
+  .ok { color: #7dff7d; } .bad { color: #ff7d7d; }
+</style>
+</head>
+<body>
+<h1>TV video diagnostic</h1>
+<pre id="log">starting…</pre>
+<video id="v" playsinline muted controls></video>
+<script>
+  var log = document.getElementById('log');
+  function say(s){ log.textContent += '\n' + s; }
+  var CLIP = 'https://drive.usercontent.google.com/download?id=1UW8cHllsQD_0eQ0coZ1q7y-DGJZo-Rq7&export=download';
+  say('1) checking whether the live presentation page is the new (wireVideo) version…');
+  fetch('https://www.evplusautorepair.com/tv-presentation.html', {cache: 'no-store'})
+    .then(function(r){ return r.text(); })
+    .then(function(t){
+      say('   live page bytes: ' + t.length);
+      say('   contains wireVideo: ' + (t.indexOf('wireVideo') !== -1));
+      say('   contains data-src: ' + (t.indexOf('data-src=') !== -1));
+      say('   contains old direct src: ' + (t.indexOf('src="https://drive.google.com/uc') !== -1));
+    })
+    .catch(function(e){ say('   live page fetch FAILED: ' + e); });
+  say('2) fetching radiator clip as data…');
+  fetch(CLIP).then(function(r){
+    say('   fetch status: ' + r.status + ' ok=' + r.ok);
+    say('   content-type: ' + r.headers.get('content-type'));
+    say('   content-disposition: ' + r.headers.get('content-disposition'));
+    return r.blob();
+  }).then(function(b){
+    say('   blob size: ' + b.size + ' type: ' + b.type);
+    var url = URL.createObjectURL(b);
+    say('   blob url: ' + url.slice(0, 30) + '…');
+    var v = document.getElementById('v');
+    v.src = url;
+    v.load();
+    v.addEventListener('error', function(){ say('   VIDEO ERROR: ' + (v.error ? v.error.code + ' ' + v.error.message : 'unknown')); });
+    v.addEventListener('loadedmetadata', function(){ say('   metadata loaded: ' + v.videoWidth + 'x' + v.videoHeight + ' dur=' + v.duration); });
+    v.addEventListener('playing', function(){ say('   PLAYING, currentTime=' + v.currentTime); });
+    v.play().then(function(){ say('   play() resolved'); }).catch(function(e){ say('   play() REJECTED: ' + e); });
+    setTimeout(function(){
+      say('   after 8s: readyState=' + v.readyState + ' networkState=' + v.networkState + ' paused=' + v.paused + ' currentTime=' + v.currentTime + ' error=' + (v.error ? v.error.code : 'none'));
+    }, 8000);
+  }).catch(function(e){ say('   clip fetch FAILED: ' + e); });
+</script>
+</body>
+</html>
