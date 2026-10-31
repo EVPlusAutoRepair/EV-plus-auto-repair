@@ -185,7 +185,15 @@
      DO NOT try to unmute programmatically: on this TV that pauses the
      video (first second plays, then black, then it resumes) — sound comes
      on only from a real tap (fullscreen button or the deck itself), which
-     sets soundOn; every video after that starts with sound. */
+     sets soundOn. BUT the gesture expires: a video that starts unmuted
+     minutes after the tap has its play() rejected (or the programmatic
+     unmute pauses it), so it sits paused at 0s with data loaded
+     (status: paused 0s rdy4 mut=false) — exactly why radiator /
+     drive-oil / 12V did not play while control-arm (started right
+     after a tap) did. RULE: videos ALWAYS start MUTED at activation,
+     so they always play. Sound comes only from a real tap, which
+     unmutes the CURRENT video. A later video starts muted again;
+     tap again for its sound. NEVER set muted = !soundOn here. */
   var soundOn = false;
   function enableSound() {
     soundOn = true;
@@ -216,9 +224,9 @@
     var wait = vid ? secs + 20 : secs;
     timer = setTimeout(function(){ show(idx + 1); }, wait * 1000);
     if (vid) {
-      vid.currentTime = 0; vid.volume = 0.6; vid.muted = !soundOn;
+      vid.currentTime = 0; vid.volume = 0.6; vid.muted = true;
       var pr = vid.play();
-      if (pr && pr.catch) pr.catch(function(){});
+      if (pr && pr.catch) pr.catch(function(){ vid.muted = true; var pr2 = vid.play(); if (pr2 && pr2.catch) pr2.catch(function(){}); });
       vid.addEventListener('ended', function(){
         if (slides[idx] === s) { clearTimeout(timer); show(idx + 1); }
       }, {once: true});
@@ -226,7 +234,7 @@
       vid.addEventListener('error', function(){
         if (retries < 2 && slides[idx] === s) { retries++;
           setTimeout(function(){
-            if (slides[idx] === s) { vid.load(); vid.muted = !soundOn; var p2 = vid.play(); if (p2 && p2.catch) p2.catch(function(){}); }
+            if (slides[idx] === s) { vid.load(); vid.muted = true; var p2 = vid.play(); if (p2 && p2.catch) p2.catch(function(){}); }
           }, 3000);
         }
       });
