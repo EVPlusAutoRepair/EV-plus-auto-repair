@@ -16,9 +16,13 @@
   .price { font-size: 11vw; font-weight: 800; color: #f5c518; margin: 2.5vh 0; line-height: 1.1; }
   .price span { font-size: 5vw; color: #f5f5f5; font-weight: 600; }
   .meta { font-size: 3.8vw; color: #9a9aa0; margin-top: 2vh; }
-  /* Video: full screen while centered, then docks to the top with text below. */
-  .vwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100vw; height: 100vh; transition: left 2s cubic-bezier(0.22, 1, 0.36, 1), top 2s cubic-bezier(0.22, 1, 0.36, 1), transform 2s cubic-bezier(0.22, 1, 0.36, 1), width 2s cubic-bezier(0.22, 1, 0.36, 1), height 2s cubic-bezier(0.22, 1, 0.36, 1); z-index: 2; }
-  .vslide.docked .vwrap { left: 50%; top: 4vh; transform: translateX(-50%); width: 34.9vh; height: 62vh; }
+  /* Video: full screen while centered, then docks to the top with text below.
+     Positioning uses explicit left/top + negative margins, NOT transform:
+     this TV's browser fumbles the docked transform, leaving the video
+     hanging at the bottom of the screen. Negative margins are half the box
+     size, so the box stays centered/docked by plain left/top alone. */
+  .vwrap { position: absolute; left: 50%; top: 50%; margin-left: -50vw; margin-top: -50vh; width: 100vw; height: 100vh; transition: left 2s cubic-bezier(0.22, 1, 0.36, 1), top 2s cubic-bezier(0.22, 1, 0.36, 1), margin-left 2s cubic-bezier(0.22, 1, 0.36, 1), margin-top 2s cubic-bezier(0.22, 1, 0.36, 1), width 2s cubic-bezier(0.22, 1, 0.36, 1), height 2s cubic-bezier(0.22, 1, 0.36, 1); z-index: 2; }
+  .vslide.docked .vwrap { left: 50%; top: 4vh; margin-left: -17.45vh; margin-top: 0; width: 34.9vh; height: 62vh; }
   .vplayer { width: 100%; height: 100%; object-fit: contain; background: #0a0a0c; display: block; }
   .vinfo { position: absolute; top: 68vh; left: 8vw; right: 8vw; text-align: left; opacity: 0; transform: translateY(2vh); transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
   .vslide.docked .vinfo { opacity: 1; transform: translateY(0); }
@@ -114,20 +118,14 @@
   }
   /* Autoplay with sound needs a user gesture (or prior engagement) on this
      TV's browser — without one, play() is rejected and the video stays
-     black. So videos start MUTED (always allowed), then we try to unmute;
-     if the browser pauses the video on unmute, we re-mute and carry on
-     with picture. Any tap (fullscreen button or the deck itself) is a
-     gesture, so it unmutes the current video and restarts its voiceover. */
-  function tryUnmute(vid, s) {
-    setTimeout(function(){
-      if (slides[idx] !== s) return;
-      vid.muted = false;
-      setTimeout(function(){
-        if (slides[idx] === s && vid.paused && !vid.ended) { vid.muted = true; var p = vid.play(); if (p && p.catch) p.catch(function(){}); }
-      }, 800);
-    }, 300);
-  }
+     black. So videos start MUTED (always allowed) until the first tap.
+     DO NOT try to unmute programmatically: on this TV that pauses the
+     video (first second plays, then black, then it resumes) — sound comes
+     on only from a real tap (fullscreen button or the deck itself), which
+     sets soundOn; every video after that starts with sound. */
+  var soundOn = false;
   function enableSound() {
+    soundOn = true;
     var s = slides[idx];
     var vid = s.querySelector('video');
     if (vid) { vid.muted = false; vid.volume = 0.6; if (vid.paused && !vid.ended) { var p = vid.play(); if (p && p.catch) p.catch(function(){}); } }
@@ -155,10 +153,9 @@
     var wait = vid ? secs + 20 : secs;
     timer = setTimeout(function(){ show(idx + 1); }, wait * 1000);
     if (vid) {
-      vid.currentTime = 0; vid.volume = 0.6; vid.muted = true;
+      vid.currentTime = 0; vid.volume = 0.6; vid.muted = !soundOn;
       var pr = vid.play();
-      if (pr && pr.then) pr.then(function(){ tryUnmute(vid, s); }).catch(function(){});
-      else setTimeout(function(){ tryUnmute(vid, s); }, 500);
+      if (pr && pr.catch) pr.catch(function(){});
       vid.addEventListener('ended', function(){
         if (slides[idx] === s) { clearTimeout(timer); show(idx + 1); }
       }, {once: true});
@@ -166,13 +163,10 @@
       vid.addEventListener('error', function(){
         if (retries < 2 && slides[idx] === s) { retries++;
           setTimeout(function(){
-            if (slides[idx] === s) { vid.load(); vid.muted = true; var p2 = vid.play(); if (p2 && p2.then) p2.then(function(){ tryUnmute(vid, s); }).catch(function(){}); }
+            if (slides[idx] === s) { vid.load(); vid.muted = !soundOn; var p2 = vid.play(); if (p2 && p2.catch) p2.catch(function(){}); }
           }, 3000);
         }
       });
-      setTimeout(function(){
-        if (slides[idx] === s && !vid.ended && vid.readyState < 2) { vid.load(); vid.muted = true; var p3 = vid.play(); if (p3 && p3.then) p3.then(function(){ tryUnmute(vid, s); }).catch(function(){}); }
-      }, 8000);
       phaseTimer = setTimeout(function(){
         s.classList.add('docked');
         var items = s.querySelectorAll('.why li');
