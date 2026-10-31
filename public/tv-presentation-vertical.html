@@ -192,8 +192,18 @@
   var statusEl = document.getElementById('status');
   function updateStatus() {
     var fs = document.fullscreenElement ? 'YES' : 'NO — tap FULLSCREEN';
-    statusEl.textContent = 'Fullscreen: ' + fs + ' · Wake Lock: ' + (window._wl || 'not tried yet');
+    var d = '';
+    var s = slides[idx];
+    var vid = s.querySelector('video');
+    if (vid) {
+      var w = vid.parentElement.getBoundingClientRect();
+      d = ' · V:' + (vid.paused ? 'paused' : 'playing') + ' ' + vid.currentTime.toFixed(0) + 's rdy' + vid.readyState + ' mut=' + vid.muted + ' err=' + (vid.error ? vid.error.code : '-') + ' box=' + Math.round(w.left) + ',' + Math.round(w.top);
+    } else {
+      d = ' · S' + idx + ' info';
+    }
+    statusEl.textContent = 'Fullscreen: ' + fs + ' · Wake Lock: ' + (window._wl || 'not tried yet') + d;
   }
+  setInterval(updateStatus, 1000);
   fsBtn.addEventListener('click', function(){
     var el = document.documentElement;
     if (el.requestFullscreen) el.requestFullscreen().catch(function(){});
