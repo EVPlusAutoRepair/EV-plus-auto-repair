@@ -774,69 +774,6 @@ export const POSTS: Post[] = [
     serviceLink: { href: "/collision", label: "Collision center" },
   },
   {
-    slug: "rent-a-tesla-while-yours-is-in-the-shop",
-    title: "In the Shop? Rent a Tesla and Keep Moving | EV+ Auto Repair",
-    h1: "Drop Off Your Tesla, Drive Off in a Tesla",
-    description:
-      "While your Tesla is being repaired at EV+ Auto Repair, rent one of our Teslas. Subject to availability — perfect during multi-day collision repairs.",
-    tag: "Rentals",
-    date: "October 29, 2026",
-    publishDate: "2026-10-29",
-    image: rentalsTeslas,
-    imageAlt: "Rent a Tesla while yours is in the shop at EV+ Auto Repair",
-    excerpt:
-      "Nobody wants to be without a car while theirs is in the shop. Our Tesla rentals keep you moving while we handle the repair.",
-    body: [
-      {
-        type: "p",
-        text: "Here is the part of car repair nobody talks about: the repair itself might be straightforward, but being without your car for days is the real headache. Work, school runs, errands — life does not pause because your Tesla is on a lift. We see it every day, which is exactly why we keep Teslas available to rent while yours is with us.",
-      },
-      { type: "h2", text: "Why a Tesla rental just makes sense" },
-      {
-        type: "p",
-        text: "If you drive a Tesla every day, switching to some random gas rental for a week is miserable. Different charging, different driving, different everything. Staying in a Tesla means zero learning curve — you already know how it drives, where to charge, and how your phone key works. It is the closest thing to not having your car in the shop at all.",
-      },
-      { type: "h2", text: "Perfect for repairs that take days" },
-      {
-        type: "p",
-        text: "This matters most during collision repairs, which can take several days while panels are ordered, painted, and fitted. Instead of piecing together rides or paying for a rental car company, you drop off your Tesla and drive off in a Tesla. Ask about a rental when you book — rentals are subject to availability, so the earlier you mention it, the better.",
-      },
-      {
-        type: "myth",
-        label: "The myth busted",
-        text: "People assume a shop rental means getting stuck with whatever is left on the lot. Our rentals are Teslas, maintained by the same techs who work on your car. You are not downgrading for the week.",
-      },
-      { type: "h2", text: "How it works" },
-      {
-        type: "p",
-        text: "It is simple. When you schedule your repair, let us know you will need a rental. Bring proof of full-coverage insurance when you drop off your car, and we will get you set up in a rental Tesla for the duration of the repair. When your car is done, you swap back. One trip, no juggling.",
-      },
-      {
-        type: "p",
-        text: "Not sure what your Tesla needs yet? Start with our free 1-hour inspection. We will diagnose the issue, give you a straight answer on the repair, and sort out a rental at the same time if the job is going to take a few days. Call (818) 281-7757 or book online.",
-      },
-    ],
-    faqs: [
-      {
-        q: "How do I reserve a rental Tesla?",
-        a: "Mention it when you book your repair. Rentals are subject to availability, so booking early gives you the best shot.",
-      },
-      {
-        q: "Do I need insurance to take a rental?",
-        a: "Yes. You will need to show proof of full-coverage insurance when you pick up the rental.",
-      },
-      {
-        q: "How long can I keep the rental?",
-        a: "For the duration of your repair. When your Tesla is finished, you bring the rental back and drive yours home.",
-      },
-      {
-        q: "What if no rentals are available?",
-        a: "We will tell you upfront when you book. Availability changes week to week, so it is always worth asking.",
-      },
-    ],
-    serviceLink: { href: "/rentals", label: "Tesla rentals" },
-  },
-  {
     slug: "tesla-tire-rotation-why-evs-need-it",
     title: "Why Tire Rotation Matters More on Your Tesla | EV+ Auto Repair",
     h1: "Your Tesla Eats Tires Faster Than You Think",
