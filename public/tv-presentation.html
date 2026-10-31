@@ -186,12 +186,20 @@
     clearTimeout(timer);
     bar.style.transition = 'none'; bar.style.width = '0%';
     setTimeout(function(){ bar.style.transition = 'width ' + secs + 's linear'; bar.style.width = '100%'; }, 50);
-    timer = setTimeout(function(){ show(idx + 1); }, secs * 1000);
     var vid = s.querySelector('video');
     document.getElementById('deck').classList.toggle('vid-mode', !!vid);
+    /* Video slides advance when the video actually ENDS, not on a fixed clock:
+       on the shop Wi-Fi the clip can start late (buffering), so a fixed 27s
+       timer cut the radiator clip short. Fallback timer (+20s) covers a video
+       that never plays or never fires 'ended'. */
+    var wait = vid ? secs + 20 : secs;
+    timer = setTimeout(function(){ show(idx + 1); }, wait * 1000);
     if (vid) {
       vid.currentTime = 0; vid.volume = 0.6; vid.muted = false;
       vid.play().catch(function(){});
+      vid.addEventListener('ended', function(){
+        if (slides[idx] === s) { clearTimeout(timer); show(idx + 1); }
+      }, {once: true});
       phaseTimer = setTimeout(function(){
         s.classList.add('docked');
         var items = s.querySelectorAll('.why li');
