@@ -36,14 +36,14 @@
   .live { animation: pulse 3s ease-in-out infinite; color: #f5c518; font-weight: 800; }
   /* video slide: video starts centered, then docks left while bullets fade in on the right */
   .vslide { text-align: left; }
-  .vwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 53vh; height: 94vh; transition: left 1.4s ease, transform 1.4s ease; z-index: 2; }
+  .vwrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 53vh; height: 94vh; transition: left 2s cubic-bezier(0.22, 1, 0.36, 1), transform 2s cubic-bezier(0.22, 1, 0.36, 1); z-index: 2; }
   .vslide.docked .vwrap { left: 4vw; transform: translate(0, -50%); }
   .vplayer { width: 100%; height: 100%; object-fit: cover; border-radius: 1.5vh; background: #17171a; display: block; }
   /* Video stays the same large size when docked (owner: keep it large on the left).
      Dots hide on video slides so they don't sit on the video's bottom edge. */
   .deck.vid-mode .dots { display: none; }
-  .vinfo { position: absolute; right: 4vw; top: 50%; transform: translateY(-50%); width: 58vw; text-align: left; opacity: 0; transition: opacity 1s ease; }
-  .vslide.docked .vinfo { opacity: 1; }
+  .vinfo { position: absolute; right: 4vw; top: 50%; transform: translateY(-50%) translateX(3vw); width: 58vw; text-align: left; opacity: 0; transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+  .vslide.docked .vinfo { opacity: 1; transform: translateY(-50%) translateX(0); }
   .why { text-align: left; margin-top: 1.6vh; }
   .why li { font-size: 2.9vh; line-height: 1.45; color: #d7d7de; margin-bottom: 1.1vh; list-style: none; opacity: 0; transform: translateY(1.2vh); transition: opacity .8s ease, transform .8s ease; }
   .why li b { color: #fff; }
