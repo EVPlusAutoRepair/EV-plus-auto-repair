@@ -31,9 +31,9 @@ export default function GasVehicleCollision() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Center", href: "/collision" }, { label: "Auto Body Repair" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Repair", href: "/collision" }, { label: "Auto Body Repair" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
+          <div className="kicker">Tesla Collision Repair</div>
           <h1>Gas Vehicle Collision Repair</h1>
           <p className="lede">We&rsquo;re a Tesla-first shop—that&rsquo;s our identity and our expertise. But quality bodywork is quality bodywork, and we also repair collision damage on gas vehicles.</p>
         </div>
@@ -63,7 +63,7 @@ export default function GasVehicleCollision() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Center</a>
+              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Repair</a>
               {" · "}
               <a href="/collision/collision-repair" style={{ color: "var(--acc)" }}>Collision Repair</a>
               {" · "}

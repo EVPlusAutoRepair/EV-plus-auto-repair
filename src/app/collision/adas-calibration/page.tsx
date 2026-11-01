@@ -35,9 +35,9 @@ export default function ADASCalibration() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Center", href: "/collision" }, { label: "ADAS Calibration" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Repair", href: "/collision" }, { label: "ADAS Calibration" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
+          <div className="kicker">Tesla Collision Repair</div>
           <h1>Tesla ADAS &amp; Camera Calibration</h1>
           <p className="lede">Your Tesla sees the world through cameras and sensors. After a windshield replacement, bumper repair, or any front-end work, those cameras need recalibration. Some shops skip this step. We don&rsquo;t.</p>
         </div>
@@ -74,7 +74,7 @@ export default function ADASCalibration() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Center</a>
+              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Repair</a>
               {" · "}
               <a href="/collision/collision-repair" style={{ color: "var(--acc)" }}>Collision Repair</a>
               {" · "}

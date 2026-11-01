@@ -12,11 +12,11 @@ export default function Home() {
         <div className="hero-bg" style={{ backgroundImage: "url('/images/hero-shop.jpg')" }} />
         <div className="hero-in">
           <h1><a href="/service" style={{ color: "inherit", textDecoration: "none" }}>Your Tesla, serviced and repaired by people who specialize in Teslas.</a></h1>
-          <p className="sub">EV+ Auto Repair is a family-owned Tesla service center and collision center in Los Angeles—maintenance, repairs, and accident recovery, all under one roof.</p>
+          <p className="sub">EV+ Auto Repair is a family-owned independent Tesla service and collision repair shop in Los Angeles—maintenance, repairs, and accident recovery, all under one roof.</p>
           <div className="hero-ctas">
             <a className="btn" href="/service">I need service</a>
             <a className="btn btn-light" href="/collision">I had an accident</a>
-            <a className="btn btn-light" href="/shop">Tesla USB drive — $29.99</a>
+            <a className="btn btn-light" href="/shop">Tesla USB drives</a>
           </div>
           <div className="trust"><a href="https://share.google/cy50CwTmNpArhnxVZ" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}><b>★ 5.0</b> on Google</a> &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; 6-12 months labor warranty</div>
         </div>
@@ -24,16 +24,16 @@ export default function Home() {
 
       <section id="centers">
         <div className="wrap">
-          <div className="kicker">Two centers, one shop</div>
+          <div className="kicker">Service & collision, one shop</div>
           <h2>Pick your lane.</h2>
           <div className="cards">
             <a className="card" id="service" href="/service">
-              <h3>Tesla Service Center</h3>
+              <h3>Tesla Service</h3>
               <p>Everything your Tesla needs to stay on the road: maintenance, inspections, drive-unit oil service, suspension, 12V & 16V batteries, HV battery replacement, tire rotation, diagnostics.</p>
               <span className="more">Explore service →</span>
             </a>
             <a className="card" id="collision" href="/collision">
-              <h3>Tesla Collision Center</h3>
+              <h3>Tesla Collision Repair</h3>
               <p>Accident? We handle everything: collision repair, paint matching, ADAS calibration, and the entire insurance claim—plus a Tesla rental so you&rsquo;re never stranded.</p>
               <span className="more">Explore collision repair →</span>
             </a>

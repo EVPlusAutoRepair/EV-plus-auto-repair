@@ -12,8 +12,8 @@ export default function SiteFooter() {
             <h5>Shop</h5>
             {/* Hidden until Stripe shipping is set up (Tracey, Oct 19) */}
             {/* <a href="/shop">Tesla Accessories</a> */}
-            <a href="/service">Tesla Service Center</a>
-            <a href="/collision">Tesla Collision Center</a>
+            <a href="/service">Tesla Service</a>
+            <a href="/collision">Tesla Collision Repair</a>
             <a href="/rentals">On-site Rentals</a>
             <a href="/blog">Blog</a>
             <a href="/about">About Us</a>
@@ -33,7 +33,7 @@ export default function SiteFooter() {
           <span>Rentals: EV+ Auto Rentals LLC</span>
         </div>
         <p style={{ fontSize: 12, marginTop: 16, color: "var(--dim)" }}>
-          EV+ Auto Repair is an independent shop. We are not affiliated with, endorsed by, or sponsored by Tesla, Inc.
+          EV+ Auto Repair is an independent shop. We are not affiliated with, approved by, endorsed by, or sponsored by Tesla, Inc.
         </p>
       </div>
     </footer>

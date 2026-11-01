@@ -35,9 +35,9 @@ export default function DriveUnitBushing() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Drive Unit Bushing Replacement" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service", href: "/service" }, { label: "Drive Unit Bushing Replacement" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
+          <div className="kicker">Tesla Service</div>
           <h1>Drive Unit Bushing Replacement</h1>
           <p className="lede">Feel a kick or vibration when you hit the accelerator? A torn drive unit bushing is one of the most common causes—and it&rsquo;s a straightforward fix when you know what to look for.</p>
         </div>
@@ -75,7 +75,7 @@ export default function DriveUnitBushing() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service Center</a>
+              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service</a>
               {" · "}
               <a href="/service/drive-unit-oil-service" style={{ color: "var(--acc)" }}>Drive-Unit Oil Service</a>
               {" · "}

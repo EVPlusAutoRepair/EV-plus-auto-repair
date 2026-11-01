@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Family-owned Tesla service center and collision repair for all EVs in Sun Valley, Los Angeles. Maintenance, batteries, accident repair, insurance claims. Free estimates: (818) 281-7757.",
   openGraph: {
-    title: "EV+ Auto Repair—Tesla Service & Collision Center, Los Angeles",
+    title: "EV+ Auto Repair — Independent Tesla Service & Collision Repair, Los Angeles",
     description:
       "Your Tesla, serviced and repaired by people who specialize in Teslas. Free estimates, 6-12 months labor warranty, on-site Tesla rentals.",
     type: "website",

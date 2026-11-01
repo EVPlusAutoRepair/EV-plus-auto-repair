@@ -361,7 +361,7 @@ export const POSTS: Post[] = [
         a: "Mileage, age, and model. Call or text us with your model and mileage and we'll tell you straight—inspections are free.",
       },
     ],
-    serviceLink: { href: "/service", label: "Tesla Service Center" },
+    serviceLink: { href: "/service", label: "Tesla Service" },
   },
   {
     slug: "tesla-front-suspension-creaking",
@@ -1257,7 +1257,7 @@ export const POSTS: Post[] = [
         a: "A written estimate before work begins, written authorization that you sign, photo documentation of damage found during teardown, supplement records for any additional work, and an itemized final invoice. If a shop resists any of this, walk away.",
       },
     ],
-    serviceLink: { href: "/collision", label: "Collision Center" },
+    serviceLink: { href: "/collision", label: "Collision Repair" },
   },
   {
     slug: "tesla-total-loss-vs-repairable",

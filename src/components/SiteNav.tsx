@@ -2,8 +2,8 @@
 import { useState } from "react";
 
 const links = [
-  { href: "/service", label: "Service Center" },
-  { href: "/collision", label: "Collision Center" },
+  { href: "/service", label: "Service" },
+  { href: "/collision", label: "Collision Repair" },
   { href: "/rentals", label: "Rentals" },
   // Shop index in the top menu (Oct 27, 2026): both USB listings show on /shop
   { href: "/shop", label: "USB Flash Drives" },

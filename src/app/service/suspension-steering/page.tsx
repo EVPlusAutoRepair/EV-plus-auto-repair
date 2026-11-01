@@ -35,9 +35,9 @@ export default function SuspensionSteering() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Tesla Suspension" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service", href: "/service" }, { label: "Tesla Suspension" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
+          <div className="kicker">Tesla Service</div>
           <h1>Tesla Suspension &amp; Steering Repair</h1>
           <p className="lede">Creaking over bumps. A kick when you accelerate. Uneven tire wear. Teslas are heavy and torquey—that combination eats suspension components faster than most owners expect. We diagnose the actual worn part instead of throwing parts at it.</p>
         </div>
@@ -74,7 +74,7 @@ export default function SuspensionSteering() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service Center</a>
+              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service</a>
               {" · "}
               <a href="/service/maintenance-inspections" style={{ color: "var(--acc)" }}>Maintenance &amp; Inspections</a>
               {" · "}

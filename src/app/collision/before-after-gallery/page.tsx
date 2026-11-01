@@ -40,9 +40,9 @@ export default function BeforeAfterGallery() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Center", href: "/collision" }, { label: "Before & After Gallery" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Repair", href: "/collision" }, { label: "Before & After Gallery" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
+          <div className="kicker">Tesla Collision Repair</div>
           <h1>Before &amp; After Gallery</h1>
           <p className="lede">Anyone can promise a flawless repair. We&rsquo;d rather show you. Real Teslas that came in wrecked and left looking factory-fresh—bodywork, paint matching, panel fitment, the whole standard.</p>
         </div>
@@ -78,7 +78,7 @@ export default function BeforeAfterGallery() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Center</a>
+              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Repair</a>
               {" · "}
               <a href="/collision/collision-repair" style={{ color: "var(--acc)" }}>Collision Repair</a>
               {" · "}

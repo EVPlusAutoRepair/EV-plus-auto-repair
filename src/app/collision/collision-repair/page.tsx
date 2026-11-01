@@ -39,9 +39,9 @@ export default function CollisionRepair() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Center", href: "/collision" }, { label: "Tesla Body Shop" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Repair", href: "/collision" }, { label: "Tesla Body Shop" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
+          <div className="kicker">Tesla Collision Repair</div>
           <h1>Tesla Collision Repair</h1>
           <p className="lede">Someone hit your Tesla. Now what? Teslas aren&rsquo;t regular cars—aluminum panels, structural battery packs, cameras and sensors everywhere. The wrong shop guesses. We don&rsquo;t.</p>
         </div>
@@ -79,7 +79,7 @@ export default function CollisionRepair() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Center</a>
+              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Repair</a>
               {" · "}
               <a href="/collision/paint-refinishing" style={{ color: "var(--acc)" }}>Paint &amp; Refinishing</a>
               {" · "}

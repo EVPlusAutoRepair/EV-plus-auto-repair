@@ -68,7 +68,7 @@ const data: CityPageData = {
   ],
   related: [
     { href: "/service/suspension-steering", label: "Suspension & steering" },
-    { href: "/service", label: "Tesla Service Center" },
+    { href: "/service", label: "Tesla Service" },
     { href: "/tesla-12v-battery-replacement-burbank", label: "12V Battery Replacement in Burbank" },
     { href: "/blog", label: "From the blog" },
   ],

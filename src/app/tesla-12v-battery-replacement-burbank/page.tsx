@@ -70,7 +70,7 @@ const data: CityPageData = {
     { href: "/service/12v-battery-replacement", label: "12V battery replacement" },
     { href: "/blog/tesla-12v-battery-warning-signs", label: "12V battery warning signs (blog)" },
     { href: "/tesla-suspension-repair-sherman-oaks", label: "Suspension Repair in Sherman Oaks" },
-    { href: "/service", label: "Tesla Service Center" },
+    { href: "/service", label: "Tesla Service" },
   ],
   ctaHeading: "Seen the 12V warning? Don't wait for the dead-car morning.",
   bookHref: "/book?lane=service&service=inspection",

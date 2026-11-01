@@ -35,9 +35,9 @@ export default function CabinFiltersRadiator() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Tesla Cooling Service" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service", href: "/service" }, { label: "Tesla Cooling Service" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
+          <div className="kicker">Tesla Service</div>
           <h1>Tesla Cabin Filters &amp; Radiator Cleaning</h1>
           <p className="lede">Musty AC? Weak airflow? Two of the most neglected maintenance items on a Tesla—and both affect your daily comfort. Quick, affordable, and most owners never think about them.</p>
         </div>
@@ -74,7 +74,7 @@ export default function CabinFiltersRadiator() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service Center</a>
+              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service</a>
               {" · "}
               <a href="/service/maintenance-inspections" style={{ color: "var(--acc)" }}>Maintenance &amp; Inspections</a>
               {" · "}

@@ -35,9 +35,9 @@ export default function PaintRefinishing() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Center", href: "/collision" }, { label: "Tesla Paint Repair" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Repair", href: "/collision" }, { label: "Tesla Paint Repair" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
+          <div className="kicker">Tesla Collision Repair</div>
           <h1>Tesla Paint &amp; Refinishing</h1>
           <p className="lede">Bad paint work is immediately visible—and on a Tesla, &ldquo;close enough&rdquo; isn&rsquo;t close enough. Factory paint codes, professional blending, invisible repairs.</p>
         </div>
@@ -74,7 +74,7 @@ export default function PaintRefinishing() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Center</a>
+              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Repair</a>
               {" · "}
               <a href="/collision/collision-repair" style={{ color: "var(--acc)" }}>Collision Repair</a>
               {" · "}

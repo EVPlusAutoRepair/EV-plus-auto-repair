@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Do you service gas vehicles?",
-    a: "No. Our service center is Tesla-only—that's what makes us good at it. (We do collision and body repair on gas vehicles—see our Collision Center.)",
+    a: "No. Our service work is Tesla-only—that's what makes us good at it. (We do collision and body repair on gas vehicles—see Tesla Collision Repair.)",
   },
 ];
 
@@ -35,9 +35,9 @@ export default function MaintenanceInspections() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Tesla Maintenance" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service", href: "/service" }, { label: "Tesla Maintenance" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
+          <div className="kicker">Tesla Service</div>
           <h1>Tesla Maintenance &amp; Inspections</h1>
           <p className="lede">Tesla says your car doesn&rsquo;t need maintenance. They&rsquo;re right that there&rsquo;s no oil change every 3,000 miles—but &ldquo;low maintenance&rdquo; isn&rsquo;t &ldquo;no maintenance.&rdquo; We keep Teslas healthy for the long run.</p>
         </div>
@@ -75,7 +75,7 @@ export default function MaintenanceInspections() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service Center</a>
+              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service</a>
               {" · "}
               <a href="/service/diagnostics" style={{ color: "var(--acc)" }}>Diagnostics</a>
               {" · "}

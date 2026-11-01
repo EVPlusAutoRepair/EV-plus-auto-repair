@@ -39,9 +39,9 @@ export default function InsuranceClaims() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Center", href: "/collision" }, { label: "Tesla Claims Help" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Collision Repair", href: "/collision" }, { label: "Tesla Claims Help" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
+          <div className="kicker">Tesla Collision Repair</div>
           <h1>We Handle Your Insurance Claim</h1>
           <p className="lede">The insurance process is a nightmare and you don&rsquo;t have time for it. You&rsquo;re right—it is. So we do the opposite of most shops: we take the whole claim off your plate.</p>
         </div>
@@ -78,7 +78,7 @@ export default function InsuranceClaims() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Center</a>
+              <a href="/collision" style={{ color: "var(--acc)" }}>Tesla Collision Repair</a>
               {" · "}
               <a href="/collision/collision-repair" style={{ color: "var(--acc)" }}>Collision Repair</a>
               {" · "}

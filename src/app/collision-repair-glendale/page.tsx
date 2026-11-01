@@ -68,7 +68,7 @@ const data: CityPageData = {
     },
   ],
   related: [
-    { href: "/collision", label: "Collision Center" },
+    { href: "/collision", label: "Collision Repair" },
     { href: "/collision/adas-calibration", label: "ADAS calibration" },
     { href: "/collision/insurance-claims", label: "Insurance claims" },
     { href: "/bumper-repair-burbank", label: "Bumper Repair in Burbank" },

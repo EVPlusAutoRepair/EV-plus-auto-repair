@@ -68,7 +68,7 @@ const data: CityPageData = {
   ],
   related: [
     { href: "/collision/paint-refinishing", label: "Paint & refinishing" },
-    { href: "/collision", label: "Collision Center" },
+    { href: "/collision", label: "Collision Repair" },
     { href: "/bumper-repair-burbank", label: "Bumper Repair in Burbank" },
     { href: "/collision-repair-north-hollywood", label: "Collision Repair in North Hollywood" },
   ],

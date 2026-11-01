@@ -35,9 +35,9 @@ export default function TwelveVBattery() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Tesla 12V Battery" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service", href: "/service" }, { label: "Tesla 12V Battery" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
+          <div className="kicker">Tesla Service</div>
           <h1>Tesla 12V Battery Service</h1>
           <p className="lede">Your Tesla is completely dead—and the big battery was fine yesterday. Nine times out of ten, the culprit is the little 12V battery. Quick to test, quick to replace, cheap compared to what it mimics.</p>
         </div>
@@ -86,7 +86,7 @@ export default function TwelveVBattery() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service Center</a>
+              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service</a>
               {" · "}
               <a href="/service/diagnostics" style={{ color: "var(--acc)" }}>Diagnostics</a>
               {" · "}

@@ -35,9 +35,9 @@ export default function HVBattery() {
       <SiteNav />
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
-        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service Center", href: "/service" }, { label: "Tesla HV Battery" }]} /></div>
+        <div className="wrap" style={{ paddingBottom: 0 }}><Breadcrumbs trail={[{ label: "Service", href: "/service" }, { label: "Tesla HV Battery" }]} /></div>
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
+          <div className="kicker">Tesla Service</div>
           <h1>Tesla High-Voltage Battery Replacement</h1>
           <p className="lede">Range dropped off a cliff? Won&rsquo;t charge past 50%? We don&rsquo;t service or repair high-voltage batteries—when your pack is done, we replace it with a low-mileage used battery, installed and configured right here in our shop.</p>
         </div>
@@ -75,7 +75,7 @@ export default function HVBattery() {
           <div style={{ marginTop: 48 }}>
             <div className="kicker">Related</div>
             <p className="lede">
-              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service Center</a>
+              <a href="/service" style={{ color: "var(--acc)" }}>Tesla Service</a>
               {" · "}
               <a href="/service/diagnostics" style={{ color: "var(--acc)" }}>Diagnostics</a>
               {" · "}

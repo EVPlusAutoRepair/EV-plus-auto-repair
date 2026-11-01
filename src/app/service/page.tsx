@@ -4,7 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "Tesla Service Center in Los Angeles | EV+ Auto Repair",
+  title: "Tesla Service in Los Angeles | EV+ Auto Repair",
   description:
     "Tesla maintenance & repair in Los Angeles: inspections, drive-unit oil, suspension, 12V & HV battery replacement, diagnostics. Free estimates—(818) 281-7757.",
 };
@@ -25,7 +25,7 @@ const services = [
 const faqs = [
   { q: "Do Teslas need maintenance?", a: "Yes—just not the same maintenance as gas cars. Cabin filters, 12V battery, drive-unit oil, suspension wear, cooling system cleaning." },
   { q: "How often should I service my Tesla?", a: "Depends on mileage and model; book a free inspection and we'll tell you honestly." },
-  { q: "Do you work on gas vehicles?", a: "Our service center is Tesla-only. (We do collision/body repair on gas vehicles—see our Collision Center.)" },
+  { q: "Do you work on gas vehicles?", a: "Our service work is Tesla-only. (We do collision/body repair on gas vehicles—see Tesla Collision Repair.)" },
 ];
 
 export default function ServiceCenter() {
@@ -35,9 +35,9 @@ export default function ServiceCenter() {
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
         <div className="wrap">
-          <div className="kicker">Tesla Service Center</div>
-          <h1>Tesla Service Center—Los Angeles</h1>
-          <p className="lede">Your Tesla doesn&rsquo;t need a general mechanic&mdash;it needs people who work on Teslas all day, every day. Our service center handles everything your Tesla needs: maintenance, repairs, batteries, and diagnostics. Tesla vehicles only.</p>
+          <div className="kicker">Tesla Service</div>
+          <h1>Tesla Service—Los Angeles</h1>
+          <p className="lede">Your Tesla doesn&rsquo;t need a general mechanic&mdash;it needs people who work on Teslas all day, every day. Our independent shop handles everything your Tesla needs: maintenance, repairs, batteries, and diagnostics. Tesla vehicles only.</p>
         </div>
       </div>
 

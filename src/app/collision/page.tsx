@@ -4,7 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "Tesla Collision Center in Los Angeles | EV+ Auto Repair",
+  title: "Tesla Collision Repair in Los Angeles | EV+ Auto Repair",
   description:
     "Tesla accident repair in Los Angeles: collision repair, paint matching, ADAS calibration. We handle your insurance claim + Tesla rental on-site. (818) 281-7757.",
 };
@@ -40,9 +40,9 @@ export default function CollisionCenter() {
       <FaqSchema faqs={faqs} />
       <div className="page-hero">
         <div className="wrap">
-          <div className="kicker">Tesla Collision Center</div>
-          <h1>Tesla Collision Center—Los Angeles</h1>
-          <p className="lede">An accident is stressful enough. Our collision center brings your Tesla back to factory condition—bodywork, paint, calibration—while we handle the insurance claim and keep you driving with an on-site Tesla rental (subject to availability). We also perform body repair on other EVs and gas vehicles—service and maintenance stays Tesla-only.</p>
+          <div className="kicker">Tesla Collision Repair</div>
+          <h1>Tesla Collision Repair—Los Angeles</h1>
+          <p className="lede">An accident is stressful enough. Our collision repair team brings your Tesla back to factory condition—bodywork, paint, calibration—while we handle the insurance claim and keep you driving with an on-site Tesla rental (subject to availability). We also perform body repair on other EVs and gas vehicles—service and maintenance stays Tesla-only.</p>
         </div>
       </div>
 

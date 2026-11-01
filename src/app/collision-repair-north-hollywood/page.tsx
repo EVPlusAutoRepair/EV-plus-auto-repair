@@ -68,7 +68,7 @@ const data: CityPageData = {
     },
   ],
   related: [
-    { href: "/collision", label: "Collision Center" },
+    { href: "/collision", label: "Collision Repair" },
     { href: "/collision/insurance-claims", label: "Insurance claims" },
     { href: "/collision-repair-glendale", label: "Collision Repair in Glendale" },
     { href: "/paint-refinish-van-nuys", label: "Paint & Refinish in Van Nuys" },
