@@ -121,6 +121,19 @@ export default function Home() {
             ))}
           </div>
           <div style={{ marginTop: 44 }}>
+            <div className="kicker">Local pages</div>
+            <h2>Collision &amp; suspension help, by neighborhood.</h2>
+            <p className="lede">
+              <a href="/collision-repair-los-angeles" style={{ color: "var(--acc)" }}>Collision Repair in Los Angeles</a>
+              {" · "}
+              <a href="/collision-repair-glendale" style={{ color: "var(--acc)" }}>Collision Repair in Glendale</a>
+              {" · "}
+              <a href="/collision-repair-north-hollywood" style={{ color: "var(--acc)" }}>Collision Repair in North Hollywood</a>
+              {" · "}
+              <a href="/tesla-suspension-repair-los-angeles" style={{ color: "var(--acc)" }}>Tesla Suspension Repair in Los Angeles</a>
+            </p>
+          </div>
+          <div style={{ marginTop: 44 }}>
             <div className="kicker">Tow truck services</div>
             <h3 style={{ fontSize: 26, margin: "10px 0 6px" }}>Stuck somewhere? We&rsquo;ll come get you.</h3>
             <p className="lede" style={{ maxWidth: 640, margin: "0 auto" }}>Our tow truck picks up Teslas (and collision jobs of any make) across Southern California. Call or text <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a> and we&rsquo;ll roll.</p>

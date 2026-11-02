@@ -4,9 +4,9 @@ import SiteFooter from "@/components/SiteFooter";
 import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "Tesla Collision Repair in Los Angeles | EV+ Auto Repair",
+  title: "Tesla Collision Repair & EV Body Shop in Los Angeles | EV+ Auto Repair",
   description:
-    "Tesla accident repair in Los Angeles: collision repair, paint matching, ADAS calibration. We handle your insurance claim + Tesla rental on-site. (818) 281-7757.",
+    "Tesla collision repair and EV body shop near Los Angeles — paint matching, ADAS calibration, insurance claims handled. Tesla rental on-site. Free estimates: (818) 281-7757.",
 };
 
 const services = [
@@ -85,6 +85,8 @@ export default function CollisionCenter() {
             <div className="kicker">Local collision pages</div>
             <h2>Collision help, by neighborhood.</h2>
             <p className="lede">
+              <a href="/collision-repair-los-angeles" style={{ color: "var(--acc)" }}>Collision Repair in Los Angeles</a>
+              {" · "}
               <a href="/bumper-repair-burbank" style={{ color: "var(--acc)" }}>Bumper Repair in Burbank</a>
               {" · "}
               <a href="/paint-refinish-van-nuys" style={{ color: "var(--acc)" }}>Paint &amp; Refinish in Van Nuys</a>

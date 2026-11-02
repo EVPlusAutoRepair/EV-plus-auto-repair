@@ -27,6 +27,16 @@ const nextConfig: NextConfig = {
       { source: "/category/:slug*", destination: "/shop", permanent: true },
       { source: "/body-repair", destination: "/collision", permanent: true },
       { source: "/checkout", destination: "/shop", permanent: true },
+      // Nov 2, 2026: Sherman Oaks suspension page replaced by the broader
+      // Los Angeles suspension page — client-geography data showed zero
+      // suspension jobs from Sherman Oaks; suspension work comes from
+      // across LA and the Valley. The old file stays in the repo; this
+      // redirect wins at request time.
+      {
+        source: "/tesla-suspension-repair-sherman-oaks",
+        destination: "/tesla-suspension-repair-los-angeles",
+        permanent: true,
+      },
     ];
   },
   turbopack: {

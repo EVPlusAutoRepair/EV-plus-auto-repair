@@ -78,7 +78,7 @@ export default function ServiceCenter() {
             <div className="kicker">Local service pages</div>
             <h2>Tesla service, by neighborhood.</h2>
             <p className="lede">
-              <a href="/tesla-suspension-repair-sherman-oaks" style={{ color: "var(--acc)" }}>Tesla Suspension Repair in Sherman Oaks</a>
+              <a href="/tesla-suspension-repair-los-angeles" style={{ color: "var(--acc)" }}>Tesla Suspension Repair in Los Angeles</a>
               {" · "}
               <a href="/tesla-12v-battery-replacement-burbank" style={{ color: "var(--acc)" }}>Tesla 12V Battery Replacement in Burbank</a>
             </p>

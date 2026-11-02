@@ -31,7 +31,8 @@ const localSlugs = [
   "paint-refinish-van-nuys",
   "collision-repair-glendale",
   "collision-repair-north-hollywood",
-  "tesla-suspension-repair-sherman-oaks",
+  "collision-repair-los-angeles",
+  "tesla-suspension-repair-los-angeles",
   "tesla-12v-battery-replacement-burbank",
 ];
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
