@@ -50,6 +50,14 @@ export default function Shop() {
           </div>
 
           <div className="cta-band" style={{ marginTop: 48 }}>
+            <h2>Need service or collision repair?</h2>
+            <p className="lede" style={{ margin: "0 auto" }}>Book a free inspection — we&rsquo;ll take a look and tell you honestly what it needs.</p>
+            <div className="hero-ctas">
+              <a className="btn" href="/book">Book a free inspection</a>
+            </div>
+          </div>
+
+          <div className="cta-band" style={{ marginTop: 48 }}>
             <h2>Looking for something else?</h2>
             <p className="lede" style={{ margin: "0 auto" }}>We stock more Tesla accessories in-store — call or text and we&rsquo;ll set it aside for you.</p>
             <div className="hero-ctas">
