@@ -4,6 +4,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import { getProduct, PRODUCTS } from "../products";
 import OrderForm from "./OrderForm";
+import BuyButton from "./BuyButton";
 
 export async function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
@@ -68,15 +69,7 @@ export default async function ProductPage({
               {p.stripeLink && (
                 <>
                   <div className="hero-ctas" style={{ justifyContent: "flex-start", margin: "0 0 12px" }}>
-                    <a
-                      className="btn"
-                      href={p.stripeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ fontSize: 18, padding: "16px 36px" }}
-                    >
-                      Buy now — {p.priceLabel}
-                    </a>
+                    <BuyButton href={p.stripeLink} label={`Buy now — ${p.priceLabel}`} item={p.slug} />
                   </div>
                   <p className="lede" style={{ fontSize: 14, marginBottom: 20 }}>
                     Secure checkout via Stripe · Ships via USPS for $5.95 (4–7 business days).
