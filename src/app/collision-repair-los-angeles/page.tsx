@@ -11,7 +11,7 @@ const data: CityPageData = {
   crumbLabel: "Collision Repair in Los Angeles",
   kicker: "In Sun Valley, Los Angeles",
   h1: "Collision Repair in Los Angeles",
-  lede: "Our shop is in Sun Valley — Los Angeles itself. When your Tesla is hit anywhere in the city, from the Valley to Downtown to the Westside, you don't have to wait weeks for a Tesla service center appointment or trust a general shop that rarely sees EVs. We repair Teslas and other EVs properly: structure, panels, paint, and camera calibration, with the entire claim handled for you.",
+  lede: "Our shop is in Sun Valley — Los Angeles itself. When your Tesla is hit anywhere in the city, from the Valley to Downtown to the Westside, you don't have to wait weeks for a Tesla service center appointment or trust a general shop that rarely sees EVs. If your car isn't drivable, our tow truck picks it up. We repair Teslas and other EVs properly — structure, panels, paint, and camera calibration — handle the entire insurance claim for you, and keep you in an on-site Tesla rental while yours is repaired (optional, based on availability).",
   sections: [
     {
       kicker: "Full collision center",
@@ -21,6 +21,7 @@ const data: CityPageData = {
         "Our collision center also repairs other EVs and gas vehicles. Service and maintenance at our shop is Tesla-only — collision is where every make is welcome.",
       ],
       ticks: [
+        "Tow truck pickup across Los Angeles — if it isn't drivable, we come get it",
         "Structural and panel repair for Tesla, other EVs, and gas vehicles",
         "ADAS / camera calibration after repair",
         "Factory paint matching and refinishing",

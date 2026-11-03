@@ -13,8 +13,10 @@ const serviceSlugs = [
   "drive-unit-oil-service",
   "drive-unit-bushing-replacement",
   "suspension-steering",
+  "control-arm-replacement",
   "hv-battery-service",
   "cabin-filters-radiator-cleaning",
+  "radiator-condenser-cleaning",
   "diagnostics",
   "tire-rotation",
 ];
@@ -32,6 +34,9 @@ const localSlugs = [
   "collision-repair-glendale",
   "collision-repair-north-hollywood",
   "collision-repair-los-angeles",
+  "collision-repair-tujunga",
+  "collision-repair-santa-clarita",
+  "collision-repair-reseda",
   "tesla-suspension-repair-los-angeles",
   "tesla-12v-battery-replacement-burbank",
 ];

@@ -24,7 +24,7 @@ REAL PRICES (these are what the shop actually quotes—use them confidently, say
 - AC evaporator/odor cleaning: $150.
 - AC compressor replacement (Model 3): $1,200 parts and labor (about 4 hours).
 - Front control arm labor (customer brings parts): $180 per side, $360 both sides (2–3 hours).
-- Front control arm replacement: around $600. (Teslas have 3 control arms per side up front; they wear out, often around 50k miles. We replace the full arm, never just the bushing.)
+- Front control arm replacement: full arm only, never just the bushing. (Teslas have 3 control arms per side up front; they wear out, often around 50k miles.)
 - Window regulator (Model S): $450 parts and labor.
 - Windshield washer fluid pump: $245 parts and labor.
 - Diagnostics: $180 one-time fee for electrical inspection (credited toward the repair bill).

@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 const services = [
   { t: "Maintenance & inspections", d: "Free inspections, scheduled maintenance, the stuff Tesla doesn't tell you about.", href: "/service/maintenance-inspections" },
   { t: "Suspension & steering", d: "Creaks, clunks, vibrations, control arms, bushings.", href: "/service/suspension-steering" },
+  { t: "Control arm replacement", d: "Full arm only — never just the bushing. Price depends on year and model.", href: "/service/control-arm-replacement" },
   { t: "Cabin filters & radiator cleaning", d: "Airflow, cooling efficiency, the dirty jobs.", href: "/service/cabin-filters-radiator-cleaning" },
+  { t: "Radiator & condenser cleaning", d: "Radiator cleaning $150 a year — Tesla charges $330–$350 for the same service.", href: "/service/radiator-condenser-cleaning" },
   { t: "Drive-unit / gearbox oil service", d: "Yes, your Tesla has oil. We service it.", href: "/service/drive-unit-oil-service" },
   { t: "Drive unit bushing replacement", d: "Kick or vibration under acceleration? Torn bushing—we replace it.", href: "/service/drive-unit-bushing-replacement" },
   { t: "Tire rotation", d: "Every 6,250 miles—EVs eat tires unevenly.", href: "/service/tire-rotation" },

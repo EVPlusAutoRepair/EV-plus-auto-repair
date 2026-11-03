@@ -4,11 +4,39 @@ import SiteFooter from "@/components/SiteFooter";
 import BookFlow from "./BookFlow";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+type BookProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+const DEFAULT_META: Metadata = {
   title: "Book Tesla Service or Start an Accident Claim | EV+ Auto Repair",
   description:
     "Book Tesla service in Los Angeles or start an accident intake with photo estimate. Free inspections, on-site Tesla rentals, 6-12 months labor warranty. Call/text (818) 281-7757.",
 };
+
+// Distinct titles/descriptions per booking lane so /book, /book?lane=service
+// and /book?lane=accident no longer share one title tag. Next 16 passes
+// searchParams as a Promise; awaiting it makes this route dynamic, which is
+// fine for an interactive booking flow.
+export async function generateMetadata({ searchParams }: BookProps): Promise<Metadata> {
+  const sp = await searchParams;
+  const lane = sp.lane;
+  if (lane === "service") {
+    return {
+      title: "Book Tesla Service | EV+ Auto Repair",
+      description:
+        "Book Tesla service in Los Angeles — maintenance, inspections, batteries, diagnostics. Free inspections, 6-12 months labor warranty. Call/text (818) 281-7757.",
+    };
+  }
+  if (lane === "accident") {
+    return {
+      title: "Start an Accident Claim | EV+ Auto Repair",
+      description:
+        "Start a Tesla accident claim with a photo estimate — collision repair, insurance handled start to finish. Tracey calls you back personally. Call/text (818) 281-7757.",
+    };
+  }
+  return DEFAULT_META;
+}
 
 export default function Book() {
   return (
