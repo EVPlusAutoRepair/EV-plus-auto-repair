@@ -31,6 +31,13 @@
   .bar { position: absolute; top: 0; left: 0; height: .8vh; background: #f5c518; width: 0%; z-index: 5; transition: width linear; }
   #fsBtn { position: absolute; right: 2vw; top: 2vh; z-index: 10; background: #f5c518; color: #111; border: 0; border-radius: 1.2vh; padding: 1.2vh 2.2vw; font-size: 2.6vh; font-weight: 800; cursor: pointer; }
   #status { position: absolute; left: 2vw; top: 2vh; z-index: 10; font-size: 1.9vh; color: #8a8a94; background: rgba(0,0,0,.45); padding: .8vh 1.2vw; border-radius: 1vh; }
+  /* Fullscreen = clean display: hide the FULLSCREEN button and the
+     top-left status line. :fullscreen covers modern browsers; the .fs-on
+     class (set by JS on fullscreenchange) covers TV browsers that don't
+     support the pseudo-class. Both come back when you leave fullscreen. */
+  :fullscreen #fsBtn, :fullscreen #status { display: none; }
+  :-webkit-full-screen #fsBtn, :-webkit-full-screen #status { display: none; }
+  .fs-on #fsBtn, .fs-on #status { display: none; }
   .dots { position: absolute; bottom: 6vh; left: 0; right: 0; text-align: center; z-index: 5; font-size: 2vh; letter-spacing: .5em; color: #55555e; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
   .live { animation: pulse 3s ease-in-out infinite; color: #f5c518; font-weight: 800; }
@@ -283,7 +290,13 @@
     enableSound();
     setTimeout(updateStatus, 500);
   });
-  document.addEventListener('fullscreenchange', updateStatus);
+  document.addEventListener('fullscreenchange', syncFullscreenClass);
+  document.addEventListener('webkitfullscreenchange', syncFullscreenClass);
+  function syncFullscreenClass() {
+    if (document.fullscreenElement || document.webkitFullscreenElement) document.documentElement.classList.add('fs-on');
+    else document.documentElement.classList.remove('fs-on');
+    updateStatus();
+  }
   var wakeLock = null;
   function requestWakeLock() {
     if (!('wakeLock' in navigator)) { window._wl = 'not supported on this TV'; updateStatus(); return; }
