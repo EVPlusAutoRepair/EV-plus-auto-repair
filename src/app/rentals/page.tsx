@@ -36,7 +36,7 @@ export default function Rentals() {
                 <li><b>Flexible terms</b>—daily &amp; weekly, for repairs of any length (call for rates)</li>
               </ul>
               <div className="hero-ctas" style={{ marginTop: 30 }}>
-                <a className="btn" href="/book">Book service + rental</a>
+                <a className="btn" href="/book?lane=service">Book service + rental</a>
                 <a className="btn btn-ghost" href="tel:+18182817757">Call (818) 281-7757</a>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function Rentals() {
           <div className="cta-band">
             <h2>Your Tesla&rsquo;s in the shop. You&rsquo;re still driving a Tesla.</h2>
             <div className="hero-ctas">
-              <a className="btn" href="/book">Book now</a>
+              <a className="btn" href="/book?lane=service">Book now</a>
               <a className="btn btn-ghost" href="tel:+18182817757">Call/text (818) 281-7757</a>
             </div>
           </div>

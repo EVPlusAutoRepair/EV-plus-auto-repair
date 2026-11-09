@@ -53,7 +53,7 @@ export default function Shop() {
             <h2>Need service or collision repair?</h2>
             <p className="lede" style={{ margin: "0 auto" }}>Book a free inspection — we&rsquo;ll take a look and tell you honestly what it needs.</p>
             <div className="hero-ctas">
-              <a className="btn" href="/book">Book a free inspection</a>
+              <a className="btn" href="/book?lane=service">Book a free inspection</a>
             </div>
           </div>
 

@@ -106,7 +106,7 @@ export default function SanFernandoValley() {
               {" · "}
               <a href="/rentals" style={{ color: "var(--acc)" }}>Tesla Rentals</a>
               {" · "}
-              <a href="/book" style={{ color: "var(--acc)" }}>Book a free inspection</a>
+              <a href="/book?lane=service" style={{ color: "var(--acc)" }}>Book a free inspection</a>
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export default function SanFernandoValley() {
           </div>
 
           <div style={{ marginTop: 48 }}>
-            <p className="lede">Ready when you are — <a href="/book" style={{ color: "var(--acc)" }}>book your free inspection</a> or call <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>.</p>
+            <p className="lede">Ready when you are — <a href="/book?lane=service" style={{ color: "var(--acc)" }}>book your free inspection</a> or call <a href="tel:+18182817757" style={{ color: "var(--acc)" }}>(818) 281-7757</a>.</p>
           </div>
         </div>
       </section>

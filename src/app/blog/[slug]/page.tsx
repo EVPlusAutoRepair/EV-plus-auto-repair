@@ -160,7 +160,7 @@ async function PostContent({ slug }: { slug: string }) {
               Call or text (818) 281-7757, or book online in under a minute.
             </p>
             <div className="hero-ctas">
-              <a className="btn" href="/book">Book free inspection</a>
+              <a className="btn" href="/book?lane=service">Book free inspection</a>
               <a className="btn btn-ghost" href="tel:+18182817757">Call/text (818) 281-7757</a>
             </div>
           </div>
