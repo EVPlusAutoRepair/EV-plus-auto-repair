@@ -14,8 +14,8 @@ export type SearchEntry = {
 };
 
 const PAGES: SearchEntry[] = [
-  { title: "Tesla Service & Collision Repair in Los Angeles", url: "/", blurb: "Family-owned Tesla service and collision repair in Sun Valley, Los Angeles.", keywords: "tesla service collision repair sun valley los angeles shop ev hours phone number address location directions contact electric" },
-  { title: "Tesla Service in Los Angeles", url: "/service", blurb: "Maintenance, inspections, batteries, diagnostics — everything that isn't an accident.", keywords: "tesla service maintenance inspection repair cost price model 3 y s x cybertruck electric" },
+  { title: "Tesla Service & Collision Repair in Los Angeles", url: "/", blurb: "Family-owned Tesla service and collision repair in Sun Valley, Los Angeles.", keywords: "tesla service collision repair sun valley los angeles shop ev hours phone number address location directions contact electric open located center alternative" },
+  { title: "Tesla Service in Los Angeles", url: "/service", blurb: "Maintenance, inspections, batteries, diagnostics — everything that isn't an accident.", keywords: "tesla service maintenance inspection repair cost price model 3 y s x cybertruck electric center alternative" },
   { title: "Tesla Suspension & Steering", url: "/service/suspension-steering", blurb: "Control arms, bushings, alignment — the suspension work Teslas actually need.", keywords: "suspension creak creaking squeak squeaking clunk clunking noise control arm control arms bushing alignment steering vibration wobble bumpy ride cost price model 3 y s x cybertruck" },
   { title: "Tesla Control Arm Replacement", url: "/service/control-arm-replacement", blurb: "Full control arm replacement — never just the bushing — with a 4-wheel alignment after.", keywords: "control arm control arms creak creaking squeak squeaking clunk noise over bumps upper lower suspension cost price model 3 y s x cybertruck" },
   { title: "Tesla 12V Battery Replacement", url: "/service/12v-battery-replacement", blurb: "12V battery service — the small battery that can strand a Tesla with no warning.", keywords: "12v 12 volt battery dead wont start won't wake up low voltage battery replacement cost price model 3 y s x cybertruck" },
@@ -25,17 +25,17 @@ const PAGES: SearchEntry[] = [
   { title: "Tesla High-Voltage Battery Service", url: "/service/hv-battery-service", blurb: "High-voltage battery replacement — the big battery, replaced properly.", keywords: "high voltage hv battery battery replacement range wont charge cost price model 3 y s x cybertruck" },
   { title: "Tesla Radiator & Condenser Cleaning", url: "/service/radiator-condenser-cleaning", blurb: "$150/year radiator and condenser cleaning — Tesla charges $330–$350 for the same job.", keywords: "radiator condenser cleaning overheating supercharging slow ac air conditioning cooling leaves debris cost price model 3 y s x cybertruck" },
   { title: "Tesla Cabin Filter Replacement", url: "/service/cabin-filters-radiator-cleaning", blurb: "Cabin filter replacement — $115. Fixes musty AC smell and weak airflow.", keywords: "cabin filter air filter smell musty ac smell airflow cost price model 3 y s x cybertruck" },
-  { title: "Tesla Tire Rotation", url: "/service/tire-rotation", blurb: "Tire rotation — $60. EVs wear tires faster and unevenly.", keywords: "tire rotation tires rotate uneven wear cost price model 3 y s x cybertruck pressure tpms" },
+  { title: "Tesla Tire Rotation", url: "/service/tire-rotation", blurb: "Tire rotation — $60. EVs wear tires faster and unevenly.", keywords: "tire rotation tires rotate uneven wear cost price model 3 y s x cybertruck pressure tpms sensor" },
   { title: "Tesla Diagnostics & Error Code Testing", url: "/service/diagnostics", blurb: "Paid diagnostic — find the cause of a warning, noise, or error code.", keywords: "diagnostic error code warning light check popping sound noise error cost price model 3 y s x cybertruck" },
   { title: "Tesla Maintenance & Free Inspections", url: "/service/maintenance-inspections", blurb: "Annual maintenance and free 1-hour inspections.", keywords: "maintenance inspection annual free inspection checkup service schedule cost price model 3 y s x cybertruck" },
-  { title: "Tesla Collision Repair in Los Angeles", url: "/collision", blurb: "Accident repair, insurance claims, photo estimates — Tesla and EV collision, done right.", keywords: "collision accident crash dent bumper paint body shop insurance claim estimate cost price model 3 y s x cybertruck warranty" },
-  { title: "Tesla Collision Repair", url: "/collision/collision-repair", blurb: "Structural and panel repair for Tesla and other EVs.", keywords: "collision repair body repair dent panel cost price model 3 y s x cybertruck warranty" },
-  { title: "Tesla ADAS Camera Calibration", url: "/collision/adas-calibration", blurb: "Camera and sensor calibration after body work, so Autopilot reads the road right.", keywords: "adas calibration camera autopilot sensor lane cost price model 3 y s x cybertruck warranty" },
-  { title: "Tesla Paint & Refinishing", url: "/collision/paint-refinishing", blurb: "Factory paint matching and refinishing after collision repair.", keywords: "paint scratch refinish color match cost price model 3 y s x cybertruck warranty" },
-  { title: "Insurance Claims — We Handle It", url: "/collision/insurance-claims", blurb: "We document the damage, coordinate with the adjuster, and file supplements.", keywords: "insurance claim geico state farm progressive supplement adjuster cost price model 3 y s x cybertruck warranty deductible rental" },
-  { title: "Gas Vehicle Collision Repair", url: "/collision/gas-vehicle-collision", blurb: "Collision repair for gas vehicles too — collision is where every make is welcome.", keywords: "gas gasoline non-tesla other car cost price model 3 y s x cybertruck warranty rivian lucid evs electric" },
-  { title: "Tesla Before & After Gallery", url: "/collision/before-after-gallery", blurb: "Real Tesla repairs, before and after.", keywords: "before after photos gallery results examples cost price model 3 y s x cybertruck warranty" },
-  { title: "Los Angeles Tesla Collision Repair", url: "/collision-repair-los-angeles", blurb: "Tesla & EV collision repair in Los Angeles — tow truck pickup, insurance handled, on-site Tesla rental.", keywords: "los angeles la collision accident cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Collision Repair in Los Angeles", url: "/collision", blurb: "Accident repair, insurance claims, photo estimates — Tesla and EV collision, done right.", keywords: "collision accident crash dent bumper paint body shop insurance claim estimate cost price model 3 y s x cybertruck warranty labor sherman oaks" },
+  { title: "Tesla Collision Repair", url: "/collision/collision-repair", blurb: "Structural and panel repair for Tesla and other EVs.", keywords: "collision repair body repair dent panel cost price model 3 y s x cybertruck warranty labor" },
+  { title: "Tesla ADAS Camera Calibration", url: "/collision/adas-calibration", blurb: "Camera and sensor calibration after body work, so Autopilot reads the road right.", keywords: "adas calibration camera autopilot sensor lane cost price model 3 y s x cybertruck warranty labor" },
+  { title: "Tesla Paint & Refinishing", url: "/collision/paint-refinishing", blurb: "Factory paint matching and refinishing after collision repair.", keywords: "paint scratch refinish color match cost price model 3 y s x cybertruck warranty labor" },
+  { title: "Insurance Claims — We Handle It", url: "/collision/insurance-claims", blurb: "We document the damage, coordinate with the adjuster, and file supplements.", keywords: "insurance claim geico state farm progressive supplement adjuster cost price model 3 y s x cybertruck warranty deductible rental labor" },
+  { title: "Gas Vehicle Collision Repair", url: "/collision/gas-vehicle-collision", blurb: "Collision repair for gas vehicles too — collision is where every make is welcome.", keywords: "gas gasoline non-tesla other car cost price model 3 y s x cybertruck warranty rivian lucid evs electric labor" },
+  { title: "Tesla Before & After Gallery", url: "/collision/before-after-gallery", blurb: "Real Tesla repairs, before and after.", keywords: "before after photos gallery results examples cost price model 3 y s x cybertruck warranty labor" },
+  { title: "Los Angeles Tesla Collision Repair", url: "/collision-repair-los-angeles", blurb: "Tesla & EV collision repair in Los Angeles — tow truck pickup, insurance handled, on-site Tesla rental.", keywords: "los angeles la collision accident cost price model 3 y s x cybertruck warranty labor sherman oaks" },
   { title: "Tesla Suspension Repair in Los Angeles", url: "/tesla-suspension-repair-los-angeles", blurb: "Tesla suspension repair in LA — control arms, bushings, alignment.", keywords: "los angeles suspension creak clunk cost price model 3 y s x cybertruck" },
   { title: "Tesla Collision Repair in Glendale", url: "/collision-repair-glendale", blurb: "Tesla collision repair near Glendale — structural repair, ADAS calibration, insurance handled.", keywords: "glendale collision cost price model 3 y s x cybertruck warranty" },
   { title: "Tesla Collision Repair in North Hollywood", url: "/collision-repair-north-hollywood", blurb: "Tesla collision repair near North Hollywood.", keywords: "north hollywood noho collision cost price model 3 y s x cybertruck warranty" },
@@ -78,9 +78,16 @@ export const SEARCH_INDEX: SearchEntry[] = [...PAGES, ...BLOG];
 
 function fieldMatch(haystack: string, token: string): boolean {
   if (haystack.includes(token)) return true;
-  // Stem-ish: "creaking" should match keyword "creak"; "batteries" -> "battery".
+  // Stem-ish: "creaking" should match keyword "creak"; "pricing" should
+  // match keyword "price" (they share the stem "pric"). Compare by common
+  // prefix instead of substring, so "pricing" vs "price" works.
   const words = haystack.split(/[^a-z0-9]+/);
-  return words.some((w) => w.length >= 4 && token.includes(w));
+  return words.some((w) => {
+    if (w.length < 4 || token.length < 4) return false;
+    let common = 0;
+    while (common < w.length && common < token.length && w[common] === token[common]) common++;
+    return common >= 4;
+  });
 }
 
 // Words customers type that carry no meaning for matching ("why is my tesla
@@ -97,7 +104,7 @@ const STOPWORDS = new Set([
   "if", "then", "than", "so", "such", "there", "here", "this", "that",
   "these", "those", "am", "is", "are", "just", "get", "got", "go", "going",
   // Generic filler that never discriminates on this site.
-  "car", "vehicle", "auto", "near",
+  "car", "vehicle", "auto", "near", "much", "now",
 ]);
 
 // Apostrophes break matching ("won't" tokenizes to "won", but the index
