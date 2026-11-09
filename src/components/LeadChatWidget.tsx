@@ -32,6 +32,7 @@ const STEPS: Step[] = [
 export default function LeadChatWidget() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [showInvite, setShowInvite] = useState(true);
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [stepIdx, setStepIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -142,6 +143,7 @@ export default function LeadChatWidget() {
 
   const toggle = () => {
     if (open) sendPartialOnce();
+    if (!open) setShowInvite(false);
     setOpen(!open);
   };
 
@@ -150,6 +152,21 @@ export default function LeadChatWidget() {
 
   return (
     <>
+      {showInvite && !open && (
+        <button
+          onClick={toggle}
+          aria-label="Have a question? Chat with us!"
+          className="chat-invite"
+          style={{
+            position: "fixed", right: 88, bottom: 28, zIndex: 70,
+            background: "var(--card)", color: "var(--txt)", border: "1px solid var(--line)",
+            borderRadius: 999, padding: "10px 16px", fontSize: 14, fontWeight: 700,
+            cursor: "pointer", boxShadow: "0 10px 30px rgba(0,0,0,.45)", whiteSpace: "nowrap",
+          }}
+        >
+          Have a question? Chat with us!
+        </button>
+      )}
       <button
         onClick={toggle}
         aria-label="Chat with EV+"
@@ -250,7 +267,7 @@ export default function LeadChatWidget() {
           </div>
         </div>
       )}
-      <style>{`@media (max-width: 900px){ .chat-fab{ bottom: 84px !important; } } @media (min-width: 901px){ .chat-panel{ left: auto !important; width: 380px; } }`}</style>
+      <style>{`@media (max-width: 900px){ .chat-fab{ bottom: 84px !important; } .chat-invite{ display: none !important; } } @media (min-width: 901px){ .chat-panel{ left: auto !important; width: 380px; } }`}</style>
     </>
   );
 }
