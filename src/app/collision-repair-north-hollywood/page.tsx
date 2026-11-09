@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CityServicePage, { type CityPageData } from "@/components/CityServicePage";
 
 export const metadata: Metadata = {
-  title: "Collision Repair in North Hollywood | EV+ Auto Repair",
+  title: "Tesla Collision Repair in North Hollywood | EV+ Auto Repair",
   description:
-    "Collision repair near North Hollywood — hit-and-run damage, insurance claims, towing, ADAS calibration. Sun Valley shop, ~10 min away. Free estimates: (818) 281-7757.",
+    "Tesla collision repair near North Hollywood — hit-and-run damage, insurance claims, towing, ADAS calibration. ~10 min away. (818) 281-7757.",
 };
 
 const data: CityPageData = {

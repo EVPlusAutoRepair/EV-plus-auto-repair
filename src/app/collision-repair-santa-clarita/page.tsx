@@ -4,7 +4,7 @@ import CityServicePage, { type CityPageData } from "@/components/CityServicePage
 export const metadata: Metadata = {
   title: "Tesla Collision Repair in Santa Clarita | EV+ Auto Repair",
   description:
-    "Tesla & EV collision repair near Santa Clarita — structural repair, ADAS calibration, insurance claims handled start to finish. Sun Valley shop, ~25 min down the 5. (818) 281-7757.",
+    "Tesla collision repair near Santa Clarita — structural repair, ADAS calibration, insurance claims handled. ~25 min down the 5. (818) 281-7757.",
 };
 
 const data: CityPageData = {

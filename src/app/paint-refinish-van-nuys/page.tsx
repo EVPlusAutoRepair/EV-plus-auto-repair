@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CityServicePage, { type CityPageData } from "@/components/CityServicePage";
 
 export const metadata: Metadata = {
-  title: "Paint & Refinish in Van Nuys | EV+ Auto Repair",
+  title: "Tesla Paint & Refinish in Van Nuys | EV+ Auto Repair",
   description:
-    "Tesla paint matching and refinishing near Van Nuys — factory colors, proper blending, booth refinishing. Family-owned shop in Sun Valley. Free estimates: (818) 281-7757.",
+    "Tesla paint matching and refinishing near Van Nuys — factory colors, proper blending, booth refinishing. Free estimates: (818) 281-7757.",
 };
 
 const data: CityPageData = {

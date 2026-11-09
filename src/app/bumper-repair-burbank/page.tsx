@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CityServicePage, { type CityPageData } from "@/components/CityServicePage";
 
 export const metadata: Metadata = {
-  title: "Bumper Repair in Burbank | EV+ Auto Repair",
+  title: "Tesla Bumper Repair in Burbank | EV+ Auto Repair",
   description:
-    "Tesla bumper repair near Burbank — sensor checks, paint matching, insurance handled. Family-owned shop in Sun Valley, about 10 minutes away. Free estimates: (818) 281-7757.",
+    "Tesla bumper repair near Burbank — sensor checks, paint matching, insurance handled. About 10 minutes away. Free estimates: (818) 281-7757.",
 };
 
 const data: CityPageData = {

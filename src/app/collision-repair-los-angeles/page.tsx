@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CityServicePage, { type CityPageData } from "@/components/CityServicePage";
 
 export const metadata: Metadata = {
-  title: "Collision Repair in Los Angeles | EV+ Auto Repair",
+  title: "Los Angeles Tesla Collision Repair | EV+ Auto Repair",
   description:
-    "Tesla & EV collision repair in Los Angeles — structural repair, ADAS calibration, insurance claims handled start to finish. Family-owned shop in Sun Valley. (818) 281-7757.",
+    "Tesla & EV collision repair in Los Angeles — structural repair, ADAS calibration, insurance claims handled. Family-owned, Sun Valley. (818) 281-7757.",
 };
 
 const data: CityPageData = {

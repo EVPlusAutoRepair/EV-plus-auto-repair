@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CityServicePage, { type CityPageData } from "@/components/CityServicePage";
 
 export const metadata: Metadata = {
-  title: "Collision Repair in Glendale | EV+ Auto Repair",
+  title: "Tesla Collision Repair in Glendale | EV+ Auto Repair",
   description:
-    "Tesla & EV collision repair near Glendale — structural repair, ADAS calibration, insurance claims handled start to finish. Sun Valley shop, ~15 min away. (818) 281-7757.",
+    "Tesla collision repair near Glendale — structural repair, ADAS calibration, insurance claims handled. Sun Valley shop, ~15 min away. (818) 281-7757.",
 };
 
 const data: CityPageData = {

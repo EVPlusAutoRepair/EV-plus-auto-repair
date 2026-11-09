@@ -4,7 +4,7 @@ import CityServicePage, { type CityPageData } from "@/components/CityServicePage
 export const metadata: Metadata = {
   title: "Tesla Suspension Repair in Los Angeles | EV+ Auto Repair",
   description:
-    "Tesla control arm & suspension repair in Los Angeles — creaking, clunking, uneven tire wear. Full arm replacement, never bushing-only. Free inspection: (818) 281-7757.",
+    "Tesla control arm & suspension repair in Los Angeles — creaking, clunking, uneven tire wear. Full arm, never bushing-only. Free inspection (818) 281-7757.",
 };
 
 const data: CityPageData = {

@@ -6,7 +6,7 @@ import FaqSchema from "@/components/FaqSchema";
 export const metadata: Metadata = {
   title: "Tesla Service in Los Angeles | EV+ Auto Repair",
   description:
-    "Tesla maintenance & repair in Los Angeles: inspections, drive-unit oil, suspension, 12V & HV battery replacement, diagnostics. Free estimates—(818) 281-7757.",
+    "Tesla maintenance & repair in Los Angeles: inspections, drive-unit oil, suspension, 12V & HV batteries, diagnostics. Free estimates: (818) 281-7757.",
 };
 
 const services = [

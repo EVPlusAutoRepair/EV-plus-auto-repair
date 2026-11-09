@@ -4,7 +4,7 @@ import CityServicePage, { type CityPageData } from "@/components/CityServicePage
 export const metadata: Metadata = {
   title: "Tesla Collision Repair in Reseda | EV+ Auto Repair",
   description:
-    "Tesla & EV collision repair near Reseda — structural repair, ADAS calibration, insurance claims handled start to finish. Sun Valley shop, ~25 min away. (818) 281-7757.",
+    "Tesla collision repair near Reseda — structural repair, ADAS calibration, insurance claims handled. Sun Valley shop, ~25 min away. (818) 281-7757.",
 };
 
 const data: CityPageData = {

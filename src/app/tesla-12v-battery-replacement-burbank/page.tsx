@@ -4,7 +4,7 @@ import CityServicePage, { type CityPageData } from "@/components/CityServicePage
 export const metadata: Metadata = {
   title: "Tesla 12V Battery Replacement in Burbank | EV+ Auto Repair",
   description:
-    "Tesla 12V battery testing & replacement near Burbank — warning signs, dead-car help, quick in-shop swap. Free inspection includes a 12V health check. (818) 281-7757.",
+    "Tesla 12V battery testing & replacement near Burbank — warning signs, dead-car help, quick in-shop swap. Free inspection: (818) 281-7757.",
 };
 
 const data: CityPageData = {

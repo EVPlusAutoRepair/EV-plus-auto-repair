@@ -4,9 +4,9 @@ import SiteFooter from "@/components/SiteFooter";
 import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "Tesla Collision Repair & EV Body Shop in Los Angeles | EV+ Auto Repair",
+  title: "Tesla Collision Repair in Los Angeles | EV+ Auto Repair",
   description:
-    "Tesla collision repair and EV body shop near Los Angeles — paint matching, ADAS calibration, insurance claims handled. Tesla rental on-site. Free estimates: (818) 281-7757.",
+    "Tesla collision repair in Los Angeles — structural repair, paint matching, ADAS calibration, insurance claims handled. Free estimates: (818) 281-7757.",
 };
 
 const services = [
