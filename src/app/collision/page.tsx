@@ -94,6 +94,12 @@ export default function CollisionCenter() {
               <a href="/collision-repair-glendale" style={{ color: "var(--acc)" }}>Collision Repair in Glendale</a>
               {" · "}
               <a href="/collision-repair-north-hollywood" style={{ color: "var(--acc)" }}>Collision Repair in North Hollywood</a>
+              {" · "}
+              <a href="/collision-repair-tujunga" style={{ color: "var(--acc)" }}>Collision Repair in Tujunga</a>
+              {" · "}
+              <a href="/collision-repair-santa-clarita" style={{ color: "var(--acc)" }}>Collision Repair in Santa Clarita</a>
+              {" · "}
+              <a href="/collision-repair-reseda" style={{ color: "var(--acc)" }}>Collision Repair in Reseda</a>
             </p>
           </div>
 
