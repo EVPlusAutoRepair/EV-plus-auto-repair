@@ -14,42 +14,42 @@ export type SearchEntry = {
 };
 
 const PAGES: SearchEntry[] = [
-  { title: "Tesla Service & Collision Repair in Los Angeles", url: "/", blurb: "Family-owned Tesla service and collision repair in Sun Valley, Los Angeles.", keywords: "tesla service collision repair sun valley los angeles shop ev" },
-  { title: "Tesla Service in Los Angeles", url: "/service", blurb: "Maintenance, inspections, batteries, diagnostics — everything that isn't an accident.", keywords: "tesla service maintenance inspection repair" },
-  { title: "Tesla Suspension & Steering", url: "/service/suspension-steering", blurb: "Control arms, bushings, alignment — the suspension work Teslas actually need.", keywords: "suspension creak creaking squeak squeaking clunk clunking noise control arm control arms bushing alignment steering vibration wobble bumpy ride" },
-  { title: "Tesla Control Arm Replacement", url: "/service/control-arm-replacement", blurb: "Full control arm replacement — never just the bushing — with a 4-wheel alignment after.", keywords: "control arm control arms creak creaking squeak squeaking clunk noise over bumps upper lower suspension" },
-  { title: "Tesla 12V Battery Replacement", url: "/service/12v-battery-replacement", blurb: "12V battery service — the small battery that can strand a Tesla with no warning.", keywords: "12v 12 volt battery dead wont start won't wake up low voltage battery replacement" },
-  { title: "Tesla 16V Battery Service", url: "/service/16v-battery-service", blurb: "16V low-voltage battery service for newer Teslas.", keywords: "16v 16 volt battery low voltage" },
-  { title: "Tesla Drive Unit Oil Service", url: "/service/drive-unit-oil-service", blurb: "Drive unit gearbox fluid service — $300 per unit, $600 for dual-motor.", keywords: "drive unit oil gear oil differential pentosin oil change gearbox fluid" },
-  { title: "Tesla Drive Unit Bushing Replacement", url: "/service/drive-unit-bushing-replacement", blurb: "Drive unit bushing replacement for vibration and noise.", keywords: "drive unit bushing vibration noise" },
-  { title: "Tesla High-Voltage Battery Service", url: "/service/hv-battery-service", blurb: "High-voltage battery replacement — the big battery, replaced properly.", keywords: "high voltage hv battery battery replacement range wont charge" },
-  { title: "Tesla Radiator & Condenser Cleaning", url: "/service/radiator-condenser-cleaning", blurb: "$150/year radiator and condenser cleaning — Tesla charges $330–$350 for the same job.", keywords: "radiator condenser cleaning overheating supercharging slow ac air conditioning cooling leaves debris" },
-  { title: "Tesla Cabin Filter Replacement", url: "/service/cabin-filters-radiator-cleaning", blurb: "Cabin filter replacement — $115. Fixes musty AC smell and weak airflow.", keywords: "cabin filter air filter smell musty ac smell airflow" },
-  { title: "Tesla Tire Rotation", url: "/service/tire-rotation", blurb: "Tire rotation — $60. EVs wear tires faster and unevenly.", keywords: "tire rotation tires rotate uneven wear" },
-  { title: "Tesla Diagnostics & Error Code Testing", url: "/service/diagnostics", blurb: "Paid diagnostic — find the cause of a warning, noise, or error code.", keywords: "diagnostic error code warning light check popping sound noise error" },
-  { title: "Tesla Maintenance & Free Inspections", url: "/service/maintenance-inspections", blurb: "Annual maintenance and free 1-hour inspections.", keywords: "maintenance inspection annual free inspection checkup service schedule" },
-  { title: "Tesla Collision Repair in Los Angeles", url: "/collision", blurb: "Accident repair, insurance claims, photo estimates — Tesla and EV collision, done right.", keywords: "collision accident crash dent bumper paint body shop insurance claim estimate" },
-  { title: "Tesla Collision Repair", url: "/collision/collision-repair", blurb: "Structural and panel repair for Tesla and other EVs.", keywords: "collision repair body repair dent panel" },
-  { title: "Tesla ADAS Camera Calibration", url: "/collision/adas-calibration", blurb: "Camera and sensor calibration after body work, so Autopilot reads the road right.", keywords: "adas calibration camera autopilot sensor lane" },
-  { title: "Tesla Paint & Refinishing", url: "/collision/paint-refinishing", blurb: "Factory paint matching and refinishing after collision repair.", keywords: "paint scratch refinish color match" },
-  { title: "Insurance Claims — We Handle It", url: "/collision/insurance-claims", blurb: "We document the damage, coordinate with the adjuster, and file supplements.", keywords: "insurance claim geico state farm progressive supplement adjuster" },
-  { title: "Gas Vehicle Collision Repair", url: "/collision/gas-vehicle-collision", blurb: "Collision repair for gas vehicles too — collision is where every make is welcome.", keywords: "gas gasoline non-tesla other car" },
-  { title: "Tesla Before & After Gallery", url: "/collision/before-after-gallery", blurb: "Real Tesla repairs, before and after.", keywords: "before after photos gallery results examples" },
-  { title: "Los Angeles Tesla Collision Repair", url: "/collision-repair-los-angeles", blurb: "Tesla & EV collision repair in Los Angeles — tow truck pickup, insurance handled, on-site Tesla rental.", keywords: "los angeles la collision accident" },
-  { title: "Tesla Suspension Repair in Los Angeles", url: "/tesla-suspension-repair-los-angeles", blurb: "Tesla suspension repair in LA — control arms, bushings, alignment.", keywords: "los angeles suspension creak clunk" },
-  { title: "Tesla Collision Repair in Glendale", url: "/collision-repair-glendale", blurb: "Tesla collision repair near Glendale — structural repair, ADAS calibration, insurance handled.", keywords: "glendale collision" },
-  { title: "Tesla Collision Repair in North Hollywood", url: "/collision-repair-north-hollywood", blurb: "Tesla collision repair near North Hollywood.", keywords: "north hollywood noho collision" },
-  { title: "Tesla Bumper Repair in Burbank", url: "/bumper-repair-burbank", blurb: "Tesla bumper repair near Burbank.", keywords: "burbank bumper dent" },
-  { title: "Tesla Paint & Refinish in Van Nuys", url: "/paint-refinish-van-nuys", blurb: "Tesla paint and refinishing near Van Nuys.", keywords: "van nuys paint scratch" },
-  { title: "Tesla 12V Battery Replacement in Burbank", url: "/tesla-12v-battery-replacement-burbank", blurb: "Tesla 12V battery replacement near Burbank.", keywords: "burbank 12v battery" },
-  { title: "Tesla Collision Repair in Tujunga", url: "/collision-repair-tujunga", blurb: "Tesla collision repair near Tujunga — about 10 minutes from the shop.", keywords: "tujunga collision" },
-  { title: "Tesla Collision Repair in Santa Clarita", url: "/collision-repair-santa-clarita", blurb: "Tesla collision repair near Santa Clarita — about 25 minutes down the 5.", keywords: "santa clarita valencia collision" },
-  { title: "Tesla Collision Repair in Reseda", url: "/collision-repair-reseda", blurb: "Tesla collision repair near Reseda.", keywords: "reseda collision" },
-  { title: "Tesla Repair in the San Fernando Valley", url: "/tesla-repair-san-fernando-valley", blurb: "Tesla repair across the San Fernando Valley.", keywords: "san fernando valley valley tesla repair" },
-  { title: "EV+ Auto Rentals — Tesla Rentals", url: "/rentals", blurb: "Rent a Tesla while yours is in the shop — optional, based on availability.", keywords: "rental rent loaner tesla rental car rental" },
-  { title: "Tesla USB Drives — Shop", url: "/shop", blurb: "128GB OEM Tesla USB drives for Sentry Mode and Dashcam — from $29.99.", keywords: "shop usb flash drive usb drive accessory buy" },
-  { title: "Tesla 128GB USB Drive (Pre-Owned)", url: "/shop/tesla-usb-drive-128gb", blurb: "128GB OEM Tesla USB drive — $29.99 + shipping. Sentry Mode and Dashcam ready.", keywords: "usb flash drive 128gb sentry dashcam" },
-  { title: "Tesla 128GB USB Drive — Flat Design (Pre-Owned)", url: "/shop/tesla-usb-drive-128gb-flat", blurb: "Flat-design 128GB Tesla USB drive — $34.99 + shipping.", keywords: "usb flash drive flat 128gb sentry" },
+  { title: "Tesla Service & Collision Repair in Los Angeles", url: "/", blurb: "Family-owned Tesla service and collision repair in Sun Valley, Los Angeles.", keywords: "tesla service collision repair sun valley los angeles shop ev hours phone number address location directions contact electric" },
+  { title: "Tesla Service in Los Angeles", url: "/service", blurb: "Maintenance, inspections, batteries, diagnostics — everything that isn't an accident.", keywords: "tesla service maintenance inspection repair cost price model 3 y s x cybertruck electric" },
+  { title: "Tesla Suspension & Steering", url: "/service/suspension-steering", blurb: "Control arms, bushings, alignment — the suspension work Teslas actually need.", keywords: "suspension creak creaking squeak squeaking clunk clunking noise control arm control arms bushing alignment steering vibration wobble bumpy ride cost price model 3 y s x cybertruck" },
+  { title: "Tesla Control Arm Replacement", url: "/service/control-arm-replacement", blurb: "Full control arm replacement — never just the bushing — with a 4-wheel alignment after.", keywords: "control arm control arms creak creaking squeak squeaking clunk noise over bumps upper lower suspension cost price model 3 y s x cybertruck" },
+  { title: "Tesla 12V Battery Replacement", url: "/service/12v-battery-replacement", blurb: "12V battery service — the small battery that can strand a Tesla with no warning.", keywords: "12v 12 volt battery dead wont start won't wake up low voltage battery replacement cost price model 3 y s x cybertruck" },
+  { title: "Tesla 16V Battery Service", url: "/service/16v-battery-service", blurb: "16V low-voltage battery service for newer Teslas.", keywords: "16v 16 volt battery low voltage cost price model 3 y s x cybertruck" },
+  { title: "Tesla Drive Unit Oil Service", url: "/service/drive-unit-oil-service", blurb: "Drive unit gearbox fluid service — $300 per unit, $600 for dual-motor.", keywords: "drive unit oil gear oil differential pentosin oil change gearbox fluid cost price model 3 y s x cybertruck" },
+  { title: "Tesla Drive Unit Bushing Replacement", url: "/service/drive-unit-bushing-replacement", blurb: "Drive unit bushing replacement for vibration and noise.", keywords: "drive unit bushing vibration noise cost price model 3 y s x cybertruck" },
+  { title: "Tesla High-Voltage Battery Service", url: "/service/hv-battery-service", blurb: "High-voltage battery replacement — the big battery, replaced properly.", keywords: "high voltage hv battery battery replacement range wont charge cost price model 3 y s x cybertruck" },
+  { title: "Tesla Radiator & Condenser Cleaning", url: "/service/radiator-condenser-cleaning", blurb: "$150/year radiator and condenser cleaning — Tesla charges $330–$350 for the same job.", keywords: "radiator condenser cleaning overheating supercharging slow ac air conditioning cooling leaves debris cost price model 3 y s x cybertruck" },
+  { title: "Tesla Cabin Filter Replacement", url: "/service/cabin-filters-radiator-cleaning", blurb: "Cabin filter replacement — $115. Fixes musty AC smell and weak airflow.", keywords: "cabin filter air filter smell musty ac smell airflow cost price model 3 y s x cybertruck" },
+  { title: "Tesla Tire Rotation", url: "/service/tire-rotation", blurb: "Tire rotation — $60. EVs wear tires faster and unevenly.", keywords: "tire rotation tires rotate uneven wear cost price model 3 y s x cybertruck pressure tpms" },
+  { title: "Tesla Diagnostics & Error Code Testing", url: "/service/diagnostics", blurb: "Paid diagnostic — find the cause of a warning, noise, or error code.", keywords: "diagnostic error code warning light check popping sound noise error cost price model 3 y s x cybertruck" },
+  { title: "Tesla Maintenance & Free Inspections", url: "/service/maintenance-inspections", blurb: "Annual maintenance and free 1-hour inspections.", keywords: "maintenance inspection annual free inspection checkup service schedule cost price model 3 y s x cybertruck" },
+  { title: "Tesla Collision Repair in Los Angeles", url: "/collision", blurb: "Accident repair, insurance claims, photo estimates — Tesla and EV collision, done right.", keywords: "collision accident crash dent bumper paint body shop insurance claim estimate cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Collision Repair", url: "/collision/collision-repair", blurb: "Structural and panel repair for Tesla and other EVs.", keywords: "collision repair body repair dent panel cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla ADAS Camera Calibration", url: "/collision/adas-calibration", blurb: "Camera and sensor calibration after body work, so Autopilot reads the road right.", keywords: "adas calibration camera autopilot sensor lane cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Paint & Refinishing", url: "/collision/paint-refinishing", blurb: "Factory paint matching and refinishing after collision repair.", keywords: "paint scratch refinish color match cost price model 3 y s x cybertruck warranty" },
+  { title: "Insurance Claims — We Handle It", url: "/collision/insurance-claims", blurb: "We document the damage, coordinate with the adjuster, and file supplements.", keywords: "insurance claim geico state farm progressive supplement adjuster cost price model 3 y s x cybertruck warranty deductible rental" },
+  { title: "Gas Vehicle Collision Repair", url: "/collision/gas-vehicle-collision", blurb: "Collision repair for gas vehicles too — collision is where every make is welcome.", keywords: "gas gasoline non-tesla other car cost price model 3 y s x cybertruck warranty rivian lucid evs electric" },
+  { title: "Tesla Before & After Gallery", url: "/collision/before-after-gallery", blurb: "Real Tesla repairs, before and after.", keywords: "before after photos gallery results examples cost price model 3 y s x cybertruck warranty" },
+  { title: "Los Angeles Tesla Collision Repair", url: "/collision-repair-los-angeles", blurb: "Tesla & EV collision repair in Los Angeles — tow truck pickup, insurance handled, on-site Tesla rental.", keywords: "los angeles la collision accident cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Suspension Repair in Los Angeles", url: "/tesla-suspension-repair-los-angeles", blurb: "Tesla suspension repair in LA — control arms, bushings, alignment.", keywords: "los angeles suspension creak clunk cost price model 3 y s x cybertruck" },
+  { title: "Tesla Collision Repair in Glendale", url: "/collision-repair-glendale", blurb: "Tesla collision repair near Glendale — structural repair, ADAS calibration, insurance handled.", keywords: "glendale collision cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Collision Repair in North Hollywood", url: "/collision-repair-north-hollywood", blurb: "Tesla collision repair near North Hollywood.", keywords: "north hollywood noho collision cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Bumper Repair in Burbank", url: "/bumper-repair-burbank", blurb: "Tesla bumper repair near Burbank.", keywords: "burbank bumper dent cost price model 3 y s x cybertruck" },
+  { title: "Tesla Paint & Refinish in Van Nuys", url: "/paint-refinish-van-nuys", blurb: "Tesla paint and refinishing near Van Nuys.", keywords: "van nuys paint scratch cost price model 3 y s x cybertruck" },
+  { title: "Tesla 12V Battery Replacement in Burbank", url: "/tesla-12v-battery-replacement-burbank", blurb: "Tesla 12V battery replacement near Burbank.", keywords: "burbank 12v battery cost price model 3 y s x cybertruck" },
+  { title: "Tesla Collision Repair in Tujunga", url: "/collision-repair-tujunga", blurb: "Tesla collision repair near Tujunga — about 10 minutes from the shop.", keywords: "tujunga collision cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Collision Repair in Santa Clarita", url: "/collision-repair-santa-clarita", blurb: "Tesla collision repair near Santa Clarita — about 25 minutes down the 5.", keywords: "santa clarita valencia collision cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Collision Repair in Reseda", url: "/collision-repair-reseda", blurb: "Tesla collision repair near Reseda.", keywords: "reseda collision cost price model 3 y s x cybertruck warranty" },
+  { title: "Tesla Repair in the San Fernando Valley", url: "/tesla-repair-san-fernando-valley", blurb: "Tesla repair across the San Fernando Valley.", keywords: "san fernando valley valley tesla repair cost price model 3 y s x cybertruck" },
+  { title: "EV+ Auto Rentals — Tesla Rentals", url: "/rentals", blurb: "Rent a Tesla while yours is in the shop — optional, based on availability.", keywords: "rental rent loaner tesla rental car rental cost price model 3 y s x cybertruck" },
+  { title: "Tesla USB Drives — Shop", url: "/shop", blurb: "128GB OEM Tesla USB drives for Sentry Mode and Dashcam — from $29.99.", keywords: "shop usb flash drive usb drive accessory buy cost price model 3 y s x cybertruck" },
+  { title: "Tesla 128GB USB Drive (Pre-Owned)", url: "/shop/tesla-usb-drive-128gb", blurb: "128GB OEM Tesla USB drive — $29.99 + shipping. Sentry Mode and Dashcam ready.", keywords: "usb flash drive 128gb sentry dashcam cost price model 3 y s x cybertruck" },
+  { title: "Tesla 128GB USB Drive — Flat Design (Pre-Owned)", url: "/shop/tesla-usb-drive-128gb-flat", blurb: "Flat-design 128GB Tesla USB drive — $34.99 + shipping.", keywords: "usb flash drive flat 128gb sentry cost price model 3 y s x cybertruck" },
   { title: "About EV+ Auto Repair", url: "/about", blurb: "Family-owned shop in Sun Valley — from classic Jeep and truck restoration to Tesla and EV work.", keywords: "about family history hovik shop story" },
   { title: "EV+ Blog — Tesla Service & Repair Guides", url: "/blog", blurb: "Guides on Tesla maintenance, batteries, suspension, collision, and more.", keywords: "blog articles guides tips" },
   { title: "Book Service or an Accident Estimate", url: "/book", blurb: "Book a free inspection or start an accident estimate — photo estimate, no appointment needed to start.", keywords: "book appointment estimate free inspection schedule" },
@@ -83,18 +83,38 @@ function fieldMatch(haystack: string, token: string): boolean {
   return words.some((w) => w.length >= 4 && token.includes(w));
 }
 
+// Words customers type that carry no meaning for matching ("why is my tesla
+// creaking" should search for "creaking", not fail on "why"/"is"/"my").
+// Negations ("not", "no", "never") are deliberately NOT in here —
+// "not Tesla certified" is a real question with a real answer.
+const STOPWORDS = new Set([
+  "a", "an", "the", "is", "are", "was", "were", "do", "does", "did",
+  "how", "why", "what", "when", "where", "which", "who", "whom",
+  "my", "your", "his", "her", "its", "our", "their", "i", "me", "we",
+  "you", "he", "she", "it", "they", "to", "of", "in", "on", "for",
+  "with", "and", "or", "but", "can", "could", "should", "would", "will",
+  "be", "been", "being", "have", "has", "had", "by", "at", "from", "as",
+  "if", "then", "than", "so", "such", "there", "here", "this", "that",
+  "these", "those", "am", "is", "are", "just", "get", "got", "go", "going",
+  // Generic filler that never discriminates on this site.
+  "car", "vehicle", "auto", "near",
+]);
+
+// Apostrophes break matching ("won't" tokenizes to "won", but the index
+// says "wont"). Strip them on both sides before comparing.
+const normalize = (s: string): string => s.toLowerCase().replace(/['’]/g, "");
+
 export function searchSite(query: string): SearchEntry[] {
-  const tokens = query
-    .toLowerCase()
+  const tokens = normalize(query)
     .split(/[^a-z0-9]+/)
-    .filter((t) => t.length > 1);
+    .filter((t) => t.length > 1 && !STOPWORDS.has(t));
   if (tokens.length === 0) return [];
   const scored: { entry: SearchEntry; score: number }[] = [];
   for (const entry of SEARCH_INDEX) {
-    const title = entry.title.toLowerCase();
-    const kw = entry.keywords.toLowerCase();
-    const blurb = entry.blurb.toLowerCase();
-    const slug = entry.url.toLowerCase();
+    const title = normalize(entry.title);
+    const kw = normalize(entry.keywords);
+    const blurb = normalize(entry.blurb);
+    const slug = normalize(entry.url);
     let score = 0;
     let allMatch = true;
     for (const token of tokens) {
