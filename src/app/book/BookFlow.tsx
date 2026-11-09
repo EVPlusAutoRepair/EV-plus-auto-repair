@@ -145,6 +145,7 @@ function useBookingDraft(lane: "service" | "accident") {
   const formRef = useRef<HTMLFormElement | null>(null);
   const sentOkRef = useRef(false);
   const notifiedRef = useRef(false);
+  const startedRef = useRef(false);
   const key = `ev-book-draft-${lane}`;
 
   // Restore a saved draft on mount.
@@ -198,6 +199,18 @@ function useBookingDraft(lane: "service" | "accident") {
   const onInput = useCallback(() => {
     const form = formRef.current;
     if (!form) return;
+    // GA4 funnel: first keystroke in the form. Fires once per form mount,
+    // so the funnel reads views -> lane picked -> started typing -> submitted.
+    // Fire-and-forget — never let analytics break a booking.
+    if (!startedRef.current) {
+      startedRef.current = true;
+      try {
+        const w = window as unknown as {
+          gtag?: (command: string, event: string, params?: Record<string, string>) => void;
+        };
+        w.gtag?.("event", "booking_start", { lane, method: "website_form" });
+      } catch {}
+    }
     const data = new FormData(form);
     const obj: Record<string, string> = {};
     data.forEach((v, k) => {
@@ -350,7 +363,8 @@ export default function BookFlow() {
   const [service, setService] = useState<string | null>(null);
 
   // Analytics-only: record which lane a visitor enters, so the booking
-  // funnel can be read as views -> lane picked -> form submitted.
+  // funnel can be read as views -> lane picked -> started typing
+  // (booking_start, first keystroke in the form) -> submitted.
   // Fire-and-forget — never let analytics break a booking.
   const trackLane = (l: "service" | "accident") => {
     try {
