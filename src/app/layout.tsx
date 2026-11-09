@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import MobileCallBar from "@/components/MobileCallBar";
 import ChatWidget from "@/components/ChatWidget";
+import LeadChatWidget from "@/components/LeadChatWidget";
 
 const GA4_ID = "G-Q8E63EG89R";
 const CLARITY_ID = "yy0b1zw9j4";
@@ -76,7 +77,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "${CLARITY_ID}");`}
         </Script>
       </head>
-      <body>{children}<MobileCallBar /><ChatWidget /></body>
+      <body>{children}<MobileCallBar /><ChatWidget /><LeadChatWidget /></body>
     </html>
   );
 }
