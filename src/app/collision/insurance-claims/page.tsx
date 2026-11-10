@@ -31,6 +31,50 @@ const faqs = [
     q: "What if the other driver's insurance is paying?",
     a: "Same process. We handle third-party claims too—estimate, supplements, approvals, rental coordination.",
   },
+  {
+    q: "What should I do if my claim is denied or underpaid?",
+    a: "Bring us the denial letter or the estimate—we'll review what the insurer covered and what it missed, document the real repair with photos and Tesla procedures, and send a supplement or corrected estimate. We can't promise an approval or a payout amount; that decision is the insurer's, but we'll make the strongest documented case we can.",
+  },
+  {
+    q: "How does the insurance claim process work, step by step?",
+    a: "First, call us or book an accident intake and bring your claim number if you have one. We inspect the car and write an estimate, then send it to your insurer. Your adjuster reviews it, we handle supplements if anything is missed, and once the insurer approves the repair, we fix the car, keep you updated with photos, and you pick it up.",
+  },
+  {
+    q: "What is a claim number, and where do I find it?",
+    a: "It's the reference number your insurer assigns when you report the accident. You'll find it in the email, text, or letter from your insurer, or in your insurer's app—your adjuster's name is usually listed with it. If you don't have one yet, call us anyway; we can start the estimate while you report the claim.",
+  },
+  {
+    q: "How long does a Tesla insurance claim take?",
+    a: "It depends on the insurer, the damage, and parts availability. Simple claims can move in days; supplements and approvals can add time. We give you a real timeline at the estimate and keep you updated—what we can't do is promise the insurer's timing, because approvals are their call.",
+  },
+  {
+    q: "Who decides if my Tesla is a total loss?",
+    a: "Your insurer decides—not the shop. If the repair cost approaches the car's value, the insurer may declare it a total loss and offer a settlement based on the car's value. If that happens, we'll explain what we found in our estimate so you can discuss it with your adjuster, but the decision and the payout are the insurer's.",
+  },
+  {
+    q: "What is diminished value?",
+    a: "In general terms, diminished value is the idea that a car can be worth less after an accident repair, even when the repair is done well, simply because it now has an accident on its record. Whether you can claim it, and how much, depends on your policy, your state, and who was at fault—it's a question for your insurer or an attorney, not something the shop can promise or calculate.",
+  },
+  {
+    q: "Does my insurance cover a rental car while my Tesla is repaired?",
+    a: "Rental coverage depends on your policy—some policies include rental reimbursement, some don't, and limits vary. Check your policy or ask your adjuster what you're covered for. Separately, you can ask us about an on-site Tesla rental—it's optional and based on availability, not guaranteed.",
+  },
+  {
+    q: "What will I pay out of pocket on an insurance repair?",
+    a: "Usually just your deductible—the part of the repair your policy says you pay first. The insurer pays the approved repair cost above that. We'll explain exactly what you owe before work starts, and if the insurer approves less than the real repair cost, we'll tell you before anything is done—no surprises.",
+  },
+  {
+    q: "How does a high deductible affect my repair?",
+    a: "A high deductible means you pay more of the repair cost yourself before your insurer pays anything—the first portion of the approved repair, up to your deductible amount, is yours. The repair itself doesn't change; only how much comes out of your pocket does. We'll show you the numbers before work starts so you can decide how to proceed.",
+  },
+  {
+    q: "Do you handle AAA insurance claims?",
+    a: "Yes. We work with AAA claims the same way we work with any major carrier—estimate, adjuster communication, supplements, and approvals. Bring your claim number and we'll take it from there.",
+  },
+  {
+    q: "Do you handle Mercury Insurance claims?",
+    a: "Yes. We work with Mercury Insurance claims the same way we work with any major carrier—estimate, adjuster communication, supplements, and approvals. Bring your claim number and we'll take it from there.",
+  },
 ];
 
 export default function InsuranceClaims() {
