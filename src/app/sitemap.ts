@@ -19,6 +19,26 @@ const serviceSlugs = [
   "radiator-condenser-cleaning",
   "diagnostics",
   "tire-rotation",
+  // Search-gap pages (Nov 9, 2026) — 19 new service pages
+  "tesla-noises-vibrations",
+  "tesla-wont-open-start-drive",
+  "tesla-touchscreen-autopilot-sentry",
+  "tesla-leaks-smells-range",
+  "tesla-wiper-blade-replacement",
+  "tesla-key-fob-battery",
+  "tesla-software-update",
+  "tesla-door-handle-repair",
+  "tesla-window-regulator",
+  "tesla-headlight-taillight",
+  "tesla-charge-port",
+  "tesla-frunk-trunk-latch",
+  "tesla-falcon-wing-door",
+  "tesla-brake-service",
+  "tesla-ac-not-cold",
+  "tesla-coolant-leak",
+  "tesla-half-shaft",
+  "tesla-power-steering-suspension",
+  "tesla-toolbox-diagnostics",
 ];
 const collisionSlugs = [
   "collision-repair",
@@ -27,6 +47,13 @@ const collisionSlugs = [
   "insurance-claims",
   "before-after-gallery",
   "gas-vehicle-collision",
+  // Search-gap page (Nov 9, 2026)
+  "after-an-accident",
+];
+const faqSlugs = [
+  // Search-gap pages (Nov 9, 2026)
+  "is-ev-plus-tesla-certified",
+  "visiting-ev-plus",
 ];
 const localSlugs = [
   "bumper-repair-burbank",
@@ -57,6 +84,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     pages.push({ url: `${URL}/service/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
   for (const s of collisionSlugs)
     pages.push({ url: `${URL}/collision/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
+  for (const s of faqSlugs)
+    pages.push({ url: `${URL}/faq/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
   for (const s of localSlugs)
     pages.push({ url: `${URL}/${s}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
   for (const p of POSTS.filter(isPublished))
