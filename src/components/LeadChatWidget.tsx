@@ -199,16 +199,28 @@ export default function LeadChatWidget() {
                 Tesla service &amp; repair · Sun Valley, LA
               </div>
             </div>
-            <button
-              onClick={newChat}
-              aria-label="Start a new chat"
-              style={{
-                background: "none", border: "1px solid var(--line)", color: "var(--mut)",
-                borderRadius: 8, padding: "4px 10px", fontSize: 12, cursor: "pointer", flexShrink: 0,
-              }}
-            >
-              New chat
-            </button>
+            <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
+              <button
+                onClick={newChat}
+                aria-label="Start a new chat"
+                style={{
+                  background: "none", border: "1px solid var(--line)", color: "var(--mut)",
+                  borderRadius: 8, padding: "4px 10px", fontSize: 12, cursor: "pointer",
+                }}
+              >
+                New chat
+              </button>
+              <button
+                onClick={toggle}
+                aria-label="Close chat"
+                style={{
+                  background: "none", border: "1px solid var(--line)", color: "var(--mut)",
+                  borderRadius: 8, padding: "4px 10px", fontSize: 14, lineHeight: 1, cursor: "pointer",
+                }}
+              >
+                ✕
+              </button>
+            </div>
           </div>
           <div ref={boxRef} style={{ flex: 1, overflowY: "auto", padding: 16, display: "flex", flexDirection: "column", gap: 10 }}>
             {msgs.map((m, i) => (
