@@ -36,6 +36,10 @@ const faqs = [
     a: "No, we don't do pre-purchase inspections. If you already own the Tesla, book a free inspection instead—we'll go over the car and tell you honestly what it needs and what can wait.",
   },
   {
+    q: "Do you do warranty inspections?",
+    a: "No, we don't do warranty inspections. If you already own the Tesla, book a free inspection instead—we'll go over the car and tell you honestly what it needs and what can wait.",
+  },
+  {
     q: "What's included in the free inspection?",
     a: "A full walkaround and systems check: tires and brakes, suspension, 12V battery health, cabin filters, cooling system condition, and a scan for stored warnings. You get a straight answer on what needs attention—and if it's fine, we'll tell you it's fine.",
   },

@@ -1153,7 +1153,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Which one should you book?" },
       {
         type: "p",
-        text: "Book the free inspection when: you hear a new noise and want it identified, you want a general checkup or a pre-purchase look at a used Tesla, your tires are wearing unevenly, or it's just been a while and you want to know where your car stands. Book the diagnostic when: a warning light is on and won't clear, the car has an electrical gremlin that comes and goes, a previous inspection flagged something that needs deeper investigation, or another shop already guessed at the problem and you want a real answer. And when in doubt, start with the free inspection — if what we find needs the deeper dive, we'll tell you exactly why before anything costs you a dollar. That is how the two appointments are designed to work together.",
+        text: "Book the free inspection when: you hear a new noise and want it identified, you want a general checkup of the Tesla you own, your tires are wearing unevenly, or it's just been a while and you want to know where your car stands. Book the diagnostic when: a warning light is on and won't clear, the car has an electrical gremlin that comes and goes, a previous inspection flagged something that needs deeper investigation, or another shop already guessed at the problem and you want a real answer. And when in doubt, start with the free inspection — if what we find needs the deeper dive, we'll tell you exactly why before anything costs you a dollar. That is how the two appointments are designed to work together.",
       },
       {
         type: "p",
