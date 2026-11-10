@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { CHAT_FAB_AVATAR, CHAT_HEADER_AVATAR } from "@/app/img/chat-avatar";
 
 // Scripted lead-capture chat box. NOT an AI chatbot: it asks a fixed set of
 // questions (name, phone, email, issue, year, model) and emails the answers
@@ -174,12 +175,19 @@ export default function LeadChatWidget() {
           position: "fixed", right: 18, bottom: 18, zIndex: 70,
           width: 58, height: 58, borderRadius: "50%",
           background: "var(--acc)", color: "#0b0b0c", border: "none",
-          fontSize: 26, cursor: "pointer",
+          fontSize: 26, cursor: "pointer", padding: 0, overflow: "hidden",
+          display: "flex", alignItems: "center", justifyContent: "center",
           boxShadow: "0 10px 30px rgba(0,0,0,.45)",
         }}
         className="chat-fab"
       >
-        {open ? "✕" : "💬"}
+        {open ? "✕" : (
+          <img
+            src={CHAT_FAB_AVATAR}
+            alt="Chat with Tracey at EV+ Auto Repair"
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          />
+        )}
       </button>
       {open && (
         <div
@@ -193,10 +201,17 @@ export default function LeadChatWidget() {
           className="chat-panel"
         >
           <div style={{ padding: "14px 18px", borderBottom: "1px solid var(--line)", fontWeight: 800, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 8 }}>
-            <div>
-              Chat with EV+
-              <div style={{ fontWeight: 400, fontSize: 13, color: "var(--mut)", marginTop: 2 }}>
-                Tesla service &amp; repair · Sun Valley, LA
+            <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
+              <img
+                src={CHAT_HEADER_AVATAR}
+                alt="Tracey at EV+ Auto Repair"
+                style={{ width: 36, height: 36, borderRadius: "50%", objectFit: "cover", flexShrink: 0, display: "block" }}
+              />
+              <div>
+                Chat with EV+
+                <div style={{ fontWeight: 400, fontSize: 13, color: "var(--mut)", marginTop: 2 }}>
+                  Tesla service &amp; repair · Sun Valley, LA
+                </div>
               </div>
             </div>
             <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
