@@ -179,19 +179,15 @@
   }
   /* Autoplay with sound needs a user gesture (or prior engagement) on this
      TV's browser — without one, play() is rejected and the video stays
-     black. So videos start MUTED (always allowed) until the first tap.
-     DO NOT try to unmute programmatically: on this TV that pauses the
-     video (first second plays, then black, then it resumes) — sound comes
-     on only from a real tap (fullscreen button or the deck itself), which
-     sets soundOn. BUT the gesture expires: a video that starts unmuted
-     minutes after the tap has its play() rejected (or the programmatic
-     unmute pauses it), so it sits paused at 0s with data loaded
-     (status: paused 0s rdy4 mut=false) — exactly why radiator /
-     drive-oil / 12V did not play while control-arm (started right
-     after a tap) did. RULE: videos ALWAYS start MUTED at activation,
-     so they always play. Sound comes only from a real tap, which
-     unmutes the CURRENT video. A later video starts muted again;
-     tap again for its sound. NEVER set muted = !soundOn here. */
+     black. So a video starts MUTED until the first tap. Sound comes on
+     from a real tap (fullscreen button or the deck itself), which sets
+     soundOn. Once soundOn is set, later videos start UNMUTED so the sound
+     carries over like the first video (owner asked Nov 10: "play like the
+     radiator video"). If the TV rejects the unmuted play() because the
+     gesture expired, the catch below and the 1.5s safety net fall back to
+     muted and play, so the video never sits paused at 0s. Do NOT unmute
+     a video mid-play programmatically outside this path: on this TV that
+     pauses the video (first second plays, then black, then it resumes). */
   var soundOn = false;
   function enableSound() {
     soundOn = true;
@@ -222,9 +218,19 @@
     var wait = vid ? secs + 20 : secs;
     timer = setTimeout(function(){ show(idx + 1); }, wait * 1000);
     if (vid) {
-      vid.currentTime = 0; vid.volume = 0.6; vid.muted = true;
+      vid.currentTime = 0; vid.volume = 0.6; vid.muted = !soundOn;
       var pr = vid.play();
       if (pr && pr.catch) pr.catch(function(){ vid.muted = true; var pr2 = vid.play(); if (pr2 && pr2.catch) pr2.catch(function(){}); });
+      /* Safety net: if the video is still paused a moment later (the
+         unmuted play was blocked and the catch did not recover it),
+         force it muted and play so it never sits at 0s. */
+      setTimeout(function(){
+        if (slides[idx] === s && vid.paused && !vid.ended) {
+          vid.muted = true;
+          var p3 = vid.play();
+          if (p3 && p3.catch) p3.catch(function(){});
+        }
+      }, 1500);
       vid.addEventListener('ended', function(){
         if (slides[idx] === s) { clearTimeout(timer); show(idx + 1); }
       }, {once: true});
