@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { CHAT_FAB_AVATAR, CHAT_HEADER_AVATAR } from "@/app/img/chat-avatar";
+import { CHAT_AVATAR } from "@/app/img/chat-avatar";
 
 // Scripted lead-capture chat box. NOT an AI chatbot: it asks a fixed set of
 // questions (name, phone, email, issue, year, model) and emails the answers
@@ -183,7 +183,7 @@ export default function LeadChatWidget() {
       >
         {open ? "✕" : (
           <img
-            src={CHAT_FAB_AVATAR}
+            src={CHAT_AVATAR}
             alt="Chat with Tracey at EV+ Auto Repair"
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
           />
@@ -203,7 +203,7 @@ export default function LeadChatWidget() {
           <div style={{ padding: "14px 18px", borderBottom: "1px solid var(--line)", fontWeight: 800, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 8 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
               <img
-                src={CHAT_HEADER_AVATAR}
+                src={CHAT_AVATAR}
                 alt="Tracey at EV+ Auto Repair"
                 style={{ width: 36, height: 36, borderRadius: "50%", objectFit: "cover", flexShrink: 0, display: "block" }}
               />
