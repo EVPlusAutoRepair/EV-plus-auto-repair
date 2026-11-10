@@ -27,6 +27,13 @@ export default function SiteNav() {
         </div>
         <div className="nav-right">
           <SiteSearch />
+          <button
+            className="search-btn-mobile"
+            onClick={() => { setOpen(false); window.dispatchEvent(new Event("evplus-open-search")); }}
+            aria-label="Search the site"
+          >
+            🔍
+          </button>
           <a className="btn" href="/book">Book Now</a>
           <button className="menu-btn" onClick={() => setOpen(!open)} aria-label="Open menu">
             {open ? "✕" : "☰"}
@@ -36,12 +43,6 @@ export default function SiteNav() {
       {open && (
         <div className="mobile-menu">
           <a href="/" onClick={() => setOpen(false)}>Home</a>
-          <button
-            onClick={() => { setOpen(false); window.dispatchEvent(new Event("evplus-open-search")); }}
-            style={{ background: "none", border: "none", color: "inherit", font: "inherit", textAlign: "left", padding: 0, cursor: "pointer" }}
-          >
-            🔍 Search
-          </button>
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
           ))}
